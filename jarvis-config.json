@@ -1,0 +1,73 @@
+{
+  "name": "Jarvis Configuration Template",
+  "description": "Template for projects to reference Jarvis AI instructions",
+  "usage": "Copy this file to your project root and customize the 'extends' section to reference the Jarvis instructions you need",
+  "extends": {
+    "framework": "svelte",
+    "standards": [
+      "code-style",
+      "naming", 
+      "file-management",
+      "git-workflow"
+    ],
+    "tools": [
+      "cursor"
+    ],
+    "libraries": [
+      "tailwindcss",
+      "bits-ui"
+    ],
+    "ai-agents": [
+      "prompt-engineering"
+    ],
+    "architecture": [
+      "patterns"
+    ],
+    "testing": [
+      "strategies"
+    ],
+    "documentation": [
+      "standards"
+    ]
+  },
+  "custom": {
+    "project-specific-rules": [
+      "Add your project-specific AI instructions here",
+      "These will override or extend the Jarvis instructions",
+      "Example: 'Focus on meal planning and recipe management'",
+      "Example: 'Use TypeScript for type safety throughout'"
+    ],
+    "overrides": {
+      "description": "Use this section to override specific Jarvis instructions",
+      "example": {
+        "standards.code-style": "Use 4 spaces instead of 2 for indentation in this project"
+      }
+    }
+  },
+  "examples": {
+    "svelte-project": {
+      "framework": "svelte",
+      "standards": ["code-style", "naming", "file-management"],
+      "tools": ["cursor"],
+      "libraries": ["tailwindcss", "bits-ui"],
+      "custom": {
+        "project-specific-rules": [
+          "Focus on component-based architecture",
+          "Use SvelteKit conventions for routing"
+        ]
+      }
+    },
+    "react-project": {
+      "framework": "react", 
+      "standards": ["code-style", "naming"],
+      "tools": ["cursor", "vscode"],
+      "libraries": ["tailwindcss"],
+      "custom": {
+        "project-specific-rules": [
+          "Use functional components with hooks",
+          "Follow React best practices for state management"
+        ]
+      }
+    }
+  }
+}

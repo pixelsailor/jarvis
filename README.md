@@ -1,4 +1,4 @@
-# Agentic AI Development Bible
+# Jarvis: Agentic AI Development Bible
 
 A comprehensive knowledge base for AI-assisted web application development. This repository contains structured guidelines, best practices, and instructions for various frameworks, tools, and development processes.
 
@@ -54,10 +54,17 @@ A comprehensive knowledge base for AI-assisted web application development. This
 
 ## 🚀 Quick Start
 
+### For Jarvis Development
 1. **Choose Your Framework**: Navigate to the appropriate framework guide
 2. **Set Up AI Tools**: Review the AI agents and MCP tools sections
 3. **Follow Standards**: Implement the development standards for your project
 4. **Use Templates**: Leverage the provided templates and examples
+
+### For Projects Using Jarvis Instructions
+1. **Copy Configuration**: Copy `jarvis-config.json` to your project root
+2. **Customize References**: Edit the `extends` section to reference the Jarvis instructions you need
+3. **Add Project Rules**: Add your project-specific rules in the `custom` section
+4. **Configure Cursor**: Update your project's `.cursor.json` to reference Jarvis instructions
 
 ## 📋 Usage Guidelines
 
@@ -75,6 +82,77 @@ This knowledge base is designed to evolve. When you discover new patterns or bes
 2. Update related sections if needed
 3. Test with AI agents to ensure clarity
 4. Share improvements with the community
+
+## 🔗 Integrating Jarvis with Your Projects
+
+### Using Jarvis Instructions in Other Projects
+
+Jarvis is designed to be a reusable knowledge base that can be referenced by any development project. Here's how to integrate it:
+
+#### 1. Copy the Configuration Template
+```bash
+cp /path/to/jarvis/jarvis-config.json ./jarvis-config.json
+```
+
+#### 2. Customize Your Project's Configuration
+Edit `jarvis-config.json` to reference only the Jarvis instructions you need:
+
+```json
+{
+  "extends": {
+    "framework": "svelte",
+    "standards": ["code-style", "naming", "file-management"],
+    "tools": ["cursor"],
+    "libraries": ["tailwindcss", "bits-ui"]
+  },
+  "custom": {
+    "project-specific-rules": [
+      "Focus on meal planning and recipe management",
+      "Use TypeScript for type safety throughout"
+    ]
+  }
+}
+```
+
+#### 3. Update Your Project's .cursor.json
+Reference the Jarvis instructions in your project's `.cursor.json`:
+
+```json
+{
+  "rules": [
+    "You are working on a SvelteKit web application for meal planning.",
+    "Follow the Jarvis instructions referenced in jarvis-config.json",
+    "Apply project-specific rules from the custom section"
+  ],
+  "extends": "./jarvis-config.json"
+}
+```
+
+#### 4. Override Specific Instructions (Optional)
+If you need to override specific Jarvis instructions for your project:
+
+```json
+{
+  "custom": {
+    "overrides": {
+      "standards.code-style": "Use 4 spaces instead of 2 for indentation in this project"
+    }
+  }
+}
+```
+
+### Available Instruction Categories
+
+- **frameworks**: svelte, react, angular, astro, wordpress
+- **standards**: code-style, naming, file-management, git-workflow
+- **tools**: cursor, vscode
+- **libraries**: tailwindcss, bits-ui, dexie, component-libraries
+- **ai-agents**: prompt-engineering, svelte-agents
+- **architecture**: patterns
+- **testing**: strategies
+- **documentation**: standards
+- **data-storage**: patterns
+- **mcp-tools**: integration
 
 ## 🎯 AI Agent Instructions
 

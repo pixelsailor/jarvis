@@ -1,0 +1,71 @@
+{
+  "name": "Jarvis AI Instructions",
+  "description": "Reusable AI instructions for web development projects",
+  "version": "1.0.0",
+  "instructions": {
+    "base": [
+      "You are working with Jarvis AI instructions - a comprehensive knowledge base for web development.",
+      "Always reference the appropriate section before making recommendations.",
+      "Follow established patterns unless there's a compelling reason to deviate.",
+      "Use markdown for documentation with clear structure and examples.",
+      "Create modular, reusable configuration patterns.",
+      "Document best practices for AI agent interactions and tool usage.",
+      "Maintain consistency across different framework and library configurations.",
+      "Prioritize clarity and automation-friendly formats."
+    ],
+    "frameworks": {
+      "svelte": "./frameworks/svelte/README.md",
+      "react": "./frameworks/react/README.md",
+      "angular": "./frameworks/angular/README.md",
+      "astro": "./frameworks/astro/README.md",
+      "wordpress": "./frameworks/wordpress/README.md"
+    },
+    "standards": {
+      "code-style": "./standards/code-style.md",
+      "naming": "./standards/naming-conventions.md",
+      "file-management": "./standards/file-management.md",
+      "git-workflow": "./standards/git-workflow.md"
+    },
+    "tools": {
+      "cursor": "./tools/cursor-integration.md",
+      "vscode": "./tools/vscode-setup.md"
+    },
+    "libraries": {
+      "tailwindcss": "./libraries/tailwindcss/README.md",
+      "bits-ui": "./libraries/bits-ui/README.md",
+      "dexie": "./libraries/dexie/README.md",
+      "component-libraries": "./libraries/component-libraries/README.md"
+    },
+    "ai-agents": {
+      "prompt-engineering": "./ai-agents/prompt-engineering.md",
+      "svelte-agents": "./ai-agents/svelte/agents.md"
+    },
+    "architecture": {
+      "patterns": "./architecture/README.md"
+    },
+    "testing": {
+      "strategies": "./testing/README.md"
+    },
+    "documentation": {
+      "standards": "./documentation/README.md"
+    },
+    "data-storage": {
+      "patterns": "./data-storage/README.md"
+    },
+    "mcp-tools": {
+      "integration": "./mcp-tools/README.md"
+    }
+  },
+  "include": [
+    "**/*.md",
+    "**/*.json",
+    "**/*.yaml",
+    "**/*.yml",
+    "**/*.toml",
+    "**/*.config.*"
+  ],
+  "exclude": [
+    "node_modules/**",
+    ".git/**"
+  ]
+}
