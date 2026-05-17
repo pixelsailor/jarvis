@@ -73,7 +73,7 @@ The project roadmap (setup backlog) should:
 | `docs/roadmap/README.md` | Short index: purpose, handoff status, pointer to `backlog.md` |
 | `docs/roadmap/backlog.md` | Checkbox tasks with stable `PROJ-*` IDs |
 
-**Format:** Markdown checklists in `backlog.md`; one task per line with ID in backticks at the start.
+**Format:** Markdown checklists in `backlog.md`; one task per line with ID in backticks at the start. Full schema, field rules, and deferred/cancelled sections: [`../target-roadmap/conventions.md`](../target-roadmap/conventions.md). Workflow index: [`../target-roadmap/README.md`](../target-roadmap/README.md).
 
 **Root README link:** Target README should route agents to `docs/roadmap/README.md` under Documentation while setup is in progress; trim or archive after handoff if the backlog is complete.
 

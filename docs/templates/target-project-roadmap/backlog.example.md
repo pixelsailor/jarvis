@@ -2,25 +2,32 @@
 
 **Last updated:** 2026-05-17
 
-Stable `PROJ-*` IDs support stop/resume across agent sessions. See [`README.md`](./README.md) for folder purpose.
+Stable `PROJ-*` IDs support stop/resume across agent sessions. Field rules: [`../../target-roadmap/conventions.md`](../../target-roadmap/conventions.md). See [`README.md`](./README.md) for folder purpose.
 
 ---
 
 ## PROJ-README — Target README
 
 - [x] `PROJ-README-001`: Draft root README with purpose, audience, stack summary, and boundaries. **required for handoff**
+  - Evidence: root `README.md` matches [`../../target-readme/outline.md`](../../target-readme/outline.md) required sections; audited 2026-05-17.
 - [ ] `PROJ-README-002`: Add Documentation section linking `docs/roadmap/README.md` and planned ADR index.
+  - Depends on: `PROJ-README-001`
+  - Owner: agent
 
 ## PROJ-ADR — Architecture decisions
 
 - [ ] `PROJ-ADR-001`: Add `adrs/` with `INDEX.md`, `GOVERNANCE.md`, and `TEMPLATE.md`. **required for handoff**
   - Depends on: `PROJ-README-001`
+  - Owner: agent
 - [ ] `PROJ-ADR-002`: Record first Accepted ADR for data ownership or deployment boundary (project-specific).
+  - Depends on: `PROJ-ADR-001`
 
 ## PROJ-RULE — Agent guidance
 
 - [ ] `PROJ-RULE-001`: Create `.cursor/rules/` layout and `index.md` routing table.
+  - Owner: agent
 - [ ] `PROJ-RULE-002`: Add always-apply rule for documentation conventions.
+  - Depends on: `PROJ-RULE-001`
 
 ## PROJ-DOC — Documentation conventions
 
@@ -28,29 +35,54 @@ Stable `PROJ-*` IDs support stop/resume across agent sessions. See [`README.md`]
 
 ## PROJ-AGENT — Agent contracts
 
-- [ ] `PROJ-AGENT-001`: *(optional for small projects)* Add agent roster only if using orchestrated multi-step setup.
+*(No active tasks — see **Cancelled** for a declined optional row.)*
 
 ## PROJ-ORCH — Orchestration
 
-- [ ] `PROJ-ORCH-001`: *(optional)* Add task-folder template if setup needs Plan–Build–Test–Validate artifacts.
+*(No active tasks — see **Deferred**.)*
 
 ## PROJ-STACK — Stack-specific setup
 
-- [ ] `PROJ-STACK-001`: Document package manager and validation commands from actual project files (do not invent scripts).
-  - Evidence: `package.json` inspected on 2026-05-17.
+- [x] `PROJ-STACK-001`: Document package manager and validation commands from actual project files (do not invent scripts). **required for handoff**
+  - Owner: agent
+  - Evidence: `package.json` inspected 2026-05-17; commands copied to README § Development.
 - [ ] `PROJ-STACK-002`: Add framework-specific rule or best-practices doc.
+  - Depends on: `PROJ-STACK-001`
+  - Owner: agent
 
 ## PROJ-HANDOFF — Self-containment
 
 - [ ] `PROJ-HANDOFF-001`: Confirm no generated doc links to the Jarvis repository. **required for handoff**
+  - Owner: agent
 - [ ] `PROJ-HANDOFF-002`: Confirm rules and agents cite only target-project paths. **required for handoff**
-- [ ] `PROJ-HANDOFF-003`: User acknowledges remaining non-handoff tasks before normal feature development.
+  - Depends on: `PROJ-RULE-001`
+  - Owner: agent
+- [ ] `PROJ-HANDOFF-003`: User acknowledges remaining non-handoff tasks before normal feature development. **required for handoff**
+  - Owner: human
 
 ---
 
 ## How agents use this file
 
 1. Read the root README, then `docs/roadmap/README.md`, then this backlog.
-2. Pick the lowest open `PROJ-*` task whose dependencies are satisfied.
-3. On completion, check the box; add a one-line sub-bullet only when evidence or follow-up is non-obvious.
-4. When the target README changes scope, add new `PROJ-*` rows in the matching section.
+2. Follow the project's backlog conventions (copy from Jarvis [`target-roadmap/conventions.md`](../../target-roadmap/conventions.md) during init if not vendored into the target repo).
+3. Pick the lowest open `PROJ-*` task whose dependencies are satisfied and that has no `Blocker:` sub-bullet.
+4. On completion, check the box; add `Evidence:` when the task is **required for handoff** or verification is non-obvious.
+5. When the target README changes scope, add new `PROJ-*` rows in the matching section.
+6. To defer or cancel, move the row to **Deferred** or **Cancelled** below — do not leave it in an active section.
+
+---
+
+## Deferred
+
+- [ ] `PROJ-ORCH-001`: Add task-folder template if setup needs Plan–Build–Test–Validate artifacts.
+  - Deferred: resume after universal orchestration templates exist in Jarvis (`JR-ORCH-*`).
+  - Owner: agent
+
+---
+
+## Cancelled
+
+- [ ] `PROJ-AGENT-001`: Add agent roster for orchestrated setup.
+  - Cancelled: small init path selected; user confirmed no agent roster at setup.
+  - Owner: human

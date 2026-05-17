@@ -47,5 +47,6 @@ Routine drafting, gap lists, and backlog updates do not require extra approval i
 
 ## Related templates
 
+- Target roadmap conventions (`PROJ-*` schema and fields): [`../target-roadmap/README.md`](../target-roadmap/README.md)
 - Target roadmap examples: [`../templates/target-project-roadmap/`](../templates/target-project-roadmap/)
 - README skeleton: embedded in [`outline.md`](./outline.md#skeleton)
