@@ -17,8 +17,8 @@ Jarvis uses the target project's `docs/roadmap/` folder as the **resumable setup
 | `JR-TARGET-TODO-001` | [`platform-spec.md`](../roadmap/platform-spec.md#default-location-and-layout) | Choosing filename, folder layout, and `PROJ-*` prefix |
 | `JR-TARGET-TODO-002` | [`conventions.md`](./conventions.md) | Markdown structure, sections, task line shape, agent edit rules |
 | `JR-TARGET-TODO-003` | [`conventions.md` § Task fields](./conventions.md#task-fields) | Required vs optional fields: ID, status, dependency, owner, evidence, blocker |
-| `JR-TARGET-TODO-004` | *(pending)* README changes → backlog updates — see [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md#when-readme-changes--update-backlog) |
-| `JR-TARGET-TODO-005` | *(pending)* When backlog completion is enough for Jarvis handoff |
+| `JR-TARGET-TODO-004` | [`readme-sync.md`](./readme-sync.md) | After any **material** target README edit; backlog add/reopen/defer/cancel |
+| `JR-TARGET-TODO-005` | [`handoff.md`](./handoff.md) | Before Jarvis declares initialization complete |
 
 ## Related material
 
@@ -34,6 +34,6 @@ Jarvis must **stop and ask** before:
 
 - Replacing an existing target `docs/roadmap/` with a parallel backlog (merge instead; see [`conventions.md`](./conventions.md#existing-roadmaps)).
 - Deleting or renumbering `PROJ-*` IDs that already appear in ADRs, rules, or orchestration artifacts.
-- Marking handoff complete while open **required for handoff** tasks remain (unless the user explicitly accepts partial handoff).
+- Marking handoff complete while open **required for handoff** tasks remain (unless the user explicitly accepts partial handoff per [`handoff.md`](./handoff.md#partial-handoff-exception)).
 
 Routine backlog rows, checkbox updates, and evidence sub-bullets that follow [`conventions.md`](./conventions.md) do not require extra approval.

@@ -41,8 +41,10 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/target-roadmap/conventions.md`](../target-roadmap/conventions.md); index [`docs/target-roadmap/README.md`](../target-roadmap/README.md).
 - [x] `JR-TARGET-TODO-003`: Define required fields such as ID, status, dependency, owner, evidence, and blocker.
   - Field matrix and examples in [`conventions.md` § Task fields](../target-roadmap/conventions.md#task-fields); deferred/cancelled → appendix sections; Owner optional per task.
-- [ ] `JR-TARGET-TODO-004`: Define how README changes create or update follow-up todo items.
-- [ ] `JR-TARGET-TODO-005`: Define when todo completion is sufficient for Jarvis handoff.
+- [x] `JR-TARGET-TODO-004`: Define how README changes create or update follow-up todo items.
+  - [`docs/target-roadmap/readme-sync.md`](../target-roadmap/readme-sync.md); scaffolding map cross-links.
+- [x] `JR-TARGET-TODO-005`: Define when todo completion is sufficient for Jarvis handoff.
+  - [`docs/target-roadmap/handoff.md`](../target-roadmap/handoff.md); three layers (README, required `PROJ-*`, user sign-off).
 
 ## Universal scaffolding
 

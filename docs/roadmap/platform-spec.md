@@ -133,6 +133,8 @@ Do not copy WFD-specific details into Jarvis defaults, including:
 
 ## Handoff checklist for future Jarvis output
 
+**Detailed criteria:** [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) (required `PROJ-*` vs optional rows, partial handoff, evidence). **README sync after edits:** [`../target-roadmap/readme-sync.md`](../target-roadmap/readme-sync.md).
+
 Before considering a target project initialized, Jarvis should confirm:
 
 - The target README stands alone.

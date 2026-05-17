@@ -15,7 +15,7 @@ Jarvis is being repurposed from a framework-oriented knowledge base into a proje
 | [`open-decisions.md`](./open-decisions.md) | You need unresolved product or structure choices, or you are closing a decision. |
 | [`MAINTENANCE.md`](./MAINTENANCE.md) | You are about to edit any roadmap file; read the update rules first. |
 | [`../target-readme/README.md`](../target-readme/README.md) | You are creating, auditing, or handing off a **target** project's root README. |
-| [`../target-roadmap/README.md`](../target-roadmap/README.md) | You are authoring or completing **target** `docs/roadmap/backlog.md` rows (`PROJ-*` schema and fields). |
+| [`../target-roadmap/README.md`](../target-roadmap/README.md) | Target `PROJ-*` backlog: conventions, README sync, or handoff criteria. |
 | [`../templates/target-project-roadmap/`](../templates/target-project-roadmap/) | You are scaffolding a target project's `docs/roadmap/` (`PROJ-*` backlog). |
 
 ## Roadmap structure decision (`JR-TODO-004`)

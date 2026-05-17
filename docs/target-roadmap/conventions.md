@@ -169,7 +169,7 @@ Do not leave deferred/cancelled tasks in active `## PROJ-*` sections.
 ### Handoff marker
 
 - **Syntax:** `**required for handoff**` at end of task line (bold phrase, exact wording).
-- **Use for:** Tasks that must be complete before claiming target-project independence from Jarvis (see `PROJ-HANDOFF-*` and [`platform-spec.md`](../roadmap/platform-spec.md#handoff-checklist-for-future-jarvis-output)).
+- **Use for:** Tasks that must be complete before claiming target-project independence from Jarvis (see [`handoff.md`](./handoff.md) and `PROJ-HANDOFF-*`).
 - **Do not** mark every task — only gates that define "initialized enough to develop."
 
 ---

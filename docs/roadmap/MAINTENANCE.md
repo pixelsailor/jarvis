@@ -9,7 +9,8 @@ Rules for humans and agents editing files under `docs/roadmap/`. Goal: resumable
 | New, completed, deferred, or removed platform task (`JR-*`) | [`backlog.md`](./backlog.md) only |
 | Terminology, boundaries, initialization flow, target README/todo requirements, WFD generalization, handoff checklist | [`platform-spec.md`](./platform-spec.md) |
 | Target README outline, intake, audit, scaffolding map, README handoff checklist | [`../target-readme/`](../target-readme/) (not `platform-spec.md`) |
-| Target `PROJ-*` backlog schema, task fields, deferred/cancelled conventions | [`../target-roadmap/`](../target-roadmap/) (not `platform-spec.md`) |
+| Target `PROJ-*` backlog schema, task fields, deferred/cancelled conventions | [`../target-roadmap/conventions.md`](../target-roadmap/conventions.md) |
+| README → backlog sync; Jarvis handoff sufficiency | [`../target-roadmap/readme-sync.md`](../target-roadmap/readme-sync.md), [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) |
 | Unresolved product or structure question; recording a closed decision | [`open-decisions.md`](./open-decisions.md) |
 | New roadmap file, link targets, or structure decision | [`README.md`](./README.md) and root [`README.md`](../../README.md) if the public entry point changes |
 | When agents must update the roadmap (this document) | [`MAINTENANCE.md`](./MAINTENANCE.md) |

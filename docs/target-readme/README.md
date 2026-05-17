@@ -18,7 +18,7 @@ Jarvis uses the target project's root `README.md` as the **first durable artifac
 | `JR-TARGET-README-002` | [`intake-questions.md`](./intake-questions.md) | No root README exists (or it is empty / placeholder) |
 | `JR-TARGET-README-003` | [`audit.md`](./audit.md) | A README already exists; before proposing edits |
 | `JR-TARGET-README-004` | [`scaffolding-map.md`](./scaffolding-map.md) | Turning README content into `PROJ-*` backlog items and downstream files |
-| `JR-TARGET-README-005` | [`handoff-checklist.md`](./handoff-checklist.md) | Verifying the README is self-contained before Jarvis handoff |
+| `JR-TARGET-README-005` | [`handoff-checklist.md`](./handoff-checklist.md) | Verifying the README is self-contained (layer 1; see also [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md)) |
 
 ## Sequence
 
@@ -47,6 +47,6 @@ Routine drafting, gap lists, and backlog updates do not require extra approval i
 
 ## Related templates
 
-- Target roadmap conventions (`PROJ-*` schema and fields): [`../target-roadmap/README.md`](../target-roadmap/README.md)
+- Target roadmap workflow: [`../target-roadmap/README.md`](../target-roadmap/README.md) — [`readme-sync.md`](../target-roadmap/readme-sync.md), [`handoff.md`](../target-roadmap/handoff.md)
 - Target roadmap examples: [`../templates/target-project-roadmap/`](../templates/target-project-roadmap/)
 - README skeleton: embedded in [`outline.md`](./outline.md#skeleton)

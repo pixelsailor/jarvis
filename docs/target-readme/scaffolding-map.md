@@ -50,11 +50,9 @@ Minimize cold-start token load:
 
 ## When README changes → update backlog
 
-After any **material** README edit (principles, stack, boundaries, capabilities):
+**Canonical workflow:** [`../target-roadmap/readme-sync.md`](../target-roadmap/readme-sync.md) (material vs immaterial edits, add/reopen/defer/cancel, stale artifacts, roadmap index sync).
 
-1. Re-run section rubric from [`audit.md`](./audit.md) mentally or explicitly.
-2. Add or reopen `PROJ-*` rows — do not rely on chat memory.
-3. Mark downstream artifacts **stale** in backlog sub-bullets when README contradicts them.
+Summary: after any **material** README edit, update `docs/roadmap/backlog.md` in the same session — do not rely on chat memory. Re-run [`audit.md`](./audit.md) rubric when principles, stack, or boundaries change.
 
 | README change | Typical new/updated tasks |
 | --- | --- |
@@ -63,9 +61,7 @@ After any **material** README edit (principles, stack, boundaries, capabilities)
 | New capability | `PROJ-DOC-*` or product doc; optional ADR if architectural |
 | Boundary tightened (e.g. secrets) | `PROJ-ADR-*` + `PROJ-RULE-*` |
 | Documentation map link added | `PROJ-DOC-*` until file exists |
-| Handoff claimed | Close `PROJ-README-*`; ensure `PROJ-HANDOFF-*` satisfied |
-
-**Material** = changes agent or implementer behavior. Typo fixes and badge updates alone do not require new tasks.
+| Handoff claimed in README | Run [`handoff.md`](../target-roadmap/handoff.md) — do not close backlog from README prose alone |
 
 ## Scaffolding order (default)
 

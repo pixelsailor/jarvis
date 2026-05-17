@@ -2,7 +2,7 @@
 
 Use when README work is complete enough to claim **README self-containment** — the target README no longer depends on Jarvis, chat context, or unlinked promises.
 
-This checklist is **README-scoped**. Full project handoff also requires `PROJ-HANDOFF-*` in `docs/roadmap/backlog.md` and non-README artifacts (ADRs, rules, etc.) per [`platform-spec.md`](../roadmap/platform-spec.md#handoff-checklist-for-future-jarvis-output).
+This checklist is **README-scoped** (layer 1). Full Jarvis initialization handoff: [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) (required `PROJ-*` gates, backlog honesty, `PROJ-HANDOFF-003`). Platform summary: [`platform-spec.md`](../roadmap/platform-spec.md#handoff-checklist-for-future-jarvis-output).
 
 ## When to run
 
@@ -67,7 +67,7 @@ On `PROJ-README-*` completion, add sub-bullets only when non-obvious:
 | **This file** | Root `README.md` quality and independence |
 | **`PROJ-HANDOFF-*` in backlog** | Whole-repo self-containment (rules cite target paths, no Jarvis in generated docs, user sign-off) |
 
-Both must pass before Jarvis tells the user initialization is complete.
+Both must pass before Jarvis tells the user initialization is complete. See **three layers** in [`handoff.md`](../target-roadmap/handoff.md).
 
 ## Post-handoff README maintenance
 
@@ -75,6 +75,6 @@ Target project owners may:
 
 - Trim the Documentation map entry for `docs/roadmap/` if setup is finished and backlog archived.
 - Add product roadmap links without reopening Jarvis.
-- Require README updates when Accepting ADRs that change boundaries — same discipline as [`scaffolding-map.md`](./scaffolding-map.md#when-readme-changes--update-backlog).
+- Require README updates when Accepting ADRs that change boundaries — same discipline as [`readme-sync.md`](../target-roadmap/readme-sync.md).
 
 Jarvis is not required for those updates.
