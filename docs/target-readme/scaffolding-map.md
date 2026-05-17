@@ -1,0 +1,103 @@
+# README → downstream scaffolding map
+
+The target README is the **control document** for what Jarvis (or a follow-on agent) creates next. This map links README content to `PROJ-*` backlog areas, artifacts, and read order — without copying WFD product or stack defaults.
+
+**Prerequisite:** A draft or audited README exists ([`outline.md`](./outline.md), [`audit.md`](./audit.md)).
+
+## Initialization paths
+
+Choose once per project (intake Q7). When unclear, default to **medium** and tell the user.
+
+| Path | README work | Typical `PROJ-*` scope | Orchestration |
+| --- | --- | --- | --- |
+| **Small** | Full required outline; minimal Documentation | `PROJ-README`, `PROJ-RULE` (1–2 rules), `PROJ-HANDOFF` | No task folders |
+| **Medium** | + boundaries refined | + `PROJ-ADR`, `PROJ-DOC`, `PROJ-STACK` | Optional for large doc sets |
+| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model when platform orchestration docs exist |
+
+## Signal → backlog → artifacts
+
+| README signal | Read first | Backlog prefix | Artifacts to create or link |
+| --- | --- | --- | --- |
+| Principles, non-negotiables | README § Principles | `PROJ-ADR-*` | `adrs/INDEX.md`, `GOVERNANCE.md`, `TEMPLATE.md`; Accepted ADRs for each non-negotiable that affects implementation |
+| Core capabilities | README § Capabilities | `PROJ-DOC-*` | Topic docs under `docs/` when a capability needs flow/architecture prose |
+| Technology stack | README § Stack + repo files | `PROJ-STACK-*` | Stack-specific rules, `docs/` references, validation commands doc — **verified from repo** |
+| Architecture boundaries | README § Boundaries | `PROJ-ADR-*`, `PROJ-RULE-*` | ADRs for client/server, secrets, data authority; always-apply rules that enforce boundaries |
+| Data ownership | README § Data ownership | `PROJ-ADR-*` | ADR for storage/sync authority; rules for local vs cloud paths |
+| Documentation map entries | README § Documentation | `PROJ-DOC-*`, `PROJ-RULE-*` | Each linked path must exist or have an open `PROJ-*` task |
+| Development commands | README § Development | `PROJ-STACK-*` | No parallel cheat sheet; rules may cite same commands |
+| Roadmap direction (product themes) | README § Roadmap | `PROJ-DOC-*` | Product docs — **not** the same as `docs/roadmap/backlog.md` setup tasks |
+| Setup in progress | README links `docs/roadmap/` | `PROJ-README-*`, all areas | [`templates/target-project-roadmap/`](../../templates/target-project-roadmap/) |
+
+## Universal vs stack-specific
+
+| Layer | Driven by | Jarvis source (copy/adapt into target) |
+| --- | --- | --- |
+| **Universal** | Any initialized project | Future `JR-UNIVERSAL-*` templates: ADR layout, doc conventions, PR guide, generic rules index |
+| **Stack-specific** | README stack + detected files | Jarvis `frameworks/`, `libraries/`, stack rules — **adapted**, not symlinked |
+
+**Rule:** Generated files live in the target repo. Jarvis repository paths are not valid `see` targets in target rules or ADRs.
+
+## Agent read sets (by role)
+
+Minimize cold-start token load:
+
+| Role | Minimum read set |
+| --- | --- |
+| **Any agent** | Target `README.md` → `docs/roadmap/README.md` → `docs/roadmap/backlog.md` |
+| **Planner** | + `adrs/INDEX.md` (if exists) + open `PROJ-*` dependencies |
+| **Builder** | + relevant Accepted ADR + `.cursor/rules/index.md` + topic doc for the task |
+| **Validator** | + validation checklist doc + `PROJ-HANDOFF-*` open items |
+
+## When README changes → update backlog
+
+After any **material** README edit (principles, stack, boundaries, capabilities):
+
+1. Re-run section rubric from [`audit.md`](./audit.md) mentally or explicitly.
+2. Add or reopen `PROJ-*` rows — do not rely on chat memory.
+3. Mark downstream artifacts **stale** in backlog sub-bullets when README contradicts them.
+
+| README change | Typical new/updated tasks |
+| --- | --- |
+| New non-negotiable | `PROJ-ADR-*` Accept decision; `PROJ-RULE-*` if enforceable in agent rules |
+| Stack component added/removed | `PROJ-STACK-*`; update Development section with evidence |
+| New capability | `PROJ-DOC-*` or product doc; optional ADR if architectural |
+| Boundary tightened (e.g. secrets) | `PROJ-ADR-*` + `PROJ-RULE-*` |
+| Documentation map link added | `PROJ-DOC-*` until file exists |
+| Handoff claimed | Close `PROJ-README-*`; ensure `PROJ-HANDOFF-*` satisfied |
+
+**Material** = changes agent or implementer behavior. Typo fixes and badge updates alone do not require new tasks.
+
+## Scaffolding order (default)
+
+```text
+1. README (draft or audit-complete)
+2. docs/roadmap/ (README + backlog with PROJ-* from this map)
+3. adrs/ index + governance + first Accepted ADRs from boundaries
+4. .cursor/rules/ index + always-apply + topic rules
+5. docs/ conventions + topic docs referenced from README
+6. agents/ orchestration (large path only)
+7. PROJ-HANDOFF-* verification
+```
+
+Do not generate step 6 before step 3 when boundaries are still Weak in the audit.
+
+## WFD patterns to generalize (not copy)
+
+From WFD-style discipline, without WFD identifiers:
+
+- Task folders for **large** init only
+- Manifest-owned resumability
+- Separate lifecycle gates vs merge-ready / handoff checks
+- Evidence on backlog completion
+
+See [`platform-spec.md`](../roadmap/platform-spec.md#wfd-concepts-to-generalize).
+
+## Open platform decisions
+
+These affect how many rows this map spawns:
+
+- Mandatory universal scaffolds for every target ([`open-decisions.md`](../roadmap/open-decisions.md))
+- Infer vs ask thresholds
+- Stack profiles vs composed capabilities
+
+Until closed, **medium path** table above is the default.

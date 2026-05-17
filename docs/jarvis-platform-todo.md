@@ -10,5 +10,6 @@ The platform roadmap was split for clearer agent reads and safer backlog edits.
 | `JR-*` task backlog | [`roadmap/backlog.md`](./roadmap/backlog.md) |
 | Unresolved design choices | [`roadmap/open-decisions.md`](./roadmap/open-decisions.md) |
 | When and how to edit roadmap files | [`roadmap/MAINTENANCE.md`](./roadmap/MAINTENANCE.md) |
+| Target README workflow | [`target-readme/README.md`](./target-readme/README.md) |
 
 Do not add new content to this file; update the roadmap files above.

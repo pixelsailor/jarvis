@@ -52,6 +52,8 @@ The target README should:
 - Avoid becoming a dumping ground for framework playbooks or low-level commands.
 - Stand alone after initialization without requiring readers or agents to consult Jarvis.
 
+**Workflow (canonical outline, intake, audit, scaffolding map, handoff):** [`../target-readme/README.md`](../target-readme/README.md).
+
 ## Target project roadmap requirements
 
 The project roadmap (setup backlog) should:

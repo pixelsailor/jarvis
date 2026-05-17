@@ -22,11 +22,16 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 
 ## Target README workflow
 
-- [ ] `JR-TARGET-README-001`: Define the canonical target README outline Jarvis should generate.
-- [ ] `JR-TARGET-README-002`: Define the minimum questions Jarvis asks when no target README exists.
-- [ ] `JR-TARGET-README-003`: Define how Jarvis audits an existing target README before editing.
-- [ ] `JR-TARGET-README-004`: Define how the target README drives downstream ADR, rule, doc, and agent scaffolding.
-- [ ] `JR-TARGET-README-005`: Define a handoff checklist for target README self-containment.
+- [x] `JR-TARGET-README-001`: Define the canonical target README outline Jarvis should generate.
+  - [`docs/target-readme/outline.md`](../target-readme/outline.md)
+- [x] `JR-TARGET-README-002`: Define the minimum questions Jarvis asks when no target README exists.
+  - [`docs/target-readme/intake-questions.md`](../target-readme/intake-questions.md)
+- [x] `JR-TARGET-README-003`: Define how Jarvis audits an existing target README before editing.
+  - [`docs/target-readme/audit.md`](../target-readme/audit.md)
+- [x] `JR-TARGET-README-004`: Define how the target README drives downstream ADR, rule, doc, and agent scaffolding.
+  - [`docs/target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
+- [x] `JR-TARGET-README-005`: Define a handoff checklist for target README self-containment.
+  - [`docs/target-readme/handoff-checklist.md`](../target-readme/handoff-checklist.md); index [`docs/target-readme/README.md`](../target-readme/README.md)
 
 ## Target project todo workflow
 
