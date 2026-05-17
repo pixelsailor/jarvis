@@ -1,169 +1,85 @@
-# Jarvis: Agentic AI Development Bible
+# Jarvis
 
-A comprehensive knowledge base for AI-assisted web application development. This repository contains structured guidelines, best practices, and instructions for various frameworks, tools, and development processes.
+Jarvis is being repurposed as a project-foundation assistant for standing up new or existing software projects with clear documentation, durable decisions, agent-friendly workflows, and consistent guardrails from the start.
 
-## 📚 Table of Contents
+The long-term goal is for Jarvis to help initialize a target project by drafting or updating its root README, creating a resumable project todo list, and scaffolding the ADRs, rules, best practices, agent contracts, orchestration files, and structured documentation that the target project needs for its own stack.
 
-### 🎯 Core Frameworks
-- [Svelte Guide](./frameworks/svelte/README.md)
-- [Angular Guide](./frameworks/angular/README.md)
-- [React Guide](./frameworks/react/README.md)
-- [Astro Guide](./frameworks/astro/README.md)
-- [WordPress Guide](./frameworks/wordpress/README.md)
+## Refactor Notice
 
-### 🤖 AI & Automation
-- [Agent Development](./ai-agents/README.md)
-- [MCP Tools Integration](./mcp-tools/README.md)
-- [AI Prompt Engineering](./ai-agents/prompt-engineering.md)
+This repository is in transition. Much of the existing content was created for an earlier version of Jarvis that acted as a framework-oriented knowledge base for AI-assisted development. Those files may be incomplete, stale, broken, or too specific for the new direction.
 
-### 🎨 UI Libraries & Styling
-- [TailwindCSS Guide](./libraries/tailwindcss/README.md)
-- [Bits-UI Guide](./libraries/bits-ui/README.md)
-- [Component Libraries](./libraries/component-libraries/README.md)
+Until each area is reviewed and intentionally ported, do not treat existing framework, library, rule, agent, or configuration files as authoritative. Prefer this README and the current roadmap documents when determining Jarvis's purpose.
 
-### 💾 Data & Storage
-- [Dexie Guide](./libraries/dexie/README.md)
-- [Database Patterns](./data-storage/README.md)
+What's For Dinner (WFD) is the conceptual template for the documentation and orchestration discipline Jarvis should eventually provide. Use WFD's patterns as inspiration for project scaffolding, handoffs, validation, and agent workflows. Do not copy WFD-specific product, framework, storage, provider, or package-script decisions into Jarvis defaults.
 
-### 🏗️ Development Standards
-- [File Management](./standards/file-management.md)
-- [Naming Conventions](./standards/naming-conventions.md)
-- [Code Style Guide](./standards/code-style.md)
-- [Git Workflow](./standards/git-workflow.md)
+## Project Summary
 
-### 🏛️ Architecture & Patterns
-- [Architecture Patterns](./architecture/README.md)
-- [Component Architecture](./architecture/component-patterns.md)
-- [State Management](./architecture/state-management.md)
+Jarvis is intended to be used during project initialization or augmentation. A user can place Jarvis near a target project during setup, ask Jarvis to initialize or improve that project, and let Jarvis produce the target project's own self-contained documentation and workflow foundation.
 
-### 🧪 Testing & Quality
-- [Testing Strategies](./testing/README.md)
-- [Testing Frameworks](./testing/frameworks.md)
-- [Quality Assurance](./testing/quality-assurance.md)
+Jarvis should not remain an operational dependency after setup. The target project must be able to live as an independent repository with its own README, todos, ADRs, rules, agents, workflows, and documentation. Any material generated from Jarvis should be copied, adapted, and owned by the target project.
 
-### 📖 Documentation
-- [Documentation Standards](./documentation/README.md)
-- [API Documentation](./documentation/api-docs.md)
-- [Component Documentation](./documentation/component-docs.md)
+## Core Principles
 
-### 🛠️ Tools & Workflows
-- [VS Code Setup](./tools/vscode-setup.md)
-- [Cursor Integration](./tools/cursor-integration.md)
-- [GitHub Workflows](./tools/github-workflows.md)
-- [Build & Deployment](./tools/build-deployment.md)
+- Start with the project story. The target project's root README should establish the 10,000 foot purpose, audience, stack, and boundaries before deeper docs are generated.
+- Support humans and agents equally. Documentation should be readable in review and precise enough to guide future agent sessions.
+- Combine universal foundations with stack-specific guidance. Common ADR, workflow, and documentation patterns should be adapted to each target project's actual technology choices.
+- Preserve durable decisions. Architecture, governance, and workflow choices should live in ADRs or focused internal docs rather than in chat history.
+- Make initialization resumable. Long setup work should produce a durable todo list and, when needed, orchestration artifacts that survive context loss.
+- Keep ownership clear. Jarvis provides patterns and scaffolding; the target project owns the resulting files after handoff.
+- Avoid hidden dependencies. A completed target project should not require live links, relative references, or continued access to the Jarvis repository.
 
-## 🚀 Quick Start
+## Core Capabilities
 
-### For Jarvis Development
-1. **Choose Your Framework**: Navigate to the appropriate framework guide
-2. **Set Up AI Tools**: Review the AI agents and MCP tools sections
-3. **Follow Standards**: Implement the development standards for your project
-4. **Use Templates**: Leverage the provided templates and examples
+Jarvis is being shaped around these capabilities:
 
-### For Projects Using Jarvis Instructions
-1. **Copy Configuration**: Copy `jarvis-config.json` to your project root
-2. **Customize References**: Edit the `extends` section to reference the Jarvis instructions you need
-3. **Add Project Rules**: Add your project-specific rules in the `custom` section
-4. **Configure Cursor**: Update your project's `.cursor.json` to reference Jarvis instructions
+- Initialize a new project foundation from a user prompt.
+- Augment an existing project by reading its current README and documentation.
+- Create or revise a target project's root README according to common README principles.
+- Ask for project specifics when the target project lacks enough context for a useful README.
+- Create and maintain a project initialization todo list so setup can stop and resume safely.
+- Use the target README to determine which universal and stack-specific docs are required.
+- Scaffold ADRs, rules, best practices, agent contracts, orchestration files, validation guidance, and supporting documentation.
+- Support a future orchestration model for complex initialization work that needs planning, implementation, testing, validation, and human approval.
 
-## 📋 Usage Guidelines
+These capabilities describe the intended direction. Jarvis is not yet a complete generator, CLI, or automated orchestration system.
 
-- Each section contains specific instructions for AI agents
-- Templates are provided for common patterns
-- Best practices are highlighted with ⭐
-- Common pitfalls are marked with ⚠️
-- Performance tips are marked with ⚡
+## Documentation
 
-## 🔄 Contributing
+The root README should stay high-level. Detailed guidance belongs in internal documents that can evolve without turning the README into an implementation manual.
 
-This knowledge base is designed to evolve. When you discover new patterns or best practices:
+Current and future documentation families include:
 
-1. Document them in the appropriate section
-2. Update related sections if needed
-3. Test with AI agents to ensure clarity
-4. Share improvements with the community
+- Roadmaps and todos for the Jarvis platform buildout.
+- ADR templates and governance guidance.
+- README and documentation conventions.
+- Cursor rules and rule indexes.
+- Agent contracts and handoff prompts.
+- Orchestration guides and task-folder templates.
+- Universal scaffolding templates.
+- Stack-specific guidance for frameworks, runtimes, testing, deployment, secrets, and tooling.
 
-## 🔗 Integrating Jarvis with Your Projects
+The active platform roadmap begins in [`docs/jarvis-platform-todo.md`](./docs/jarvis-platform-todo.md).
 
-### Using Jarvis Instructions in Other Projects
+## Development
 
-Jarvis is designed to be a reusable knowledge base that can be referenced by any development project. Here's how to integrate it:
+Jarvis itself is being rebuilt. During the transition, development guidance should be kept in focused internal docs and updated as the repository structure becomes intentional.
 
-#### 1. Copy the Configuration Template
-```bash
-cp /path/to/jarvis/jarvis-config.json ./jarvis-config.json
-```
+Contributors and agents should keep root README changes limited to durable purpose, principles, high-level capabilities, and documentation routing. Implementation playbooks, stack details, generated templates, and orchestration mechanics should live in dedicated docs.
 
-#### 2. Customize Your Project's Configuration
-Edit `jarvis-config.json` to reference only the Jarvis instructions you need:
+Because the current repository content includes legacy material, avoid expanding or depending on old file catalogs without first reviewing whether they still serve the repurposed platform.
 
-```json
-{
-  "extends": {
-    "framework": "svelte",
-    "standards": ["code-style", "naming", "file-management"],
-    "tools": ["cursor"],
-    "libraries": ["tailwindcss", "bits-ui"]
-  },
-  "custom": {
-    "project-specific-rules": [
-      "Focus on meal planning and recipe management",
-      "Use TypeScript for type safety throughout"
-    ]
-  }
-}
-```
+## Workflow
 
-#### 3. Update Your Project's .cursor.json
-Reference the Jarvis instructions in your project's `.cursor.json`:
+The intended Jarvis-assisted initialization flow is:
 
-```json
-{
-  "rules": [
-    "You are working on a SvelteKit web application for meal planning.",
-    "Follow the Jarvis instructions referenced in jarvis-config.json",
-    "Apply project-specific rules from the custom section"
-  ],
-  "extends": "./jarvis-config.json"
-}
-```
+1. A user asks Jarvis to initialize a new project or augment an existing one.
+2. Jarvis inspects the target project and determines whether a root README already exists.
+3. If no target README exists, Jarvis asks for the project specifics needed to draft one.
+4. If a target README exists, Jarvis analyzes it and proposes updates that clarify the project's purpose, stack, boundaries, and documentation needs.
+5. Jarvis creates or updates a target-project todo list that records remaining initialization work with stable, resumable tasks.
+6. Jarvis scaffolds universal documentation and guardrails.
+7. Jarvis adds stack-specific ADRs, rules, best practices, agent guidance, validation expectations, and workflow docs based on the target README.
+8. For complex setup work, Jarvis uses or creates an orchestration process inspired by WFD's task-folder and gated handoff model.
+9. Jarvis completes handoff by ensuring the target project is self-contained and does not rely on the Jarvis repository.
 
-#### 4. Override Specific Instructions (Optional)
-If you need to override specific Jarvis instructions for your project:
-
-```json
-{
-  "custom": {
-    "overrides": {
-      "standards.code-style": "Use 4 spaces instead of 2 for indentation in this project"
-    }
-  }
-}
-```
-
-### Available Instruction Categories
-
-- **frameworks**: svelte, react, angular, astro, wordpress
-- **standards**: code-style, naming, file-management, git-workflow
-- **tools**: cursor, vscode
-- **libraries**: tailwindcss, bits-ui, dexie, component-libraries
-- **ai-agents**: prompt-engineering, svelte-agents
-- **architecture**: patterns
-- **testing**: strategies
-- **documentation**: standards
-- **data-storage**: patterns
-- **mcp-tools**: integration
-
-## 🎯 AI Agent Instructions
-
-When working with this knowledge base:
-
-1. **Always reference the relevant section** before making recommendations
-2. **Follow the established patterns** unless there's a compelling reason to deviate
-3. **Use the provided templates** as starting points
-4. **Apply the naming conventions** consistently
-5. **Consider the architecture patterns** for larger decisions
-
----
-
-*This knowledge base is designed to work seamlessly with AI agents, providing clear, actionable guidance for web application development.*
+The target project's README is the starting point for project-specific scaffolding. Jarvis's README explains the platform; the target README explains the project being initialized.
