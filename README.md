@@ -2,7 +2,7 @@
 
 Jarvis is being repurposed as a project-foundation assistant for standing up new or existing software projects with clear documentation, durable decisions, agent-friendly workflows, and consistent guardrails from the start.
 
-The long-term goal is for Jarvis to help initialize a target project by drafting or updating its root README, creating a resumable project todo list, and scaffolding the ADRs, rules, best practices, agent contracts, orchestration files, and structured documentation that the target project needs for its own stack.
+The long-term goal is for Jarvis to help initialize a target project by drafting or updating its root README, creating a resumable `docs/roadmap/` backlog (`PROJ-*` tasks), and scaffolding the ADRs, rules, best practices, agent contracts, orchestration files, and structured documentation that the target project needs for its own stack.
 
 ## Refactor Notice
 
@@ -36,12 +36,12 @@ Jarvis is being shaped around these capabilities:
 - Augment an existing project by reading its current README and documentation.
 - Create or revise a target project's root README according to common README principles.
 - Ask for project specifics when the target project lacks enough context for a useful README.
-- Create and maintain a project initialization todo list so setup can stop and resume safely.
+- Create and maintain a project roadmap under `docs/roadmap/` so setup can stop and resume safely.
 - Use the target README to determine which universal and stack-specific docs are required.
 - Scaffold ADRs, rules, best practices, agent contracts, orchestration files, validation guidance, and supporting documentation.
 - Support a future orchestration model for complex initialization work that needs planning, implementation, testing, validation, and human approval.
 
-These capabilities describe the intended direction. Jarvis is not yet a complete generator, CLI, or automated orchestration system.
+These capabilities describe the intended direction. Jarvis is documentation-first today: it does not ship a CLI or generator scripts in this repository. A future CLI remains possible but out of scope for the current buildout.
 
 ## Documentation
 
@@ -58,7 +58,7 @@ Current and future documentation families include:
 - Universal scaffolding templates.
 - Stack-specific guidance for frameworks, runtimes, testing, deployment, secrets, and tooling.
 
-The active platform roadmap begins in [`docs/jarvis-platform-todo.md`](./docs/jarvis-platform-todo.md).
+The active platform roadmap begins in [`docs/roadmap/README.md`](./docs/roadmap/README.md) (task backlog, platform spec, and maintenance rules). [`docs/jarvis-platform-todo.md`](./docs/jarvis-platform-todo.md) redirects there for older links.
 
 ## Development
 
@@ -76,7 +76,7 @@ The intended Jarvis-assisted initialization flow is:
 2. Jarvis inspects the target project and determines whether a root README already exists.
 3. If no target README exists, Jarvis asks for the project specifics needed to draft one.
 4. If a target README exists, Jarvis analyzes it and proposes updates that clarify the project's purpose, stack, boundaries, and documentation needs.
-5. Jarvis creates or updates a target-project todo list that records remaining initialization work with stable, resumable tasks.
+5. Jarvis creates or updates the target project's `docs/roadmap/` backlog with stable `PROJ-*` tasks.
 6. Jarvis scaffolds universal documentation and guardrails.
 7. Jarvis adds stack-specific ADRs, rules, best practices, agent guidance, validation expectations, and workflow docs based on the target README.
 8. For complex setup work, Jarvis uses or creates an orchestration process inspired by WFD's task-folder and gated handoff model.

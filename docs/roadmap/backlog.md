@@ -1,0 +1,94 @@
+# Jarvis platform backlog
+
+Resumable platform buildout tasks. Stable reference material lives in [`platform-spec.md`](./platform-spec.md). Update rules: [`MAINTENANCE.md`](./MAINTENANCE.md).
+
+## Root positioning
+
+- [x] `JR-README-001`: Rewrite Jarvis's root README around the new project-foundation mission.
+- [x] `JR-README-002`: Add a refactor notice warning that old files may be stale or legacy.
+- [x] `JR-README-003`: Clarify that WFD is a conceptual template, not stack-specific source material to copy.
+- [x] `JR-README-004`: State that target projects must be independent after handoff.
+- [ ] `JR-README-005`: Revisit the README after core docs exist and replace transition language with stable documentation links.
+
+## Platform todo and roadmap
+
+- [x] `JR-TODO-001`: Create a Jarvis-owned roadmap/todo document for the repurpose.
+- [x] `JR-TODO-002`: Distinguish Jarvis's own README from target-project READMEs.
+- [x] `JR-TODO-003`: Capture the target-project independence requirement.
+- [x] `JR-TODO-004`: Decide whether this roadmap remains a single file or moves into a structured `docs/roadmap/` area.
+  - Structured `docs/roadmap/` with spec, backlog, open-decisions, and maintenance docs; see [`README.md`](./README.md).
+- [x] `JR-TODO-005`: Add maintenance rules for when agents update this file.
+  - See [`MAINTENANCE.md`](./MAINTENANCE.md).
+
+## Target README workflow
+
+- [ ] `JR-TARGET-README-001`: Define the canonical target README outline Jarvis should generate.
+- [ ] `JR-TARGET-README-002`: Define the minimum questions Jarvis asks when no target README exists.
+- [ ] `JR-TARGET-README-003`: Define how Jarvis audits an existing target README before editing.
+- [ ] `JR-TARGET-README-004`: Define how the target README drives downstream ADR, rule, doc, and agent scaffolding.
+- [ ] `JR-TARGET-README-005`: Define a handoff checklist for target README self-containment.
+
+## Target project todo workflow
+
+- [x] `JR-TARGET-TODO-001`: Choose the default filename and location for the target-project roadmap.
+  - Default: `docs/roadmap/` (`README.md` + `backlog.md`, `PROJ-*` IDs); examples in [`../../templates/target-project-roadmap/`](../../templates/target-project-roadmap/); spec in [`platform-spec.md`](./platform-spec.md#default-location-and-layout).
+- [ ] `JR-TARGET-TODO-002`: Define the todo schema or Markdown conventions.
+- [ ] `JR-TARGET-TODO-003`: Define required fields such as ID, status, dependency, owner, evidence, and blocker.
+- [ ] `JR-TARGET-TODO-004`: Define how README changes create or update follow-up todo items.
+- [ ] `JR-TARGET-TODO-005`: Define when todo completion is sufficient for Jarvis handoff.
+
+## Universal scaffolding
+
+- [ ] `JR-UNIVERSAL-001`: Create a generic ADR directory structure, index, template, and governance model.
+- [ ] `JR-UNIVERSAL-002`: Create README governance guidance that target projects can own independently.
+- [ ] `JR-UNIVERSAL-003`: Create documentation conventions for production source, tests, architecture docs, and user-facing docs.
+- [ ] `JR-UNIVERSAL-004`: Create a generic Cursor rules layout and rules index.
+- [ ] `JR-UNIVERSAL-005`: Create PR and commit communication guidance.
+- [ ] `JR-UNIVERSAL-006`: Create validation checklist templates with generic rows and stack-specific extension points.
+- [ ] `JR-UNIVERSAL-007`: Create handoff guidance that confirms no target-project reliance on Jarvis.
+
+## Stack-specific scaffolding
+
+- [ ] `JR-STACK-001`: Define how Jarvis detects or asks for a target project's language and framework.
+- [ ] `JR-STACK-002`: Define how Jarvis selects stack-specific rules and best-practices docs.
+- [ ] `JR-STACK-003`: Define how Jarvis records package manager and validation commands without inventing commands.
+- [ ] `JR-STACK-004`: Define testing strategy prompts for unit, integration, component, browser, and end-to-end layers.
+- [ ] `JR-STACK-005`: Define runtime, deployment, secrets, and environment boundary prompts.
+- [ ] `JR-STACK-006`: Define dependency and tooling review guidance for generated project docs.
+- [ ] `JR-STACK-007`: Review legacy framework and library docs for possible generalized reuse.
+
+## Agent and rule scaffolding
+
+- [ ] `JR-AGENT-001`: Generalize an agent roster inspired by WFD without importing WFD product or stack assumptions.
+- [ ] `JR-AGENT-002`: Create role contracts for Orchestrator, Planner, Builder, Tester, and Validator.
+- [ ] `JR-AGENT-003`: Define minimum read sets for each role to keep future sessions efficient.
+- [ ] `JR-AGENT-004`: Define handoff prompts that target projects can copy and own.
+- [ ] `JR-RULE-001`: Define always-apply versus topic-specific rule conventions.
+- [ ] `JR-RULE-002`: Define rule authoring guidance for target projects.
+- [ ] `JR-RULE-003`: Define how generated rules cite target-project ADRs and docs.
+
+## Orchestration model
+
+- [ ] `JR-ORCH-001`: Generalize WFD's task-folder model for target projects.
+- [ ] `JR-ORCH-002`: Define a generic `task-manifest.json` shape.
+- [ ] `JR-ORCH-003`: Define artifact ownership for plan, acceptance criteria, build log, test report, validation report, and human approval.
+- [ ] `JR-ORCH-004`: Separate lifecycle gates from merge-ready or handoff checks.
+- [ ] `JR-ORCH-005`: Define small, medium, and large initialization paths.
+- [ ] `JR-ORCH-006`: Define loop behavior for failed validation or human rework.
+- [ ] `JR-ORCH-007`: Ensure copied orchestration artifacts are self-contained inside the target project.
+
+## Validation and handoff
+
+- [ ] `JR-VALIDATION-001`: Define generic validation categories for initialized projects.
+- [ ] `JR-VALIDATION-002`: Define evidence expectations for documentation-only initialization.
+- [ ] `JR-VALIDATION-003`: Define evidence expectations for generated code, tooling, or config.
+- [ ] `JR-VALIDATION-004`: Define target-project self-containment checks.
+- [ ] `JR-VALIDATION-005`: Define what Jarvis may claim as complete versus what requires human approval.
+
+## Legacy repository review
+
+- [ ] `JR-LEGACY-001`: Inventory current legacy files and mark each as keep, generalize, replace, or remove.
+- [ ] `JR-LEGACY-002`: Remove or fix broken references from legacy configuration files.
+- [ ] `JR-LEGACY-003`: Decide whether `jarvis-config.json` remains useful under the new model.
+- [ ] `JR-LEGACY-004`: Decide whether `.cursor.json` remains useful under the new model.
+- [ ] `JR-LEGACY-005`: Move reviewed legacy material into the new documentation structure or delete it.
