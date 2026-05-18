@@ -32,7 +32,7 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 
 | Layer | Driven by | Jarvis source (copy/adapt into target) |
 | --- | --- | --- |
-| **Universal** | Any initialized project | [`docs/universal-adr/README.md`](../universal-adr/README.md) (ADR layout); [`docs/universal-readme/README.md`](../universal-readme/README.md) (README governance); [`docs/universal-docs/README.md`](../universal-docs/README.md) (doc conventions); [`docs/universal-rules/README.md`](../universal-rules/README.md) (Cursor rules layout + index); [`docs/universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR/commit guide + GitHub template); [`docs/universal-validation/README.md`](../universal-validation/README.md) (validation checklist + optional rule) |
+| **Universal** | Any initialized project | [`docs/universal-adr/README.md`](../universal-adr/README.md) (ADR layout); [`docs/universal-readme/README.md`](../universal-readme/README.md) (README governance); [`docs/universal-docs/README.md`](../universal-docs/README.md) (doc conventions); [`docs/universal-rules/README.md`](../universal-rules/README.md) (Cursor rules layout + index); [`docs/universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR/commit guide + GitHub template); [`docs/universal-validation/README.md`](../universal-validation/README.md) (validation checklist + optional rule); [`docs/universal-handoff/README.md`](../universal-handoff/README.md) (handoff self-containment audit) |
 | **Stack-specific** | README stack + detected files | Jarvis `frameworks/`, `libraries/`, stack rules — **adapted**, not symlinked |
 
 **Rule:** Generated files live in the target repo. Jarvis repository paths are not valid `see` targets in target rules or ADRs.
@@ -72,7 +72,7 @@ Summary: after any **material** README edit, update `docs/roadmap/backlog.md` in
 4. .cursor/rules/ index + always-apply + topic rules
 5. docs/readme-governance.md (+ optional readme-governance rule) + docs/documentation-conventions.md + docs/pr-and-commit-guide.md (+ .github/pull_request_template.md on GitHub medium/large) + docs/validation-checklist.md (medium/large default) + docs/architecture/ (+ docs/guides/ when applicable) + topic docs referenced from README
 6. agents/ orchestration (large path only)
-7. PROJ-HANDOFF-* verification
+7. docs/handoff-self-containment.md + PROJ-HANDOFF-* verification
 ```
 
 Do not generate step 6 before step 3 when boundaries are still Weak in the audit.

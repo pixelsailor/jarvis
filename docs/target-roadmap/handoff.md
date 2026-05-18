@@ -127,8 +127,8 @@ When path and README disagree, **pause and ask** ([`readme-sync.md`](./readme-sy
 | Task type | Evidence |
 | --- | --- |
 | **required for handoff** | Required sub-bullet — paths, commands run, or audit date |
-| `PROJ-HANDOFF-001` | Note scan: no `jarvis` / `JR-*` in generated target docs (or list fixes) |
-| `PROJ-HANDOFF-002` | Sample rule/agent paths verified target-local |
+| `PROJ-HANDOFF-001` | Target `docs/handoff-self-containment.md` **IND-01**–**IND-06** pass (or list fixes); note scan date — scaffold: [`../universal-handoff/README.md`](../universal-handoff/README.md) |
+| `PROJ-HANDOFF-002` | Same checklist **IND-07**–**IND-09** pass; sample rule/agent paths |
 | `PROJ-HANDOFF-003` | User confirmation quoted or paraphrased with date |
 | Optional open tasks | No evidence required to hand off |
 

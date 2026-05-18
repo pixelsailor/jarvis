@@ -65,7 +65,7 @@ On `PROJ-README-*` completion, add sub-bullets only when non-obvious:
 | Checklist | Scope |
 | --- | --- |
 | **This file** | Root `README.md` quality and independence |
-| **`PROJ-HANDOFF-*` in backlog** | Whole-repo self-containment (rules cite target paths, no Jarvis in generated docs, user sign-off) |
+| **`PROJ-HANDOFF-*` in backlog** | Whole-repo self-containment — run target `docs/handoff-self-containment.md` when scaffolded ([`../universal-handoff/README.md`](../universal-handoff/README.md)); user sign-off on `PROJ-HANDOFF-003` |
 
 Both must pass before Jarvis tells the user initialization is complete. See **three layers** in [`handoff.md`](../target-roadmap/handoff.md).
 

@@ -133,13 +133,14 @@ Do not copy WFD-specific details into Jarvis defaults, including:
 
 ## Handoff checklist for future Jarvis output
 
-**Detailed criteria:** [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) (required `PROJ-*` vs optional rows, partial handoff, evidence). **README sync after edits:** [`../target-roadmap/readme-sync.md`](../target-roadmap/readme-sync.md).
+**Detailed criteria:** [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) (required `PROJ-*` vs optional rows, partial handoff, evidence). **README sync after edits:** [`../target-roadmap/readme-sync.md`](../target-roadmap/readme-sync.md). **Repo-wide independence audit:** [`../universal-handoff/README.md`](../universal-handoff/README.md) → target `docs/handoff-self-containment.md`.
 
 Before considering a target project initialized, Jarvis should confirm:
 
 - The target README stands alone.
 - The target project has a durable `docs/roadmap/` backlog or equivalent completion record.
 - Generated ADRs, rules, agents, and docs live inside the target project.
+- Target `docs/handoff-self-containment.md` (or equivalent) passes — no required links to Jarvis; rules and agents cite target paths only.
 - Generated docs do not require relative links to Jarvis.
 - Generated rules and agents cite target-project files, not Jarvis-local files.
 - Stack-specific guidance matches the target project's actual tools.

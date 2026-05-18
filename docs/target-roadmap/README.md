@@ -27,6 +27,7 @@ Jarvis uses the target project's `docs/roadmap/` folder as the **resumable setup
 | [`../templates/target-project-roadmap/`](../templates/target-project-roadmap/) | Copy-paste `README.example.md` and `backlog.example.md` into the target project |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | README signals → initial `PROJ-*` rows |
 | [`../target-readme/handoff-checklist.md`](../target-readme/handoff-checklist.md) | README self-containment before `PROJ-HANDOFF-*` |
+| [`../universal-handoff/README.md`](../universal-handoff/README.md) | Target `docs/handoff-self-containment.md` for `PROJ-HANDOFF-001` / `PROJ-HANDOFF-002` evidence |
 
 ## Human input (pause points)
 

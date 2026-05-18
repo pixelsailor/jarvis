@@ -19,6 +19,7 @@ Rules for humans and agents editing files under `docs/roadmap/`. Goal: resumable
 | Universal documentation conventions scaffold (copy/adapt for targets) | [`../universal-docs/README.md`](../universal-docs/README.md) |
 | Universal PR/commit communication scaffold (copy/adapt for targets) | [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) |
 | Universal validation checklist scaffold (copy/adapt for targets) | [`../universal-validation/README.md`](../universal-validation/README.md) |
+| Universal handoff self-containment scaffold (copy/adapt for targets) | [`../universal-handoff/README.md`](../universal-handoff/README.md) |
 
 Do not duplicate backlog tasks in `platform-spec.md` or prose summaries of the backlog in the root README.
 

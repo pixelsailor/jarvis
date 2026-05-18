@@ -60,7 +60,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/universal-pr-commit/README.md`](../universal-pr-commit/README.md); templates in [`docs/templates/universal-pr-commit/`](../templates/universal-pr-commit/).
 - [x] `JR-UNIVERSAL-006`: Create validation checklist templates with generic rows and stack-specific extension points.
   - [`docs/universal-validation/README.md`](../universal-validation/README.md); templates in [`docs/templates/universal-validation/`](../templates/universal-validation/).
-- [ ] `JR-UNIVERSAL-007`: Create handoff guidance that confirms no target-project reliance on Jarvis.
+- [x] `JR-UNIVERSAL-007`: Create handoff guidance that confirms no target-project reliance on Jarvis.
+  - [`docs/universal-handoff/README.md`](../universal-handoff/README.md); template [`docs/templates/universal-handoff/handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md).
 
 ## Stack-specific scaffolding
 
@@ -98,6 +99,7 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 - [ ] `JR-VALIDATION-002`: Define evidence expectations for documentation-only initialization.
 - [ ] `JR-VALIDATION-003`: Define evidence expectations for generated code, tooling, or config.
 - [ ] `JR-VALIDATION-004`: Define target-project self-containment checks.
+  - Operational checklist: [`docs/universal-handoff/README.md`](../universal-handoff/README.md) (`JR-UNIVERSAL-007`); extend evidence tiers if needed.
 - [ ] `JR-VALIDATION-005`: Define what Jarvis may claim as complete versus what requires human approval.
 
 ## Legacy repository review

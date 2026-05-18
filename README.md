@@ -56,6 +56,7 @@ Current and future documentation families include:
 - Cursor rules layout and index ([`docs/universal-rules/README.md`](./docs/universal-rules/README.md)).
 - PR and commit communication ([`docs/universal-pr-commit/README.md`](./docs/universal-pr-commit/README.md)).
 - Validation checklist ([`docs/universal-validation/README.md`](./docs/universal-validation/README.md)).
+- Handoff self-containment ([`docs/universal-handoff/README.md`](./docs/universal-handoff/README.md)).
 - Agent contracts and handoff prompts.
 - Orchestration guides and task-folder templates.
 - Universal scaffolding templates.

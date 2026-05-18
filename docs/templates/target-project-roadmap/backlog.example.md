@@ -53,8 +53,10 @@ Stable `PROJ-*` IDs support stop/resume across agent sessions. Field rules: [`..
 ## PROJ-HANDOFF — Self-containment
 
 - [ ] `PROJ-HANDOFF-001`: Confirm no generated doc links to the Jarvis repository. **required for handoff**
+  - Run: `docs/handoff-self-containment.md` **IND-01**–**IND-06** (copy from Jarvis [`universal-handoff`](../../universal-handoff/README.md) during init)
   - Owner: agent
 - [ ] `PROJ-HANDOFF-002`: Confirm rules and agents cite only target-project paths. **required for handoff**
+  - Run: same checklist **IND-07**–**IND-09**
   - Depends on: `PROJ-RULE-001`
   - Owner: agent
 - [ ] `PROJ-HANDOFF-003`: User acknowledges remaining non-handoff tasks before normal feature development. **required for handoff**
