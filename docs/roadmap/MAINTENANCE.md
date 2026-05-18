@@ -16,6 +16,7 @@ Rules for humans and agents editing files under `docs/roadmap/`. Goal: resumable
 | When agents must update the roadmap (this document) | [`MAINTENANCE.md`](./MAINTENANCE.md) |
 | Universal ADR scaffold (copy/adapt for targets) | [`../universal-adr/README.md`](../universal-adr/README.md) |
 | Universal README governance scaffold (copy/adapt for targets) | [`../universal-readme/README.md`](../universal-readme/README.md) |
+| Universal documentation conventions scaffold (copy/adapt for targets) | [`../universal-docs/README.md`](../universal-docs/README.md) |
 
 Do not duplicate backlog tasks in `platform-spec.md` or prose summaries of the backlog in the root README.
 

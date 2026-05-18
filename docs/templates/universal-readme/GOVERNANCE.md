@@ -63,6 +63,7 @@ Use stable headings so agents can scan across projects. Required sections apply 
 | Setup and foundation tasks | `docs/roadmap/backlog.md` (`PROJ-*` tasks) while initialization is active |
 | Implementation vs Accepted ADR drift | `docs/adr-alignment-gaps.md` (optional; see `adrs/GOVERNANCE.md`) |
 | PR/commit templates, validation checklists, orchestration mechanics | Dedicated docs linked once from the map |
+| Production source, tests, architecture topics, user guides | `docs/documentation-conventions.md`; `docs/architecture/`; `docs/guides/` |
 
 **Default action when adding information:** create or extend a linked doc (or ADR), then add **one line** to the Documentation map — do not paste long sections into the README.
 

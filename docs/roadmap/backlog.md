@@ -52,7 +52,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/universal-adr/README.md`](../universal-adr/README.md); copy templates in [`docs/templates/universal-adr/`](../templates/universal-adr/).
 - [x] `JR-UNIVERSAL-002`: Create README governance guidance that target projects can own independently.
   - [`docs/universal-readme/README.md`](../universal-readme/README.md); templates in [`docs/templates/universal-readme/`](../templates/universal-readme/).
-- [ ] `JR-UNIVERSAL-003`: Create documentation conventions for production source, tests, architecture docs, and user-facing docs.
+- [x] `JR-UNIVERSAL-003`: Create documentation conventions for production source, tests, architecture docs, and user-facing docs.
+  - [`docs/universal-docs/README.md`](../universal-docs/README.md); templates in [`docs/templates/universal-docs/`](../templates/universal-docs/).
 - [ ] `JR-UNIVERSAL-004`: Create a generic Cursor rules layout and rules index.
 - [ ] `JR-UNIVERSAL-005`: Create PR and commit communication guidance.
 - [ ] `JR-UNIVERSAL-006`: Create validation checklist templates with generic rows and stack-specific extension points.

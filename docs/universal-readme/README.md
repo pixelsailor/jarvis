@@ -43,6 +43,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | [`../target-readme/handoff-checklist.md`](../target-readme/handoff-checklist.md) | README self-containment checks before `PROJ-README-*` complete |
 | [`../target-roadmap/readme-sync.md`](../target-roadmap/readme-sync.md) | Material README edits → `PROJ-*` backlog (copy with target roadmap workflow) |
 | [`../universal-adr/README.md`](../universal-adr/README.md) | ADRs own decisions; README summarizes — no duplication |
+| [`../universal-docs/README.md`](../universal-docs/README.md) | Source, test, architecture, and user-guide doc policy; README routes here |
 | `JR-UNIVERSAL-004` (future) | Rules index cites this governance doc; governance does not duplicate rule bodies |
 
 ## Human input (pause points)
