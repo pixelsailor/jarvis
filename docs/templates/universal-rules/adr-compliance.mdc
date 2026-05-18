@@ -1,0 +1,48 @@
+---
+description: Consult adrs/INDEX.md and Accepted ADRs before build work; record unresolved drift in docs/adr-alignment-gaps.md
+alwaysApply: true
+---
+
+# ADR compliance (build tasks)
+
+**Scope — “build task”:** Any work that adds, changes, or removes project code, configuration that encodes architecture, dependencies, or APIs — including features, fixes, refactors, and tooling that affects structure or behavior. Not limited to running a production build command.
+
+## High-impact areas
+
+Treat the following as **always** requiring ADR index review and relevant **Accepted** ADRs before substantive implementation: **architecture**, **data flow**, **authentication**, **security boundaries**, **external integrations**, and **deployment or runtime** choices when the project records them in ADRs.
+
+_Customize this list when the target README § Boundaries names other always-ADR domains._
+
+## Before substantive implementation
+
+1. **Read** [`adrs/INDEX.md`](../../adrs/INDEX.md) when `adrs/` exists and identify **Accepted** ADRs that touch the area you are changing.
+2. **Treat only Accepted ADRs as binding.** Ignore **Proposed**, **Deprecated**, and **Superseded** for new decisions; follow successors named in the index or ADR body.
+3. **Follow** [`adrs/GOVERNANCE.md`](../../adrs/GOVERNANCE.md) for lifecycle, conflicts, and scoped compliance.
+
+When `adrs/` does not exist yet, follow README § Boundaries and surface a **Proposed** ADR before treating architectural choices as final.
+
+## When something is unclear
+
+- **Ambiguous requirement:** Ask the user a concrete question before choosing an approach that could violate an **Accepted** ADR or expand scope.
+- **No Accepted ADR:** Proceed with sound judgment or draft **Proposed** per governance — do **not** treat Proposed as binding until a human accepts it.
+- **Conflict** between user instruction and an **Accepted** ADR: Stop, cite the ADR, summarize the decision, and ask how to proceed.
+
+## During edits
+
+- Prefer **small, local** compliance fixes only in files you already touch; do **not** broaden refactors solely for ADR cleanup.
+- Do **not** infer deprecation from code age — only from ADR status in `adrs/` and the index.
+
+## Alignment gaps (unresolved mismatches)
+
+If the change **cannot** be brought into compliance with an **Accepted** ADR within scope, **add or update** an entry in [`docs/adr-alignment-gaps.md`](../../docs/adr-alignment-gaps.md) (owner, severity, affected files, remediation). Do not hide drift in comments alone.
+
+If the project uses a different gaps path, update this rule and the index in the same session.
+
+## Quick reference
+
+| Need | Where |
+| --- | --- |
+| Binding decisions | `adrs/INDEX.md` (**Accepted** rows) |
+| Process and proposals | `adrs/GOVERNANCE.md` |
+| New ADR shape | `adrs/TEMPLATE.md` |
+| Tracked implementation drift | `docs/adr-alignment-gaps.md` |

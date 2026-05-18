@@ -13,7 +13,7 @@ Generic documentation conventions for target projects: production source comment
 | `docs/guides/README.md` | Index for user-facing guides (from `guides-README.md`; create when product has external users) |
 | `docs/stack/source-documentation.md` | Stack-specific comment syntax (from `stack-source-documentation.example.md`; required when production code exists) |
 
-**No Cursor rule** for this scaffold (confirmed): agents load policy via the root README Documentation map and this file. Projects may add a topic rule later under `PROJ-RULE-*` if enforcement in `.cursor/rules/` is desired (`JR-UNIVERSAL-004`).
+**No Cursor rule** for this scaffold (confirmed): agents load policy via the root README Documentation map and this file. Projects may add a topic rule later under `PROJ-RULE-*` if enforcement in `.cursor/rules/` is desired ([`universal-rules`](../universal-rules/README.md)).
 
 Jarvis authoring workflow for README-driven doc creation stays in [`../target-readme/`](../target-readme/) — not copied to targets.
 
@@ -48,7 +48,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | [`../universal-adr/README.md`](../universal-adr/README.md) | ADRs own decisions; architecture docs illustrate |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | README signals → `PROJ-DOC-*` and doc paths |
 | `JR-STACK-*` (future) | Fills `docs/stack/source-documentation.md` and stack playbooks |
-| `JR-UNIVERSAL-004` (future) | Rules index may reference this doc; this scaffold does not ship a default rule |
+| [`../universal-rules/README.md`](../universal-rules/README.md) | Rules index may reference this doc; this scaffold does not ship a default rule |
 
 ## Human input (pause points)
 

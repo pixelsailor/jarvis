@@ -1,0 +1,34 @@
+---
+description: Repo layout and rule routing; read .cursor/rules/index.md for the full catalog
+alwaysApply: true
+---
+
+# Project routing — REPLACE_WITH_PROJECT_NAME
+
+## Scope (this rule)
+
+**Owns:** High-level **repository layout** and **which rule or doc to open first**.
+
+**Does not own:** Stack syntax, lint configuration, or boundary enforcement — those live in topic rules and ADRs.
+
+## Project structure
+
+_Customize this section from the target README § Stack and verified directories. Remove bullets that do not apply._
+
+- **Application entry:** _(for example `src/`, `app/`, `packages/web/`)_
+- **Shared libraries:** _(for example `src/lib/`, `internal/`)_
+- **Architecture decisions:** [`adrs/INDEX.md`](../../adrs/INDEX.md) when `adrs/` exists
+- **Setup backlog:** [`docs/roadmap/backlog.md`](../../docs/roadmap/backlog.md) while initialization is active
+
+## Rule routing (use the narrowest match)
+
+| Need | Where |
+| --- | --- |
+| Full rule catalog and activation modes | [`.cursor/rules/index.md`](./index.md) |
+| ADR compliance before build work | [adr-compliance.mdc](./adr-compliance.mdc) |
+| Root README editing scope | [readme-governance.mdc](./readme-governance.mdc) when present |
+| README maintenance policy | [`docs/readme-governance.md`](../../docs/readme-governance.md) when present |
+| Source and doc conventions | [`docs/documentation-conventions.md`](../../docs/documentation-conventions.md) when present |
+| Accepted architecture decisions | [`adrs/INDEX.md`](../../adrs/INDEX.md) |
+
+Add rows when new topic rules exist. Link rules and docs — do not paste long playbooks here.

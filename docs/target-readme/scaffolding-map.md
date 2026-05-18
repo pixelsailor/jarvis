@@ -32,7 +32,7 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 
 | Layer | Driven by | Jarvis source (copy/adapt into target) |
 | --- | --- | --- |
-| **Universal** | Any initialized project | [`docs/universal-adr/README.md`](../universal-adr/README.md) (ADR layout); [`docs/universal-readme/README.md`](../universal-readme/README.md) (README governance); [`docs/universal-docs/README.md`](../universal-docs/README.md) (doc conventions); future `JR-UNIVERSAL-*`: PR guide, generic rules index |
+| **Universal** | Any initialized project | [`docs/universal-adr/README.md`](../universal-adr/README.md) (ADR layout); [`docs/universal-readme/README.md`](../universal-readme/README.md) (README governance); [`docs/universal-docs/README.md`](../universal-docs/README.md) (doc conventions); [`docs/universal-rules/README.md`](../universal-rules/README.md) (Cursor rules layout + index); future `JR-UNIVERSAL-*`: PR guide, validation checklist |
 | **Stack-specific** | README stack + detected files | Jarvis `frameworks/`, `libraries/`, stack rules — **adapted**, not symlinked |
 
 **Rule:** Generated files live in the target repo. Jarvis repository paths are not valid `see` targets in target rules or ADRs.

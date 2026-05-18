@@ -54,7 +54,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/universal-readme/README.md`](../universal-readme/README.md); templates in [`docs/templates/universal-readme/`](../templates/universal-readme/).
 - [x] `JR-UNIVERSAL-003`: Create documentation conventions for production source, tests, architecture docs, and user-facing docs.
   - [`docs/universal-docs/README.md`](../universal-docs/README.md); templates in [`docs/templates/universal-docs/`](../templates/universal-docs/).
-- [ ] `JR-UNIVERSAL-004`: Create a generic Cursor rules layout and rules index.
+- [x] `JR-UNIVERSAL-004`: Create a generic Cursor rules layout and rules index.
+  - [`docs/universal-rules/README.md`](../universal-rules/README.md); templates in [`docs/templates/universal-rules/`](../templates/universal-rules/).
 - [ ] `JR-UNIVERSAL-005`: Create PR and commit communication guidance.
 - [ ] `JR-UNIVERSAL-006`: Create validation checklist templates with generic rows and stack-specific extension points.
 - [ ] `JR-UNIVERSAL-007`: Create handoff guidance that confirms no target-project reliance on Jarvis.

@@ -57,7 +57,7 @@ Use a different path only when the target already has an equivalent; link it fro
 | --- | --- |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | README signals → `PROJ-ADR-*` and first ADRs |
 | [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) | Medium/large paths expect `adrs/` index + governance |
-| `JR-UNIVERSAL-004` (future) | Cursor rules cite **Accepted** ADRs; ADRs do not duplicate rule text |
+| [`../universal-rules/README.md`](../universal-rules/README.md) | Cursor rules cite **Accepted** ADRs; ADRs do not duplicate rule text |
 | `JR-ORCH-*` (future) | Orchestration block in `TEMPLATE.md` activates when target has orchestration docs |
 
 ## Human input (pause points)
