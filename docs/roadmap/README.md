@@ -18,6 +18,7 @@ Jarvis is being repurposed from a framework-oriented knowledge base into a proje
 | [`../target-roadmap/README.md`](../target-roadmap/README.md) | Target `PROJ-*` backlog: conventions, README sync, or handoff criteria. |
 | [`../templates/target-project-roadmap/`](../templates/target-project-roadmap/) | You are scaffolding a target project's `docs/roadmap/` (`PROJ-*` backlog). |
 | [`../universal-adr/README.md`](../universal-adr/README.md) | You are scaffolding or adapting target `adrs/` (index, governance, template). |
+| [`../universal-readme/README.md`](../universal-readme/README.md) | You are scaffolding target README governance (`docs/readme-governance.md`, optional rule). |
 
 ## Roadmap structure decision (`JR-TODO-004`)
 

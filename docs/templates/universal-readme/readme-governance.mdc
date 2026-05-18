@@ -1,0 +1,31 @@
+---
+description: Root README stays high-level; route deep guidance to docs/readme-governance.md, ADRs, and topic docs
+globs: README.md
+alwaysApply: false
+---
+
+# README governance (repository root)
+
+The top-level `README.md` carries **purpose, principles, stack, and durable boundaries**. It is not the home for long implementation playbooks.
+
+**Canonical policy:** [`docs/readme-governance.md`](../../docs/readme-governance.md) — read before large README edits.
+
+## Belongs in the root README
+
+- What the project is and who it is for
+- Principles and non-negotiables
+- High-level technology stack and where secrets or privileged code run
+- Short architecture boundary statements (no step-by-step procedures)
+- Compact project tree or pointer to structure; **Documentation** map with links
+- Minimal onboarding: verified commands; env var **names** and which runtime loads them
+
+## Put elsewhere (and link from the map)
+
+| Instead of expanding the root README | Use |
+| --- | --- |
+| Durable architecture or data-ownership decisions | `adrs/` once recorded |
+| Patterns owned by a directory | Scoped `README.md` or `docs/<topic>.md` |
+| Agent-enforced dev behavior | `.cursor/rules/` + rules index |
+| Setup foundation work | `docs/roadmap/backlog.md` (`PROJ-*`) while init is active |
+
+Prefer a **new linked doc or ADR** and one Documentation map line over pasting long sections into the root README.

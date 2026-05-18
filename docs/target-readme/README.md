@@ -50,3 +50,4 @@ Routine drafting, gap lists, and backlog updates do not require extra approval i
 - Target roadmap workflow: [`../target-roadmap/README.md`](../target-roadmap/README.md) — [`readme-sync.md`](../target-roadmap/readme-sync.md), [`handoff.md`](../target-roadmap/handoff.md)
 - Target roadmap examples: [`../templates/target-project-roadmap/`](../templates/target-project-roadmap/)
 - README skeleton: embedded in [`outline.md`](./outline.md#skeleton)
+- README governance (copy to target after draft): [`../universal-readme/README.md`](../universal-readme/README.md)

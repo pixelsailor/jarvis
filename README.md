@@ -51,7 +51,8 @@ Current and future documentation families include:
 
 - Roadmaps and todos for the Jarvis platform buildout.
 - ADR templates and governance guidance ([`docs/universal-adr/README.md`](./docs/universal-adr/README.md)).
-- README and documentation conventions.
+- README governance for target projects ([`docs/universal-readme/README.md`](./docs/universal-readme/README.md)).
+- Documentation conventions (future `JR-UNIVERSAL-003`).
 - Cursor rules and rule indexes.
 - Agent contracts and handoff prompts.
 - Orchestration guides and task-folder templates.
