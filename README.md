@@ -50,7 +50,7 @@ The root README should stay high-level. Detailed guidance belongs in internal do
 Current and future documentation families include:
 
 - Roadmaps and todos for the Jarvis platform buildout.
-- ADR templates and governance guidance.
+- ADR templates and governance guidance ([`docs/universal-adr/README.md`](./docs/universal-adr/README.md)).
 - README and documentation conventions.
 - Cursor rules and rule indexes.
 - Agent contracts and handoff prompts.

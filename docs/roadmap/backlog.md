@@ -48,7 +48,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 
 ## Universal scaffolding
 
-- [ ] `JR-UNIVERSAL-001`: Create a generic ADR directory structure, index, template, and governance model.
+- [x] `JR-UNIVERSAL-001`: Create a generic ADR directory structure, index, template, and governance model.
+  - [`docs/universal-adr/README.md`](../universal-adr/README.md); copy templates in [`docs/templates/universal-adr/`](../templates/universal-adr/).
 - [ ] `JR-UNIVERSAL-002`: Create README governance guidance that target projects can own independently.
 - [ ] `JR-UNIVERSAL-003`: Create documentation conventions for production source, tests, architecture docs, and user-facing docs.
 - [ ] `JR-UNIVERSAL-004`: Create a generic Cursor rules layout and rules index.
