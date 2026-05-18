@@ -1,0 +1,28 @@
+---
+description: Cross-cutting validation checklist for Validator runs, Planner scoping, and PR review
+globs:
+  - .cursor/orchestrations/**
+  - docs/validation-checklist.md
+---
+
+# Validation checklist
+
+**Canonical checklist:** [`docs/validation-checklist.md`](../docs/validation-checklist.md)
+
+## When to use
+
+- **Validator agent:** Audit every **applicable** section before issuing `validation-report.md`. Record results in **Checklist audit** (item ID, status ✅ / ⚠️ / ❌ / N/A, evidence).
+- **Planner:** Pull relevant rows into `plan.md` → **Validation commands**; map to AC IDs.
+- **Human PR review:** Use the same IDs when reviewing changes that touch boundaries covered by the checklist.
+
+## Verdict interaction
+
+- Any applicable **❌** on **MG-*** or on a row required by `plan.md` / an **Accepted** ADR → **FAIL** (blocks **PASS_WITH_NOTES**) when the project defines that policy.
+- Mark sections **N/A** with a one-line reason when the change does not touch that domain.
+
+## Related
+
+- [`docs/pr-and-commit-guide.md`](../docs/pr-and-commit-guide.md)
+- [`.cursor/rules/adr-compliance.mdc`](./adr-compliance.mdc)
+- [`adrs/INDEX.md`](../../adrs/INDEX.md)
+- Project orchestration guide and `validation-report.md` template when present

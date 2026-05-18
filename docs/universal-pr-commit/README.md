@@ -43,7 +43,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | [`../universal-adr/README.md`](../universal-adr/README.md) | Architecture bucket links **Accepted** ADRs; alignment gaps use `docs/adr-alignment-gaps.md` |
 | [`../universal-readme/README.md`](../universal-readme/README.md) | README governance routes PR/commit docs out of the root README |
 | [`../universal-rules/README.md`](../universal-rules/README.md) | Index lists guide under Workflow; no default `pr-commit-expectations.mdc` |
-| `JR-UNIVERSAL-006` (future) | `docs/validation-checklist.md` — merge-ready section in guide and PR template reference it when present |
+| [`../universal-validation/README.md`](../universal-validation/README.md) | `docs/validation-checklist.md` — merge-ready section in guide and PR template reference it when present |
 | `JR-ORCH-*` (future) | Orchestrated runs link validation/test artifacts; guide §1 and §4 stay generic until orchestration docs exist |
 
 ## Human input (pause points)
@@ -70,5 +70,5 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Commit messages | **Subject-only** default; imperative ~72 chars; optional body for context/test — **not** the three PR buckets |
 | Test evidence | Required every PR; **Untested risk** required when nothing was verified |
 | Merge-ready block | **Generic optional** section in guide + PR template; no universal `workflow-gates.mdc` |
-| Validation checklist | Referenced when `docs/validation-checklist.md` exists (`JR-UNIVERSAL-006`); no hard dependency until scaffolded |
+| Validation checklist | Scaffold from [`universal-validation`](../universal-validation/README.md); guide and PR template reference `docs/validation-checklist.md` when present |
 | WFD pattern source | Bucket discipline and test-evidence expectations generalized — no WFD product or stack identifiers in templates |

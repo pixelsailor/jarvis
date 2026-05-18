@@ -58,7 +58,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/universal-rules/README.md`](../universal-rules/README.md); templates in [`docs/templates/universal-rules/`](../templates/universal-rules/).
 - [x] `JR-UNIVERSAL-005`: Create PR and commit communication guidance.
   - [`docs/universal-pr-commit/README.md`](../universal-pr-commit/README.md); templates in [`docs/templates/universal-pr-commit/`](../templates/universal-pr-commit/).
-- [ ] `JR-UNIVERSAL-006`: Create validation checklist templates with generic rows and stack-specific extension points.
+- [x] `JR-UNIVERSAL-006`: Create validation checklist templates with generic rows and stack-specific extension points.
+  - [`docs/universal-validation/README.md`](../universal-validation/README.md); templates in [`docs/templates/universal-validation/`](../templates/universal-validation/).
 - [ ] `JR-UNIVERSAL-007`: Create handoff guidance that confirms no target-project reliance on Jarvis.
 
 ## Stack-specific scaffolding
