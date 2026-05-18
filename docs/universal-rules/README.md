@@ -80,7 +80,7 @@ Keep **alwaysApply** count small (platform default: **two** universal starters p
 | [`../universal-readme/README.md`](../universal-readme/README.md) | `readme-governance.mdc` — globs `README.md`; index lists under Governance |
 | [`../universal-docs/README.md`](../universal-docs/README.md) | **Doc-only** by default; optional `PROJ-RULE-*` doc-enforcement rule |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | README boundaries → `PROJ-RULE-*` and index rows |
-| `JR-UNIVERSAL-005` (future) | PR/commit rule; add to index when scaffold exists |
+| [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) | **Doc-only** PR/commit guide; index Workflow row — no default `.mdc` |
 | `JR-RULE-*` (future) | Expands authoring and ADR citation discipline |
 
 ## Human input (pause points)

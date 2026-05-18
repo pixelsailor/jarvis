@@ -54,6 +54,7 @@ Current and future documentation families include:
 - README governance for target projects ([`docs/universal-readme/README.md`](./docs/universal-readme/README.md)).
 - Documentation conventions ([`docs/universal-docs/README.md`](./docs/universal-docs/README.md)).
 - Cursor rules layout and index ([`docs/universal-rules/README.md`](./docs/universal-rules/README.md)).
+- PR and commit communication ([`docs/universal-pr-commit/README.md`](./docs/universal-pr-commit/README.md)).
 - Agent contracts and handoff prompts.
 - Orchestration guides and task-folder templates.
 - Universal scaffolding templates.

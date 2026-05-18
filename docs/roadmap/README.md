@@ -20,6 +20,7 @@ Jarvis is being repurposed from a framework-oriented knowledge base into a proje
 | [`../universal-adr/README.md`](../universal-adr/README.md) | You are scaffolding or adapting target `adrs/` (index, governance, template). |
 | [`../universal-readme/README.md`](../universal-readme/README.md) | You are scaffolding target README governance (`docs/readme-governance.md`, optional rule). |
 | [`../universal-docs/README.md`](../universal-docs/README.md) | You are scaffolding target documentation conventions (`docs/documentation-conventions.md`, `docs/architecture/`, `docs/guides/`). |
+| [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) | You are scaffolding target PR/commit guidance (`docs/pr-and-commit-guide.md`, optional `.github/pull_request_template.md`). |
 
 ## Roadmap structure decision (`JR-TODO-004`)
 

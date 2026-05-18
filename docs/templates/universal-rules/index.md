@@ -13,7 +13,8 @@ Catalog of **Cursor rules** (`.cursor/rules/*.mdc`). Read this file when choosin
 | **Governance** | readme-governance | Root README scope; route depth to `docs/readme-governance.md` | globs `README.md` — add when [`readme-governance.mdc`](./readme-governance.mdc) and [`docs/readme-governance.md`](../../docs/readme-governance.md) exist |
 | **ADR-backed** | _—_ | Boundary enforcement rules cite ADR IDs in `description` and body | globs per rule — add from `PROJ-RULE-*` |
 | **Stack** | _—_ | Framework, lint, test, or MCP playbooks | globs per rule — add from `PROJ-STACK-*` |
-| **Workflow** | _—_ | PR/commit, validation checklist, orchestration gates | alwaysApply or globs — add when those scaffolds exist |
+| **Workflow** | _—_ | PR/commit summaries and test evidence — link [`docs/pr-and-commit-guide.md`](../../docs/pr-and-commit-guide.md) when present | doc via README map — add row when guide exists |
+| **Workflow** | _—_ | Validation checklist, orchestration gates | doc or rule — add when those scaffolds exist |
 
 Remove placeholder rows as you add real rules. Keep **one row per `.mdc` file**.
 
