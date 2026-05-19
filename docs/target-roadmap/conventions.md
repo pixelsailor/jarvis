@@ -109,7 +109,7 @@ Suggested areas: `README`, `ADR`, `RULE`, `DOC`, `AGENT`, `ORCH`, `STACK`, `HAND
 ## Deferred
 
 - [ ] `PROJ-ORCH-001`: Add task-folder template for large setup.
-  - Deferred: waiting for `JR-ORCH-*` universal templates in Jarvis before copying.
+  - Jarvis templates: [`../orchestration/`](../orchestration/), [`../templates/orchestration/_template/`](../templates/orchestration/_template/).
   - Owner: agent
 ```
 

@@ -136,6 +136,8 @@ WFD should guide Jarvis's documentation and orchestration discipline, especially
 - Fresh-session handoffs that avoid reliance on chat memory.
 - Right-sized workflows for small, medium, and large changes.
 
+**Canonical Jarvis docs (generalized, not WFD copies):** [`../orchestration/README.md`](../orchestration/README.md) — task folders under `.cursor/orchestrations/{task-id}/`, `{project-slug}-NNN` IDs, `task-manifest.json` schema (`JR-ORCH-001`, `JR-ORCH-002`).
+
 Do not copy WFD-specific details into Jarvis defaults, including:
 
 - Product domain language.

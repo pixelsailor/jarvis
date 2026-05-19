@@ -11,7 +11,7 @@ Generic **validation checklist** for target projects: reusable audit rows for Va
 | `docs/validation-checklist.md` | Canonical checklist (from `validation-checklist.md` template) |
 | `.cursor/rules/validation-checklist.mdc` | Optional — globs load when orchestration or checklist is in context |
 
-**Related (when present):** [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR template and guide link checklist rows); future `JR-ORCH-*` (lifecycle gates, `validation-report.md`); future `JR-VALIDATION-*` (evidence expectations by init path).
+**Related (when present):** [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR template and guide link checklist rows); [`../orchestration/README.md`](../orchestration/README.md) (`JR-ORCH-001`/`002` — task folders and manifest; lifecycle ↔ checklist in checklist orchestration appendix); future `JR-ORCH-003`+ and `JR-VALIDATION-*` (artifact contracts, evidence tiers).
 
 ## When to scaffold
 
@@ -60,7 +60,8 @@ Use stable IDs so `validation-report.md`, PR comments, and `plan.md` → Validat
 | [`../stack-scaffolding/testing.md`](../stack-scaffolding/testing.md) | **TST-** extension rows per verified test layer |
 | [`../stack-scaffolding/runtime.md`](../stack-scaffolding/runtime.md) | **SEC-** / **DEPLOY-** rows for secrets and deploy boundaries |
 | [`../stack-scaffolding/dependencies.md`](../stack-scaffolding/dependencies.md) | **TOOL-** rows for lockfile/script alignment |
-| `JR-ORCH-*` (future) | Lifecycle gate ↔ checklist mapping lives in checklist orchestration appendix |
+| `JR-ORCH-001`/`002` | Task-folder path and `gate_status` keys; lifecycle ↔ **MG-*** mapping in checklist orchestration appendix |
+| `JR-ORCH-003`+ (future) | `validation-report.md` template and full gate narrative in target orchestration guide |
 | `JR-VALIDATION-*` (future) | Doc-only vs code init evidence; does not replace this checklist |
 
 ## Human input (pause points)
@@ -86,7 +87,7 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Generic rows | **MG-01**–**MG-05**, **TST-01**–**TST-05** — stable, product-agnostic wording |
 | Stack-specific rows | Single **extension table** + optional themed subsections; IDs chosen per project (prefix examples in template) |
 | ADR annexes | Add under **ADR-specific annexes** when an Accepted ADR needs repeatable audit items |
-| Orchestration mapping | **Appendix** in checklist — placeholders until `JR-ORCH-*` scaffolds exist; no WFD `gate_status` keys in universal template |
+| Orchestration mapping | **Appendix** in checklist — example `gate_0_intake`…`gate_6_human_approval` keys; target doc links [`../orchestration/task-manifest.md`](../orchestration/task-manifest.md) |
 | Second checklist file | **No** by default — split only if extension section exceeds ~80 rows (user approval) |
 | WFD pattern source | Applicability table, MG/TST discipline, versioning table — no WFD product, stack, or provider identifiers |
 

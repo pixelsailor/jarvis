@@ -121,7 +121,7 @@ Treat Plan–Build–Test–Validate (or equivalent) orchestration as **required
 Link the project's orchestration entrypoint (for example `.cursor/agents/orchestrator.md`, `docs/ORCHESTRATED_DEVELOPMENT.md`, or equivalent). **Omit until the project defines these paths.**
 
 - Orchestration guide: `REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`
-- Task folder pattern: `REPLACE_WITH_TASK_FOLDER_PATTERN` (for example `.cursor/orchestrations/{task-id}/`)
+- Task folder pattern: `.cursor/orchestrations/{task-id}/` (folder slug must match manifest `task_id`, e.g. `{project-slug}-001`)
 
 ### Agent and coding conventions
 

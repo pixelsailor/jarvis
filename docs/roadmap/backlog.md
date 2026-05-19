@@ -92,8 +92,10 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 
 ## Orchestration model
 
-- [ ] `JR-ORCH-001`: Generalize WFD's task-folder model for target projects.
-- [ ] `JR-ORCH-002`: Define a generic `task-manifest.json` shape.
+- [x] `JR-ORCH-001`: Generalize WFD's task-folder model for target projects.
+  - [`docs/orchestration/task-folder-model.md`](../orchestration/task-folder-model.md); templates [`docs/templates/orchestration/`](../templates/orchestration/); default `.cursor/orchestrations/{task-id}/`, `{project-slug}-NNN`.
+- [x] `JR-ORCH-002`: Define a generic `task-manifest.json` shape.
+  - [`docs/orchestration/task-manifest.md`](../orchestration/task-manifest.md); example [`task-manifest.example.json`](../templates/orchestration/_template/task-manifest.example.json) (`manifest_version` **1.0.0**, full WFD-shaped fields).
 - [ ] `JR-ORCH-003`: Define artifact ownership for plan, acceptance criteria, build log, test report, validation report, and human approval.
 - [ ] `JR-ORCH-004`: Separate lifecycle gates from merge-ready or handoff checks.
 - [ ] `JR-ORCH-005`: Define small, medium, and large initialization paths.

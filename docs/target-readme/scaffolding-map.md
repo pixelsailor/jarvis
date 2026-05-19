@@ -12,7 +12,7 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 | --- | --- | --- | --- |
 | **Small** | Full required outline; minimal Documentation | `PROJ-README`, `PROJ-RULE` (1–2 rules), `PROJ-HANDOFF` | No task folders |
 | **Medium** | + boundaries refined | + `PROJ-ADR`, `PROJ-DOC`, `PROJ-STACK` | Optional for large doc sets |
-| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model when platform orchestration docs exist |
+| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model — [`../orchestration/`](../orchestration/) (`JR-ORCH-001`/`002`) |
 
 ## Signal → backlog → artifacts
 
@@ -74,7 +74,7 @@ Summary: after any **material** README edit, update `docs/roadmap/backlog.md` in
 3. adrs/ index + governance + first Accepted ADRs from boundaries
 4. .cursor/rules/ index + always-apply + topic rules
 5. docs/readme-governance.md (+ optional readme-governance rule) + docs/documentation-conventions.md + docs/pr-and-commit-guide.md (+ .github/pull_request_template.md on GitHub medium/large) + docs/validation-checklist.md (medium/large default) + docs/architecture/ (+ docs/guides/ when applicable) + topic docs referenced from README
-6. agents/ orchestration (large path only)
+6. `.cursor/orchestrations/_template/` + orchestration guide + agents (large path only) — [`../orchestration/README.md`](../orchestration/README.md)
 7. docs/handoff-self-containment.md + PROJ-HANDOFF-* verification
 ```
 

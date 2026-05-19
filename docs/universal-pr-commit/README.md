@@ -44,7 +44,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | [`../universal-readme/README.md`](../universal-readme/README.md) | README governance routes PR/commit docs out of the root README |
 | [`../universal-rules/README.md`](../universal-rules/README.md) | Index lists guide under Workflow; no default `pr-commit-expectations.mdc` |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | `docs/validation-checklist.md` — merge-ready section in guide and PR template reference it when present |
-| `JR-ORCH-*` (future) | Orchestrated runs link validation/test artifacts; guide §1 and §4 stay generic until orchestration docs exist |
+| `JR-ORCH-001`/`002` | Task-folder + manifest schema — [`../orchestration/README.md`](../orchestration/README.md); orchestrated PRs link validation/test artifacts when those files exist |
 
 ## Human input (pause points)
 

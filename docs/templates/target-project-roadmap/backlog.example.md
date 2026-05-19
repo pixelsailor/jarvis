@@ -86,8 +86,8 @@ Stable `PROJ-*` IDs support stop/resume across agent sessions. Field rules: [`..
 
 ## Deferred
 
-- [ ] `PROJ-ORCH-001`: Add task-folder template if setup needs Plan–Build–Test–Validate artifacts.
-  - Deferred: resume after universal orchestration templates exist in Jarvis (`JR-ORCH-*`).
+- [ ] `PROJ-ORCH-001`: Seed `.cursor/orchestrations/_template/` from Jarvis orchestration templates; set `project-slug` for `{slug}-NNN` task IDs.
+  - Jarvis: [`docs/orchestration/`](../../orchestration/), [`docs/templates/orchestration/_template/`](../../templates/orchestration/_template/).
   - Owner: agent
 
 ---

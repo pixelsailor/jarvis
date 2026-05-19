@@ -24,6 +24,7 @@ Jarvis is being repurposed from a framework-oriented knowledge base into a proje
 | [`../universal-validation/README.md`](../universal-validation/README.md) | You are scaffolding target validation checklist (`docs/validation-checklist.md`, optional `validation-checklist.mdc`). |
 | [`../universal-handoff/README.md`](../universal-handoff/README.md) | You are scaffolding target handoff self-containment (`docs/handoff-self-containment.md`) for `PROJ-HANDOFF-*`. |
 | [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) | Target stack: detect/confirm (`JR-STACK-001`), then select rules and docs (`JR-STACK-002`). |
+| [`../orchestration/README.md`](../orchestration/README.md) | Task-folder model and `task-manifest.json` schema for target orchestration (`JR-ORCH-001`, `JR-ORCH-002`). |
 
 ## Roadmap structure decision (`JR-TODO-004`)
 

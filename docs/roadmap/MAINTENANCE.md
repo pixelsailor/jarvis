@@ -21,6 +21,7 @@ Rules for humans and agents editing files under `docs/roadmap/`. Goal: resumable
 | Universal validation checklist scaffold (copy/adapt for targets) | [`../universal-validation/README.md`](../universal-validation/README.md) |
 | Universal handoff self-containment scaffold (copy/adapt for targets) | [`../universal-handoff/README.md`](../universal-handoff/README.md) |
 | Stack detection, confirmation, commands, testing, runtime, dependencies, and rule/doc selection | [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) |
+| Universal orchestration task-folder model and manifest schema | [`../orchestration/README.md`](../orchestration/README.md) |
 
 Do not duplicate backlog tasks in `platform-spec.md` or prose summaries of the backlog in the root README.
 
