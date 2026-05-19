@@ -23,6 +23,7 @@ Jarvis is being repurposed from a framework-oriented knowledge base into a proje
 | [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) | You are scaffolding target PR/commit guidance (`docs/pr-and-commit-guide.md`, optional `.github/pull_request_template.md`). |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | You are scaffolding target validation checklist (`docs/validation-checklist.md`, optional `validation-checklist.mdc`). |
 | [`../universal-handoff/README.md`](../universal-handoff/README.md) | You are scaffolding target handoff self-containment (`docs/handoff-self-containment.md`) for `PROJ-HANDOFF-*`. |
+| [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) | Target stack: detect/confirm (`JR-STACK-001`), then select rules and docs (`JR-STACK-002`). |
 
 ## Roadmap structure decision (`JR-TODO-004`)
 

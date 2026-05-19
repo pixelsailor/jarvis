@@ -47,7 +47,7 @@ Every task marked **`required for handoff`** on the task line must be `[x]` with
 | `PROJ-ADR-*` | Medium/large: index + governance; first Accepted ADR as needed | Small path may defer ADRs — **ask user** |
 | `PROJ-RULE-*` | At least index + one always-apply rule | Small path minimum |
 | `PROJ-DOC-*` | Only if README links require those paths | Unlinked conventions can be post-handoff |
-| `PROJ-STACK-*` | Yes when repo has tooling | Commands verified from manifests |
+| `PROJ-STACK-*` | Yes when repo has tooling | `docs/stack/stack-profile.md` confirmed; commands verified from manifests (`JR-STACK-001`, `JR-STACK-003`) |
 | `PROJ-AGENT-*` / `PROJ-ORCH-*` | Large path only | Optional rows never block |
 | `PROJ-HANDOFF-*` | Yes | Repo-wide self-containment + user acknowledgment |
 

@@ -35,7 +35,7 @@ Stable reference for Jarvis platform behavior, terminology, and target-project e
 6. Jarvis creates or updates the target README first because it guides the rest of the scaffold.
 7. Jarvis creates or updates the target project's `docs/roadmap/` backlog (see default layout below).
 8. Jarvis scaffolds universal documentation and guardrails.
-9. Jarvis scaffolds stack-specific documentation based on the target README, detected project files, and user answers.
+9. Jarvis identifies language and framework from repository files and user confirmation, then scaffolds stack-specific documentation based on the target README, stack profile, and verified manifests.
 10. If the work is complex, Jarvis routes setup through an orchestration model with planned artifacts, test or validation evidence, and human approval.
 11. Jarvis performs a handoff check to confirm the target project is self-contained.
 
@@ -53,6 +53,18 @@ The target README should:
 - Stand alone after initialization without requiring readers or agents to consult Jarvis.
 
 **Workflow (canonical outline, intake, audit, scaffolding map, handoff):** [`../target-readme/README.md`](../target-readme/README.md).
+
+## Stack identification
+
+Before stack-specific rules or playbooks are copied into the target project, Jarvis:
+
+1. Runs an evidence-based **detection pass** on the target repository (and named package root in monorepos).
+2. Compares results to README § Technology Stack when present.
+3. Presents a **single confirmation batch** for gaps, medium-confidence assumptions, and conflicts — not field-by-field re-asks when lockfiles are clear.
+4. Records confirmed facts in target `docs/stack/stack-profile.md` and aligns README § Technology Stack.
+5. **Selects** stack-specific rules and docs by **composing** confirmed capabilities (framework, libraries, language) via [`source-registry.md`](../stack-scaffolding/source-registry.md) — not opaque stack profile IDs.
+
+**Workflow:** [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) (detect → confirm → [select rules/docs](../stack-scaffolding/selection.md)). **Do not** treat Jarvis legacy `frameworks/` trees or co-located reference repos (e.g. WFD) as automatic stack evidence.
 
 ## Target project roadmap requirements
 

@@ -60,7 +60,7 @@ Current and future documentation families include:
 - Agent contracts and handoff prompts.
 - Orchestration guides and task-folder templates.
 - Universal scaffolding templates.
-- Stack-specific guidance for frameworks, runtimes, testing, deployment, secrets, and tooling.
+- Stack identification and scaffolding ([`docs/stack-scaffolding/README.md`](./docs/stack-scaffolding/README.md)); stack-specific guidance for frameworks, runtimes, testing, deployment, secrets, and tooling.
 
 The active platform roadmap begins in [`docs/roadmap/README.md`](./docs/roadmap/README.md) (task backlog, platform spec, and maintenance rules). Target-project README workflow lives in [`docs/target-readme/README.md`](./docs/target-readme/README.md). [`docs/jarvis-platform-todo.md`](./docs/jarvis-platform-todo.md) redirects there for older links.
 

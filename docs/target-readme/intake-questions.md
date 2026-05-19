@@ -16,7 +16,7 @@ Present questions together to reduce round-trips. Skip a question only when the 
 | Q2 | **Who is it for** (end users, internal team, library consumers, operators)? | Audience and tone |
 | Q3 | **What problem does it solve** or what outcome does it enable? | Principles and capabilities |
 | Q4 | **What are the non-negotiables?** (e.g. offline-first, no account required, AGPL only, single-tenant) | Principles and architecture boundaries |
-| Q5 | **What is the intended stack** at a high level (language, framework, primary data store, deployment target)? | Technology stack section |
+| Q5 | **What is the intended stack** at a high level (language, framework, primary data store, deployment target)? | Technology stack section; greenfield or no manifests — see [`../stack-scaffolding/confirmation.md`](../stack-scaffolding/confirmation.md#greenfield-no-manifests) |
 | Q6 | **What must never happen** architecturally? (e.g. secrets in client bundles, PII in logs, breaking public API without major version) | Architecture boundaries → ADR candidates |
 
 ### Required when signals are ambiguous
@@ -36,6 +36,8 @@ Present questions together to reduce round-trips. Skip a question only when the 
 | Q12 | **License / contribution** expectations? | Link only; do not invent legal text |
 
 ## Infer before asking (do not re-ask)
+
+File-based stack inference uses [`../stack-scaffolding/detection.md`](../stack-scaffolding/detection.md) (confidence levels and conflicts). After README draft, confirm via [`../stack-scaffolding/confirmation.md`](../stack-scaffolding/confirmation.md).
 
 Jarvis may **infer** and state assumptions in the draft for the user to correct:
 

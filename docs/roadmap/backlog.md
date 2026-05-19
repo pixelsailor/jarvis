@@ -65,8 +65,10 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 
 ## Stack-specific scaffolding
 
-- [ ] `JR-STACK-001`: Define how Jarvis detects or asks for a target project's language and framework.
-- [ ] `JR-STACK-002`: Define how Jarvis selects stack-specific rules and best-practices docs.
+- [x] `JR-STACK-001`: Define how Jarvis detects or asks for a target project's language and framework.
+  - [`docs/stack-scaffolding/`](../stack-scaffolding/) (`detection.md`, `confirmation.md`); target template [`docs/templates/stack-scaffolding/stack-profile.example.md`](../templates/stack-scaffolding/stack-profile.example.md).
+- [x] `JR-STACK-002`: Define how Jarvis selects stack-specific rules and best-practices docs.
+  - [`docs/stack-scaffolding/selection.md`](../stack-scaffolding/selection.md), [`source-registry.md`](../stack-scaffolding/source-registry.md); templates `upstream-references.example.md`, `stack-framework-rule.example.mdc`.
 - [ ] `JR-STACK-003`: Define how Jarvis records package manager and validation commands without inventing commands.
 - [ ] `JR-STACK-004`: Define testing strategy prompts for unit, integration, component, browser, and end-to-end layers.
 - [ ] `JR-STACK-005`: Define runtime, deployment, secrets, and environment boundary prompts.

@@ -1,0 +1,32 @@
+---
+description: Framework conventions for REPLACE_WITH_FRAMEWORK; see docs/stack/upstream-references.md
+globs: REPLACE_WITH_PRODUCTION_GLOB
+---
+
+# REPLACE_WITH_FRAMEWORK conventions — REPLACE_WITH_PROJECT_NAME
+
+## Scope (this rule)
+
+**Owns:** Framework-specific editing patterns for globs above.
+
+**Does not own:** Repository routing, ADR compliance, lint config, or package scripts — see other rules and `docs/stack/stack-profile.md`.
+
+## Read first
+
+| Need | Where |
+| --- | --- |
+| Upstream docs and MCP order | [`docs/stack/upstream-references.md`](../../docs/stack/upstream-references.md) |
+| Comment / component doc syntax | [`docs/stack/source-documentation.md`](../../docs/stack/source-documentation.md) when present |
+| Project boundaries | Root README § Boundaries; Accepted ADRs |
+
+## Project-specific notes
+
+_Add only conventions not covered by upstream docs — verified paths, folder layout, testing entrypoints._
+
+- **Production root:** _(e.g. `src/` )_
+- **Routes / pages:** _(e.g. `src/routes/` )_
+
+## Anti-patterns
+
+- Do not import patterns from other projects (WFD, Jarvis samples).
+- Do not invent npm/pnpm scripts — use README § Development or `package.json`.

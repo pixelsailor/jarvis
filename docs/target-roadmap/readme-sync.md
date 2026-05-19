@@ -63,8 +63,8 @@ Use [`scaffolding-map.md` § Signal → backlog](../target-readme/scaffolding-ma
 | Principle removed or weakened | Reopen or cancel ADR/rule tasks; add stale note on affected rows | Existing IDs |
 | Capability added | `PROJ-DOC-*` and/or product doc task; ADR if architectural | New `PROJ-DOC-*` |
 | Capability removed | Cancel open doc tasks; stale note on completed docs if misleading | |
-| Stack component added | `PROJ-STACK-*` with **Evidence** from repo inspection | New `PROJ-STACK-*` |
-| Stack component removed | Cancel or defer stack tasks; update README § Development with evidence | |
+| Stack component added | `PROJ-STACK-*` with **Evidence** from repo inspection; update `docs/stack/stack-profile.md` per [`stack-scaffolding/confirmation.md`](../stack-scaffolding/confirmation.md#re-verification-triggers) | New `PROJ-STACK-*` |
+| Stack component removed | Cancel or defer stack tasks; update README § Development and `docs/stack/stack-profile.md` with evidence | |
 | Boundary tightened (secrets, client/server, offline) | `PROJ-ADR-*` + `PROJ-RULE-*` | Often reopens work |
 | Data ownership changed | `PROJ-ADR-*`; may reopen `PROJ-DOC-*` | |
 | New Documentation map link | `PROJ-DOC-*` until path exists or link removed | |

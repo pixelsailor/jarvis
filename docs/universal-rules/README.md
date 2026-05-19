@@ -82,6 +82,7 @@ Keep **alwaysApply** count small (platform default: **two** universal starters p
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | README boundaries → `PROJ-RULE-*` and index rows |
 | [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) | **Doc-only** PR/commit guide; index Workflow row — no default `.mdc` |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Optional `validation-checklist.mdc` (globs); index Workflow row when checklist exists |
+| [`../stack-scaffolding/selection.md`](../stack-scaffolding/selection.md) | After stack-profile — framework/library `.mdc` rules and `docs/stack/upstream-references.md` |
 | `JR-RULE-*` (future) | Expands authoring and ADR citation discipline |
 
 ## Human input (pause points)
