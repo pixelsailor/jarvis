@@ -82,8 +82,10 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 
 ## Agent and rule scaffolding
 
-- [ ] `JR-AGENT-001`: Generalize an agent roster inspired by WFD without importing WFD product or stack assumptions.
-- [ ] `JR-AGENT-002`: Create role contracts for Orchestrator, Planner, Builder, Tester, and Validator.
+- [x] `JR-AGENT-001`: Generalize an agent roster inspired by WFD without importing WFD product or stack assumptions.
+  - [`docs/universal-agents/README.md`](../universal-agents/README.md); template [`docs/templates/universal-agents/INDEX.example.md`](../templates/universal-agents/INDEX.example.md).
+- [x] `JR-AGENT-002`: Create role contracts for Orchestrator, Planner, Builder, Tester, and Validator.
+  - Templates: [`docs/templates/universal-agents/orchestrator.example.md`](../templates/universal-agents/orchestrator.example.md), [`planner.example.md`](../templates/universal-agents/planner.example.md), [`builder.example.md`](../templates/universal-agents/builder.example.md), [`tester.example.md`](../templates/universal-agents/tester.example.md), [`validator.example.md`](../templates/universal-agents/validator.example.md); pack README [`docs/universal-agents/README.md`](../universal-agents/README.md) § Copy and adapt (role contracts).
 - [ ] `JR-AGENT-003`: Define minimum read sets for each role to keep future sessions efficient.
 - [ ] `JR-AGENT-004`: Define handoff prompts that target projects can copy and own.
 - [ ] `JR-RULE-001`: Define always-apply versus topic-specific rule conventions.

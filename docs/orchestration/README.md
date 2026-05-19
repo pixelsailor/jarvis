@@ -3,7 +3,7 @@
 Jarvis guidance for **target-project** multi-agent runs: durable **task folders**, a **manifest-owned** pipeline, and stage artifacts that survive context loss. Inspired by What's For Dinner (WFD) discipline — **not** WFD product, stack, or identifiers.
 
 **Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape)  
-**Follow-on (not in this pack):** `JR-ORCH-003`–`007` (artifact ownership, gates vs merge-ready, init paths, loops, self-containment), `JR-AGENT-*` (role contracts).
+**Follow-on (not in this pack):** `JR-ORCH-003`–`007` (artifact ownership, gates vs merge-ready, init paths, loops, self-containment). **Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
 
 **Read order for agents (Jarvis initializing orchestration in a target):**
 
@@ -28,7 +28,8 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 | --- | --- |
 | `.cursor/orchestrations/_template/` | Read-only templates; copy into `{task-id}/` per run |
 | `.cursor/orchestrations/{task-id}/` | One folder per run; folder slug **must equal** manifest `task_id` |
-| `.cursor/agents/` | Role contracts (`JR-AGENT-*`; not part of `JR-ORCH-001`/`002`) |
+| `.cursor/agents/INDEX.md` | Agent roster — copy from [`../templates/universal-agents/`](../templates/universal-agents/) (`JR-AGENT-001`) |
+| `.cursor/agents/*.md` | Per-role contracts — copy from [`../templates/universal-agents/`](../templates/universal-agents/) (`JR-AGENT-002`) |
 | `docs/ORCHESTRATED_DEVELOPMENT.md` (or project-chosen name) | Human orchestration guide — adapt from WFD pattern, target-owned |
 
 Jarvis does **not** copy WFD's `docs/ORCHESTRATED_DEVELOPMENT.md` verbatim. Targets author their guide after templates and agent contracts exist.

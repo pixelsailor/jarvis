@@ -2,7 +2,7 @@
 
 Catalog of **Cursor rules** (`.cursor/rules/*.mdc`). Read this file when choosing which rule to load for a task.
 
-**Agent contracts** (orchestration roles) are **not** Cursor rules. When present, see [`.cursor/agents/INDEX.md`](../agents/INDEX.md) or [`agents/INDEX.md`](../../agents/INDEX.md) — adjust path to match this repository.
+**Agent contracts** (orchestration roles) are **not** Cursor rules. When present, see [`.cursor/agents/INDEX.md`](../agents/INDEX.md) (roster; copy from universal-agents template) and per-role `*.md` contracts under the same folder — or [`agents/INDEX.md`](../../agents/INDEX.md) if the team uses a repo-root `agents/` tree. Adjust path to match this repository.
 
 ## Lookup by category
 

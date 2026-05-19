@@ -35,7 +35,7 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 
 | Layer | Driven by | Jarvis source (copy/adapt into target) |
 | --- | --- | --- |
-| **Universal** | Any initialized project | [`docs/universal-adr/README.md`](../universal-adr/README.md) (ADR layout); [`docs/universal-readme/README.md`](../universal-readme/README.md) (README governance); [`docs/universal-docs/README.md`](../universal-docs/README.md) (doc conventions); [`docs/universal-rules/README.md`](../universal-rules/README.md) (Cursor rules layout + index); [`docs/universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR/commit guide + GitHub template); [`docs/universal-validation/README.md`](../universal-validation/README.md) (validation checklist + optional rule); [`docs/universal-handoff/README.md`](../universal-handoff/README.md) (handoff self-containment audit) |
+| **Universal** | Any initialized project | [`docs/universal-adr/README.md`](../universal-adr/README.md) (ADR layout); [`docs/universal-readme/README.md`](../universal-readme/README.md) (README governance); [`docs/universal-docs/README.md`](../universal-docs/README.md) (doc conventions); [`docs/universal-rules/README.md`](../universal-rules/README.md) (Cursor rules layout + index); [`docs/universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR/commit guide + GitHub template); [`docs/universal-validation/README.md`](../universal-validation/README.md) (validation checklist + optional rule); [`docs/universal-handoff/README.md`](../universal-handoff/README.md) (handoff self-containment audit); [`docs/universal-agents/README.md`](../universal-agents/README.md) (agent INDEX + role contracts — large path; INDEX optional on medium) |
 | **Stack-specific** | README stack + `docs/stack/stack-profile.md` + detected files | [`stack-scaffolding/`](../stack-scaffolding/README.md) — detect/confirm then [`selection.md`](../stack-scaffolding/selection.md) + [`upstream-capabilities.md`](../stack-scaffolding/upstream-capabilities.md); rules and upstream refs **authored in target**, not copied from Jarvis |
 
 **Rule:** Generated files live in the target repo. Jarvis repository paths are not valid `see` targets in target rules or ADRs.
@@ -74,7 +74,7 @@ Summary: after any **material** README edit, update `docs/roadmap/backlog.md` in
 3. adrs/ index + governance + first Accepted ADRs from boundaries
 4. .cursor/rules/ index + always-apply + topic rules
 5. docs/readme-governance.md (+ optional readme-governance rule) + docs/documentation-conventions.md + docs/pr-and-commit-guide.md (+ .github/pull_request_template.md on GitHub medium/large) + docs/validation-checklist.md (medium/large default) + docs/architecture/ (+ docs/guides/ when applicable) + topic docs referenced from README
-6. `.cursor/orchestrations/_template/` + orchestration guide + agents (large path only) — [`../orchestration/README.md`](../orchestration/README.md)
+6. `.cursor/orchestrations/_template/` + orchestration guide + `.cursor/agents/INDEX.md` + five role contracts (large path; from [`../universal-agents/README.md`](../universal-agents/README.md)) — [`../orchestration/README.md`](../orchestration/README.md)
 7. docs/handoff-self-containment.md + PROJ-HANDOFF-* verification
 ```
 
