@@ -1,6 +1,6 @@
 # Artifact ownership (`JR-ORCH-003`)
 
-Canonical contracts for **who writes which file** under `.cursor/orchestrations/{task-id}/`, required **section order**, **freeze** rules after handoff, and **loop/rework** behavior. Role contracts in [`.cursor/agents/`](../templates/universal-agents/) implement these rules; this document is the platform source of truth targets copy into orchestration guides and topic rules.
+Canonical contracts for **who writes which file** under `.cursor/orchestrations/{task-id}/`, required **section order**, **freeze** rules after handoff, and **per-file loop edit** behavior (append vs replace). **Routing**, counters, and `gate_status` on loops: [`loops-and-rework.md`](./loops-and-rework.md) (`JR-ORCH-006`). Role contracts in [`.cursor/agents/`](../templates/universal-agents/) implement these rules; this document is the platform source of truth targets copy into orchestration guides and topic rules.
 
 **Prerequisites:** [`task-folder-model.md`](./task-folder-model.md) (`JR-ORCH-001`), [`task-manifest.md`](./task-manifest.md) (`JR-ORCH-002`).  
 **Templates:** [`../templates/orchestration/_template/`](../templates/orchestration/_template/).
@@ -40,6 +40,8 @@ Canonical contracts for **who writes which file** under `.cursor/orchestrations/
 7. **Comments in templates:** HTML comments in `_template/` files are authoring hints. Delete them (or replace with real content) before stage handoff.
 
 ## Freeze and rework
+
+**Manifest routing and counters** on validation remediation or human Gate 6 rework: [`loops-and-rework.md`](./loops-and-rework.md).
 
 After the Orchestrator marks a gate **passed**, the owning role must not rewrite that stage’s artifact except as below.
 
@@ -256,4 +258,5 @@ Defaults favor long-term agent clarity; override in the target orchestration gui
 | [`README.md`](./README.md) | Orchestration pack index |
 | [`../templates/universal-agents/`](../templates/universal-agents/) | Per-role rules and output contracts |
 | [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle vs merge-ready vs handoff |
+| [`loops-and-rework.md`](./loops-and-rework.md) | Remediation vs human rework routing (`JR-ORCH-006`) |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Checklist and MG-* |

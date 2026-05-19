@@ -24,9 +24,9 @@ Authoritative JSON contract for orchestration run state in target projects. **On
 | `risk_tier` | object | yes | Orchestrator | Tier and skip rationale — see [Risk tier](#risk-tier) |
 | `gate_status` | object | yes | Orchestrator | Lifecycle gates 0–6 — see [Gate status](#gate-status) |
 | `completed_stages` | array | yes | Orchestrator | Short factual summaries per finished stage |
-| `loop_count` | number | yes | Orchestrator | Validator **FAIL** remediation loops (increment on each loop) |
+| `loop_count` | number | yes | Orchestrator | Validator **FAIL** remediation loops — increment **only** when routing to Builder; see [`loops-and-rework.md`](./loops-and-rework.md) |
 | `max_loops` | number | yes | Orchestrator | Cap before `blocked` (default **2** unless project doc overrides) |
-| `rework_count` | number | yes | Orchestrator | Human **rejected_rework** cycles |
+| `rework_count` | number | yes | Orchestrator | Human **rejected_rework** cycles — separate from `loop_count` |
 | `rework_history` | array | yes | Orchestrator | Entries for each rework — see [Rework history](#rework-history) |
 | `session_counts` | object | yes | Orchestrator | Invocations per agent role — see [Session counts](#session-counts) |
 | `command_evidence` | array | yes | Orchestrator | Commands run / skipped — see [Command evidence](#command-evidence) |
@@ -211,4 +211,5 @@ Before handoff:
 | --- | --- |
 | [`task-folder-model.md`](./task-folder-model.md) | Paths, artifacts, git policy |
 | [`artifact-ownership.md`](./artifact-ownership.md) | Stage file contracts |
+| [`loops-and-rework.md`](./loops-and-rework.md) | When counters increment; remediation vs rework routing |
 | [`README.md`](./README.md) | Index |

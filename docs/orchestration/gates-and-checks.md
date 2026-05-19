@@ -63,7 +63,7 @@ Lifecycle gates track **orchestration pipeline stage completion** for a single r
 | `in_progress` | Pipeline active | One or more lifecycle gates not `passed` / appropriately `skipped` |
 | `awaiting_human` | Validation path green (or documented small-run substitute) | **MG-01**–**MG-05** satisfied per policy; **Gate 6** pending |
 | `complete` | Human approved; run closed | **Gate 6** `passed`; `human_approval` recorded |
-| `blocked` | Cannot proceed | Failed gate, max loops, or unresolved contradiction |
+| `blocked` | Cannot proceed | Failed gate, max loops (`loops-and-rework.md`), or unresolved contradiction |
 
 Orchestrator sets `awaiting_human` only after the merge-ready path documented in the target orchestration guide (normally Validator **PASS** / **PASS_WITH_NOTES** with full **MG-*** evidence). Orchestrator sets `complete` only after **Gate 6** is recorded in manifest and `human-approval.md`.
 
@@ -196,6 +196,7 @@ Routine copy, placeholder replacement, and aligning checklist appendix keys with
 | --- | --- |
 | [`README.md`](./README.md) | Orchestration pack index |
 | [`init-paths.md`](./init-paths.md) | Init and run-sizing paths (`JR-ORCH-005`) |
+| [`loops-and-rework.md`](./loops-and-rework.md) | Remediation and human rework loops (`JR-ORCH-006`) |
 | [`task-folder-model.md`](./task-folder-model.md) | Paths, git policy |
 | [`artifact-ownership.md`](./artifact-ownership.md) | Who writes merge-ready evidence |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Checklist scaffold |

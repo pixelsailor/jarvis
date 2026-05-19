@@ -129,5 +129,5 @@ When sources conflict:
 
 - **Full feature:** Start with Orchestrator, classify tier, create manifest, route Planner.
 - **Targeted resume:** Start with Orchestrator, adopt task folder, inspect manifest and artifacts, route the next required role.
-- **Validation failure:** Orchestrator reads `validation-report.md`, increments `loop_count` when allowed, routes Builder with Required remediations, then Tester and Validator.
+- **Validation failure:** Orchestrator reads `validation-report.md`, increments `loop_count` when allowed, routes Builder with Required remediations, then Tester and Validator (see target orchestration guide — loop policy from [`loops-and-rework.md`](../../orchestration/loops-and-rework.md) when initializing).
 - **Human rework request:** Orchestrator records `rework_history`, increments `rework_count`, clears stale completion approval fields, and routes Builder unless scope changed enough to require Planner.

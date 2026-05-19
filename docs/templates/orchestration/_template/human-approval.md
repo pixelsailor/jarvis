@@ -47,6 +47,6 @@ I have reviewed the implementation, tests, validation report, and command eviden
 
 ---
 
-Mirror the same outcome fields in `task-manifest.json` under `human_approval`. If the outcome is `rejected_rework`, increment `rework_count`, append `rework_history`, and route per the target orchestration guide (typically Builder → Tester → Validator; Planner when scope changes).
+Mirror the same outcome fields in `task-manifest.json` under `human_approval`. If the outcome is `rejected_rework`, increment `rework_count`, append `rework_history`, and route per the target orchestration guide (typically Builder → Tester → Validator; Planner when scope changes). Do **not** increment `loop_count` for human rework — that counter is for Validator **FAIL** remediation only.
 
 When outcome is `approved` or `approved_with_conditions`, the Orchestrator asks whether to create a git commit (application changes; optionally this task folder). Commit only if the human explicitly confirms in the same thread.

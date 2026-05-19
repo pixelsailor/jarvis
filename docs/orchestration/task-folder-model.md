@@ -117,7 +117,7 @@ Small-run path details (paths A/B/C; Validator vs Tester skipped) are in [`init-
 
 ## Edit ownership (summary)
 
-See [`artifact-ownership.md`](./artifact-ownership.md) for section contracts, freeze after handoff, and remediation/rework behavior.
+See [`artifact-ownership.md`](./artifact-ownership.md) for section contracts and freeze after handoff; [`loops-and-rework.md`](./loops-and-rework.md) for remediation/rework routing and counters.
 
 | Actor | May write |
 | --- | --- |

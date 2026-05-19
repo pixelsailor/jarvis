@@ -139,7 +139,7 @@ Orchestrator MUST classify as **`medium` or `large`** (not `small`) when the cha
 | `pipeline` | `["planner", "builder", "tester", "validator"]` (same agents; **phased** execution) |
 | `skipped_stages` | `[]` unless human-approved exception documented |
 | Planner | `plan.md` lists phases; each phase has scope, AC subset, validation commands |
-| Loops | Standard `loop_count` / `max_loops` per phase or whole run per target guide |
+| Loops | [`loops-and-rework.md`](./loops-and-rework.md) — `loop_count` / `max_loops` **per phase** (default); reset at phase boundary |
 | **MG-*** | Full audit at end of each Validator pass relevant to that phase; final Validator pass covers whole change set |
 | **Full orchestrated merge-ready?** | **Yes**, when final Validator pass and **MG-*** green |
 
