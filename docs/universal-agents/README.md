@@ -91,7 +91,8 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | **`JR-AGENT-003`** | Minimum read set tables per role (efficiency) — **not** in contract templates |
 | **`JR-AGENT-004`** | Handoff prompt / Next Agent Directive blocks for orchestration guide — **not** full duplicate in contracts |
 | **`JR-ORCH-003`** | [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) — stage file contracts |
-| **`JR-ORCH-004`–`007`** | Gates vs merge-ready, init paths, loops, self-containment |
+| **`JR-ORCH-004`** | [`gates-and-checks.md`](../orchestration/gates-and-checks.md) — lifecycle vs merge-ready vs handoff |
+| **`JR-ORCH-005`–`007`** | Init paths, loops, self-containment |
 
 Keep **small-run path matrices** thin in INDEX and contracts; defer nuance to **`JR-ORCH-005`** and the target orchestration guide.
 
@@ -114,7 +115,7 @@ Routine copy of INDEX and contracts, placeholder replacement, and backlog eviden
 | Canonical roster path | **`.cursor/agents/INDEX.md`** | Matches `.cursor/rules/` and `.cursor/orchestrations/` |
 | Medium init | **Optional** roster-only INDEX | Contracts optional until orchestration enabled |
 | Large init | **Required** INDEX before first orchestrated run | Contracts + orchestration `_template/` same init wave |
-| Gate detail in INDEX | **High-level** gates 0–6 table only | Small-path skips, MG-* mapping → **`JR-ORCH-004`/`005`** + validation checklist |
+| Gate detail in INDEX | **High-level** gates 0–6 table only | MG-* mapping → **`JR-ORCH-004`** + checklist; small-path skips → **`JR-ORCH-005`** |
 | Test runners in INDEX | **Pointer** to target testing-strategy doc | No default runner names in Jarvis templates |
 | Rule bindings in INDEX | **Placeholder table** by role | Target fills from `.cursor/rules/index.md` |
 | Document precedence | ADRs → workflow/merge-ready rules → role contracts → templates → orchestration guide | Same order as [`task-folder-model.md`](../orchestration/task-folder-model.md) |

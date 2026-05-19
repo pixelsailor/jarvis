@@ -39,4 +39,5 @@ Until then, keep task folders local and put **review evidence in the PR** (comma
 - `docs/ORCHESTRATED_DEVELOPMENT.md` — human orchestration guide (name chosen by project)
 - `.cursor/agents/INDEX.md` — agent roster ([`universal-agents`](../../../universal-agents/) `JR-AGENT-001`)
 - `.cursor/agents/orchestrator.md`, `planner.md`, `builder.md`, `tester.md`, `validator.md` — role contracts (`JR-AGENT-002`)
-- `docs/validation-checklist.md` — merge-ready **MG-*** and lifecycle mapping
+- `docs/validation-checklist.md` — merge-ready **MG-*** and lifecycle mapping (three vocabularies: lifecycle, merge-ready, handoff)
+- `.cursor/rules/workflow-gates.mdc` — agent-facing merge-ready contract (when present)

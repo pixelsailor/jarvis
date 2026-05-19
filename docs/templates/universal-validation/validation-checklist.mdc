@@ -7,7 +7,7 @@ globs:
 
 # Validation checklist
 
-**Canonical checklist:** [`docs/validation-checklist.md`](../docs/validation-checklist.md)
+**Canonical checklist:** [`docs/validation-checklist.md`](../docs/validation-checklist.md) — lifecycle gates 0–6 ↔ `gate_status`, merge-ready **MG-01**–**MG-05**, handoff **PROJ-HANDOFF-*** (orchestration appendix; do not conflate)
 
 ## When to use
 

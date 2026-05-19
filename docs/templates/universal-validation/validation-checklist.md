@@ -93,12 +93,15 @@ _Delete this subsection until the first annex is required._
 
 **Enable when** the project scaffolds orchestration (`task-manifest.json`, lifecycle gates, `validation-report.md` template). Until then, leave this section as reference or delete it.
 
-Orchestrated projects often use **two vocabularies** — do not conflate them:
+Orchestrated projects use **three gate vocabularies** — do not conflate them (narrative in the project orchestration guide, adapted from Jarvis `gates-and-checks` discipline):
 
 | Vocabulary | Typical range | Tracks | Recorded in |
 | --- | --- | --- | --- |
 | **Lifecycle gates** | Project-defined (e.g. 0–6) | Pipeline stage completion | `task-manifest.json` → `gate_status` (keys per project orchestration doc) |
-| **Merge-ready checks** | **MG-01**–**MG-05** above | Whether work may be claimed **merge-ready** | Checklist + `validation-report.md` / PR evidence |
+| **Merge-ready checks** | **MG-01**–**MG-05** above | Whether work may be claimed **merge-ready** | Checklist + `validation-report.md` / PR; `.cursor/rules/workflow-gates.mdc` |
+| **Handoff checks** | **PROJ-HANDOFF-*** | Target repo independent of scaffolding repos | `docs/handoff-self-containment.md`, `docs/roadmap/backlog.md` |
+
+**Lifecycle Gate 5** (validation green) ≠ **MG-05** (tooling). **Gate 6** (human approval) follows a green merge-ready path. Handoff completion ≠ merge-ready for a feature run.
 
 ### Lifecycle gate ↔ checklist (fill per project)
 

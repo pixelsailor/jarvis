@@ -1,0 +1,97 @@
+---
+description: Merge-ready checks (MG-01–MG-05) for orchestrated runs and architecture-touching work; separate from lifecycle gates 0–6
+globs:
+  - .cursor/orchestrations/**
+  - .cursor/agents/orchestrator.md
+  - .cursor/agents/planner.md
+  - .cursor/agents/builder.md
+  - .cursor/agents/tester.md
+  - .cursor/agents/validator.md
+  - REPLACE_WITH_ORCHESTRATION_GUIDE_PATH
+alwaysApply: false
+---
+
+# Workflow gates (merge-ready)
+
+**Purpose:** Define when agents or humans may claim work is **merge-ready**. This rule is the agent-facing contract for **MG-01**–**MG-05**. Lifecycle gates **0–6** live in `task-manifest.json` → `gate_status` — see [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH) and [`docs/validation-checklist.md`](../../docs/validation-checklist.md) orchestration appendix. ADR lifecycle: [adr-compliance.mdc](./adr-compliance.mdc).
+
+## Two orchestration vocabularies (do not conflate)
+
+| Vocabulary | Range | Tracks |
+| --- | --- | --- |
+| **Lifecycle gates** | **0–6** | Pipeline stage completion (`gate_status`) |
+| **Merge-ready checks** (this rule) | **MG-01**–**MG-05** | Whether work may be claimed **merge-ready** |
+
+**Lifecycle Gate 5** (validation green) ≠ **MG-05** (tooling). **Lifecycle Gate 6** (human approval) runs after **MG-01**–**MG-05** are green; it is not a substitute for them.
+
+**Handoff** (`PROJ-HANDOFF-*`, `docs/handoff-self-containment.md`) verifies target independence from scaffolding repos — not a lifecycle or merge-ready gate.
+
+Use **MG-01**–**MG-05** in PRs and agent text. Do not use legacy “merge-ready Gate 1–5” numbering.
+
+Full mapping: [`docs/validation-checklist.md`](../../docs/validation-checklist.md) — orchestration appendix.
+
+## When this rule applies
+
+| Work | Merge-ready bar |
+| --- | --- |
+| **Orchestrated** run under `.cursor/orchestrations/{task-id}/` | **MG-01**–**MG-05** (subject to small-run skips in orchestration guide) |
+| **Non-orchestrated** change touching architecture, auth, data authority, sync, AI, deployment/secrets, or other boundaries in README § Boundaries | **MG-01**, **MG-02**, **MG-05**; test evidence in PR (**MG-04** style) |
+| **Trivial** (typo, comment-only, isolated non-architectural fix) | [adr-compliance.mdc](./adr-compliance.mdc) only; note orchestration not required when relevant |
+
+## MG-02 — ADR before durable architecture
+
+Before merge or any **merge-ready** claim, an ADR must be **created or updated** in the same effort when the change alters durable architecture (per [adr-compliance.mdc](./adr-compliance.mdc)), or an explicit follow-up with timeline is documented in `plan.md`, the PR, or the ADR — not code comments alone. **Proposed** ADRs are not binding.
+
+**Planner:** List Accepted ADRs in `plan.md` → **ADR references** before Builder starts.
+
+## MG-01 — Alignment gaps
+
+Implementation must match Accepted ADRs cited in `plan.md`, or deviation is recorded in the project's alignment-gaps doc (path in `adrs/GOVERNANCE.md` and [adr-compliance.mdc](./adr-compliance.mdc)).
+
+## MG-03 — Validation evidence (orchestrated)
+
+Do **not** claim merge-ready for orchestrated runs until:
+
+1. `validation-report.md` exists with **Verdict**, **AC audit**, **ADR compliance**, **Checklist audit**, remediations sections.
+2. **Verdict** is **PASS** or **PASS_WITH_NOTES** (not **FAIL**). **PASS_WITH_NOTES**: no ❌ ACs; residual ⚠️ listed; Gate 6 human accepts risk in `conditions` / notes.
+3. **Checklist audit** covers every applicable **MG-*** and domain row; applicable ❌ on **MG-*** or plan/ADR-required rows blocks **PASS** and **PASS_WITH_NOTES**.
+
+**Builder, Tester, and Planner** must **not** claim merge-ready for the task.
+
+## MG-04 — Test evidence (orchestrated)
+
+Do **not** claim merge-ready until `test-report.md` has AC coverage, commands run, and residual risk for gaps. When `test-matrix.md` has **Planned coverage**, **Actual coverage** is filled or gaps are documented (**TST-05**).
+
+## MG-05 — Tooling
+
+Verified check/lint/test commands pass for touched paths: `REPLACE_WITH_VERIFY_COMMANDS` — or pre-existing failures outside scope are documented in `build-log.md`, `test-report.md`, or the PR.
+
+## Small orchestrated runs
+
+When `risk_tier.level` is `small` and stages are skipped per the orchestration guide:
+
+- **Validator skipped:** Do **not** claim full orchestrated merge-ready without substitute human audit; **MG-03** via PR + review, not `validation-report.md`, unless policy allows.
+- **Validator runs:** **MG-03**–**MG-05** apply on **PASS** / **PASS_WITH_NOTES**.
+- **Tester skipped:** **MG-04** via PR test evidence.
+
+See checklist appendix — small-run skips.
+
+## Orchestrator and human completion
+
+1. **Validator path:** **MG-01**–**MG-05** satisfied → Orchestrator may set `status` to `awaiting_human` (not `complete`).
+2. **Human path:** Gate 6 recorded in `human-approval.md` and manifest → Orchestrator may set `status` to `complete`.
+
+On **FAIL**, route remediation; do not claim merge-ready until a subsequent **PASS** / **PASS_WITH_NOTES**.
+
+## Non-orchestrated PRs
+
+Merge-ready claims must satisfy **MG-01**, **MG-02**, **MG-05**, and **MG-04**-style test evidence in the PR unless `validation-report.md` / `test-report.md` exist for that change.
+
+## Related
+
+| Topic | Location |
+| --- | --- |
+| Artifact ownership | `orchestration-artifacts.mdc` (when present) |
+| Checklist | [`docs/validation-checklist.md`](../../docs/validation-checklist.md) |
+| Orchestration guide | [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH) |
+| PR format | [`docs/pr-and-commit-guide.md`](../../docs/pr-and-commit-guide.md) |

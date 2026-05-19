@@ -87,16 +87,19 @@ Markdown artifact **templates** ship in `_template/` when the target scaffolds o
 
 See [`../templates/orchestration/_template/README.example.md`](../templates/orchestration/_template/README.example.md).
 
-## Two gate vocabularies (do not conflate)
+## Gates, merge-ready, and handoff (do not conflate)
+
+Three vocabularies — full contract in [`gates-and-checks.md`](./gates-and-checks.md) (`JR-ORCH-004`):
 
 | Vocabulary | Tracks | Recorded in |
 | --- | --- | --- |
 | **Lifecycle gates (0–6)** | Pipeline stage completion | `task-manifest.json` → `gate_status` |
 | **Merge-ready checks (MG-01–MG-05)** | Whether work may be claimed **merge-ready** | `validation-report.md`, PR body, checklist |
+| **Handoff checks (PROJ-HANDOFF-*)** | Target independence from Jarvis | `docs/handoff-self-containment.md`, target backlog |
 
-**Lifecycle Gate 5** (validation green) ≠ **MG-05** (tooling). **Lifecycle Gate 6** (human approval) follows a green merge-ready path; it does not replace MG-* items.
+**Lifecycle Gate 5** (validation green) ≠ **MG-05** (tooling). **Lifecycle Gate 6** (human approval) follows a green merge-ready path; it does not replace MG-* items. Handoff completion does not satisfy merge-ready for a feature run.
 
-Mapping table: [`../templates/universal-validation/validation-checklist.md`](../templates/universal-validation/validation-checklist.md) — Orchestration appendix. Target-specific narrative: `docs/ORCHESTRATED_DEVELOPMENT.md` (name chosen by target).
+Checklist mapping: [`../templates/universal-validation/validation-checklist.md`](../templates/universal-validation/validation-checklist.md) — orchestration appendix. Target narrative: orchestration guide + `.cursor/rules/workflow-gates.mdc`.
 
 ## Risk tiers
 

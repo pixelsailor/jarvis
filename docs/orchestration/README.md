@@ -2,18 +2,19 @@
 
 Jarvis guidance for **target-project** multi-agent runs: durable **task folders**, a **manifest-owned** pipeline, and stage artifacts that survive context loss. Inspired by What's For Dinner (WFD) discipline — **not** WFD product, stack, or identifiers.
 
-**Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership)  
-**Follow-on (not in this pack):** `JR-ORCH-004`–`007` (gates vs merge-ready, init paths, loops, self-containment). **Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
+**Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership), `JR-ORCH-004` (lifecycle vs merge-ready vs handoff)  
+**Follow-on (not in this pack):** `JR-ORCH-005`–`007` (init paths, loops, self-containment). **Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
 
 **Read order for agents (Jarvis initializing orchestration in a target):**
 
 1. Target root `README.md` — initialization path (large init usually needs orchestration)
 2. [`task-folder-model.md`](./task-folder-model.md) — where runs live, artifact set, bootstrap, git policy
 3. [`artifact-ownership.md`](./artifact-ownership.md) — who writes each file, section contracts, freeze/loop rules
-4. [`task-manifest.md`](./task-manifest.md) — JSON field contract and enums
-5. [`../templates/orchestration/`](../templates/orchestration/) — copy `_template/` into the target
-6. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — `PROJ-ORCH-*` backlog rows
-7. [`../universal-validation/README.md`](../universal-validation/README.md) — checklist + orchestration appendix when validation doc exists
+4. [`gates-and-checks.md`](./gates-and-checks.md) — lifecycle gates vs merge-ready vs handoff
+5. [`task-manifest.md`](./task-manifest.md) — JSON field contract and enums
+6. [`../templates/orchestration/`](../templates/orchestration/) — copy `_template/` into the target
+7. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — `PROJ-ORCH-*` backlog rows
+8. [`../universal-validation/README.md`](../universal-validation/README.md) — checklist + orchestration appendix when validation doc exists
 
 ## Workflow documents
 
@@ -22,6 +23,7 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 | `JR-ORCH-001` | [`task-folder-model.md`](./task-folder-model.md) | Choosing paths, artifacts, lifecycle vocabulary, bootstrap, git policy |
 | `JR-ORCH-002` | [`task-manifest.md`](./task-manifest.md) | Creating or validating `task-manifest.json`; schema migrations via `manifest_version` |
 | `JR-ORCH-003` | [`artifact-ownership.md`](./artifact-ownership.md) | Per-file writers, required sections, freeze and loop behavior |
+| `JR-ORCH-004` | [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle gates vs merge-ready (**MG-***) vs handoff (**PROJ-HANDOFF-***) |
 | (target templates) | [`../templates/orchestration/_template/`](../templates/orchestration/_template/) | Manifest example + seven markdown stage templates |
 
 ## Target layout (after copy)
@@ -63,6 +65,16 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | `manifest_version` | **`1.0.0`** for Jarvis universal template; targets may bump when forking schema — document in target orchestration guide |
 | Product/stack in manifest | **Never** — no WFD IDs, package managers, or provider names in the generic template |
 
+## Decisions recorded for `JR-ORCH-004`
+
+| Topic | Decision |
+| --- | --- |
+| Canonical contract | [`gates-and-checks.md`](./gates-and-checks.md) — three vocabularies, mapping, who may claim merge-ready |
+| Agent-facing target rule | [`../templates/universal-rules/workflow-gates.mdc`](../templates/universal-rules/workflow-gates.mdc) — globs on orchestration + agents + orchestration guide |
+| Gate 5 vs MG-05 | Explicitly distinct in platform doc, checklist appendix, and workflow-gates template |
+| Handoff | Third vocabulary — not conflated with lifecycle or merge-ready |
+| Small-run paths | Summary in `gates-and-checks.md`; full matrices → `JR-ORCH-005` |
+
 ## Decisions recorded for `JR-ORCH-003`
 
 | Topic | Decision |
@@ -80,6 +92,8 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Resource | Role |
 | --- | --- |
 | [`../roadmap/platform-spec.md`](../roadmap/platform-spec.md) | WFD concepts to generalize; `PROJ-ORCH-*` prefix |
-| [`../universal-validation/README.md`](../universal-validation/README.md) | **MG-** merge-ready vs lifecycle gates |
+| [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle vs merge-ready vs handoff (`JR-ORCH-004`) |
+| [`../universal-validation/README.md`](../universal-validation/README.md) | Checklist **MG-*** rows and orchestration appendix |
+| [`../templates/universal-rules/workflow-gates.mdc`](../templates/universal-rules/workflow-gates.mdc) | Target merge-ready agent contract |
 | [`../templates/universal-validation/validation-checklist.md`](../templates/universal-validation/validation-checklist.md) | Orchestration appendix (lifecycle ↔ checklist) |
 | WFD reference (conceptual) | Task-folder model in a mature project — do not link from target artifacts |

@@ -15,7 +15,7 @@ Catalog of **Cursor rules** (`.cursor/rules/*.mdc`). Read this file when choosin
 | **Stack** | _—_ | Framework, lint, test, or MCP playbooks | globs per rule — add from `PROJ-STACK-*` |
 | **Workflow** | _—_ | PR/commit summaries and test evidence — link [`docs/pr-and-commit-guide.md`](../../docs/pr-and-commit-guide.md) when present | doc via README map — add row when guide exists |
 | **Workflow** | validation-checklist | Cross-cutting Validator/PR audit per [`docs/validation-checklist.md`](../../docs/validation-checklist.md) | globs `.cursor/orchestrations/**`, `docs/validation-checklist.md` — add `.mdc` row when checklist scaffolded |
-| **Workflow** | _—_ | Orchestration gates, lifecycle mapping | doc via orchestration guide — add when orchestration scaffolds exist |
+| **Workflow** | workflow-gates | Merge-ready **MG-01**–**MG-05**; separate from lifecycle gates 0–6 | globs orchestration + agents + orchestration guide — add when [`workflow-gates.mdc`](./workflow-gates.mdc) copied (`JR-ORCH-004`) |
 
 Remove placeholder rows as you add real rules. Keep **one row per `.mdc` file**.
 

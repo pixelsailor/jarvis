@@ -37,6 +37,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 8. Copy [`rules-authoring.md`](../templates/universal-rules/rules-authoring.md) → `docs/rules-authoring.md` on large path; link from index § Maintenance.
 9. Register each new rule in `index.md` (category, one-liner, activation) in the **same session** as the `.mdc` file.
 10. Add or update `PROJ-RULE-*` rows in `docs/roadmap/backlog.md` with evidence paths.
+11. When orchestration is scaffolded (`JR-ORCH-*`), copy [`workflow-gates.mdc`](../templates/universal-rules/workflow-gates.mdc) → `.cursor/rules/workflow-gates.mdc`; replace `REPLACE_WITH_*` placeholders; register in `index.md` (Workflow).
 
 **Handoff rule:** Rules and the index must not link to the Jarvis repository. All `see` targets must be target-project paths.
 
@@ -82,6 +83,7 @@ Keep **alwaysApply** count small (platform default: **two** universal starters p
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | README boundaries → `PROJ-RULE-*` and index rows |
 | [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) | **Doc-only** PR/commit guide; index Workflow row — no default `.mdc` |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Optional `validation-checklist.mdc` (globs); index Workflow row when checklist exists |
+| [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) | Optional `workflow-gates.mdc` (globs) on **large** / orchestrated path — merge-ready **MG-*** contract (`JR-ORCH-004`) |
 | [`../stack-scaffolding/selection.md`](../stack-scaffolding/selection.md) | After stack-profile — framework/library `.mdc` rules and `docs/stack/upstream-references.md` |
 | [`../universal-agents/README.md`](../universal-agents/README.md) | Agent INDEX + role contract templates (`.cursor/agents/`) — `JR-AGENT-001`/`002` |
 | `JR-RULE-*` (future) | Expands authoring and ADR citation discipline |

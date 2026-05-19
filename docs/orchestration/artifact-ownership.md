@@ -27,7 +27,7 @@ Canonical contracts for **who writes which file** under `.cursor/orchestrations/
 | `validation-report.md` | **Validator** | Orchestrator, human (Gate 6) | 5 |
 | `human-approval.md` | **Orchestrator** (from human decision) | Human, Orchestrator | 6 |
 
-**Not in scope for this task:** merge-ready **MG-*** narrative and small-run skip paths — [`JR-ORCH-004`](./README.md); init tier shortcuts — `JR-ORCH-005`.
+**Merge-ready and handoff vocabulary:** [`gates-and-checks.md`](./gates-and-checks.md) (`JR-ORCH-004`). Small-run skip path matrices — `JR-ORCH-005`.
 
 ## Global rules
 
@@ -255,4 +255,5 @@ Defaults favor long-term agent clarity; override in the target orchestration gui
 | [`task-manifest.md`](./task-manifest.md) | JSON fields |
 | [`README.md`](./README.md) | Orchestration pack index |
 | [`../templates/universal-agents/`](../templates/universal-agents/) | Per-role rules and output contracts |
+| [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle vs merge-ready vs handoff |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Checklist and MG-* |

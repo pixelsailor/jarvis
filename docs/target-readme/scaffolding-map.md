@@ -86,7 +86,7 @@ From WFD-style discipline, without WFD identifiers:
 
 - Task folders for **large** init only
 - Manifest-owned resumability
-- Separate lifecycle gates vs merge-ready / handoff checks
+- Separate lifecycle gates vs merge-ready / handoff checks — [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`)
 - Evidence on backlog completion
 
 See [`platform-spec.md`](../roadmap/platform-spec.md#wfd-concepts-to-generalize).

@@ -100,7 +100,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/orchestration/task-manifest.md`](../orchestration/task-manifest.md); example [`task-manifest.example.json`](../templates/orchestration/_template/task-manifest.example.json) (`manifest_version` **1.0.0**, full WFD-shaped fields).
 - [x] `JR-ORCH-003`: Define artifact ownership for plan, acceptance criteria, build log, test report, validation report, and human approval.
   - [`docs/orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md); stage templates in [`docs/templates/orchestration/_template/`](../templates/orchestration/_template/) (`plan.md`, `acceptance-criteria.md`, `test-matrix.md`, `build-log.md`, `test-report.md`, `validation-report.md`, `human-approval.md`).
-- [ ] `JR-ORCH-004`: Separate lifecycle gates from merge-ready or handoff checks.
+- [x] `JR-ORCH-004`: Separate lifecycle gates from merge-ready or handoff checks.
+  - [`docs/orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md); target template [`docs/templates/universal-rules/workflow-gates.mdc`](../templates/universal-rules/workflow-gates.mdc).
 - [ ] `JR-ORCH-005`: Define small, medium, and large initialization paths.
 - [ ] `JR-ORCH-006`: Define loop behavior for failed validation or human rework.
 - [ ] `JR-ORCH-007`: Ensure copied orchestration artifacts are self-contained inside the target project.
