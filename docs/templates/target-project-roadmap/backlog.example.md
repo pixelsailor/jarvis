@@ -45,7 +45,7 @@ Stable `PROJ-*` IDs support stop/resume across agent sessions. Field rules: [`..
 
 - [x] `PROJ-STACK-001`: Document package manager and validation commands from actual project files (do not invent scripts). **required for handoff**
   - Owner: agent
-  - Evidence: `package.json` inspected 2026-05-17; commands copied to README § Development.
+  - Evidence: `package.json` inspected 2026-05-17; `docs/stack/commands.md`; README § Development aligned ([`commands.md`](../../stack-scaffolding/commands.md)).
 - [ ] `PROJ-STACK-002`: Add framework-specific rules and stack docs from confirmed capabilities ([`selection.md`](../../stack-scaffolding/selection.md)).
   - Depends on: `PROJ-STACK-000` (stack-profile)
   - Owner: agent

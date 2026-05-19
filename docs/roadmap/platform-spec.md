@@ -63,8 +63,9 @@ Before stack-specific rules or playbooks are copied into the target project, Jar
 3. Presents a **single confirmation batch** for gaps, medium-confidence assumptions, and conflicts — not field-by-field re-asks when lockfiles are clear.
 4. Records confirmed facts in target `docs/stack/stack-profile.md` and aligns README § Technology Stack.
 5. **Selects** stack-specific rules and docs by **composing** confirmed capabilities (framework, libraries, language) via [`source-registry.md`](../stack-scaffolding/source-registry.md) — not opaque stack profile IDs.
+6. **Records** package manager and validation commands from manifests into README § Development and `docs/stack/commands.md` — never invented scripts ([`commands.md`](../stack-scaffolding/commands.md)).
 
-**Workflow:** [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) (detect → confirm → [select rules/docs](../stack-scaffolding/selection.md)). **Do not** treat Jarvis legacy `frameworks/` trees or co-located reference repos (e.g. WFD) as automatic stack evidence.
+**Workflow:** [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) (detect → confirm → [commands](../stack-scaffolding/commands.md) → [select rules/docs](../stack-scaffolding/selection.md)). **Do not** treat Jarvis legacy `frameworks/` trees or co-located reference repos (e.g. WFD) as automatic stack evidence.
 
 ## Target project roadmap requirements
 

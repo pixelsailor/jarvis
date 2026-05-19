@@ -4,7 +4,7 @@ After stack capabilities are confirmed in target `docs/stack/stack-profile.md` (
 
 **Platform task:** `JR-STACK-002`  
 **Prerequisite:** `PROJ-STACK-000` complete (stack-profile recorded); universal rules scaffold present or planned ([`universal-rules`](../universal-rules/README.md)).  
-**Related:** [`source-registry.md`](./source-registry.md) (capability → Jarvis copy sources); commands and scripts — `JR-STACK-003`; testing prompts — `JR-STACK-004`.
+**Related:** [`source-registry.md`](./source-registry.md) (capability → Jarvis copy sources); commands and scripts — [`commands.md`](./commands.md) (`JR-STACK-003`); testing prompts — `JR-STACK-004`.
 
 ## Decision: composed capabilities (not profile IDs)
 

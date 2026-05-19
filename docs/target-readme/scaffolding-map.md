@@ -20,11 +20,11 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 | --- | --- | --- | --- |
 | Principles, non-negotiables | README § Principles | `PROJ-ADR-*` | `adrs/INDEX.md`, `GOVERNANCE.md`, `TEMPLATE.md`; Accepted ADRs for each non-negotiable that affects implementation |
 | Core capabilities | README § Capabilities | `PROJ-DOC-*` | Topic docs under `docs/` when a capability needs flow/architecture prose |
-| Technology stack | README § Stack + [`stack-profile.md`](../stack-scaffolding/confirmation.md#recording-target-repository) + repo files | `PROJ-STACK-*` | Detect/confirm per [`stack-scaffolding/`](../stack-scaffolding/README.md); then rules, `docs/stack/`, validation commands — **verified from repo** |
+| Technology stack | README § Stack + [`stack-profile.md`](../stack-scaffolding/confirmation.md#recording-target-repository) + repo files | `PROJ-STACK-*` | Detect/confirm per [`stack-scaffolding/`](../stack-scaffolding/README.md); then [`commands.md`](../stack-scaffolding/commands.md), rules, `docs/stack/` — **verified from repo** |
 | Architecture boundaries | README § Boundaries | `PROJ-ADR-*`, `PROJ-RULE-*` | ADRs for client/server, secrets, data authority; always-apply rules that enforce boundaries |
 | Data ownership | README § Data ownership | `PROJ-ADR-*` | ADR for storage/sync authority; rules for local vs cloud paths |
 | Documentation map entries | README § Documentation | `PROJ-DOC-*`, `PROJ-RULE-*` | Each linked path must exist or have an open `PROJ-*` task |
-| Development commands | README § Development | `PROJ-STACK-*` | No parallel cheat sheet; rules may cite same commands |
+| Development commands | README § Development + `docs/stack/commands.md` | `PROJ-STACK-001` | [`commands.md`](../stack-scaffolding/commands.md); no parallel cheat sheet; rules may cite same commands |
 | Roadmap direction (product themes) | README § Roadmap | `PROJ-DOC-*` | Product docs — **not** the same as `docs/roadmap/backlog.md` setup tasks |
 | Setup in progress | README links `docs/roadmap/` | `PROJ-README-*`, all areas | [`templates/target-project-roadmap/`](../../templates/target-project-roadmap/) |
 

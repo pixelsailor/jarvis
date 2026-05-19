@@ -117,7 +117,7 @@ Omit fields with no evidence. Use `unknown` only in the draft worksheet — do n
 | `pytest.ini` / `pytest` in pyproject | pytest |
 | `testing-library` packages | Component/integration style (record name only) |
 
-Commands are **`JR-STACK-003`** — detection may **name** runners here, not invent `pnpm test` scripts.
+Commands are **[`commands.md`](./commands.md)** (`JR-STACK-003`) — detection may **name** runners here, not invent `pnpm test` scripts.
 
 ## Deployment and runtime signals
 

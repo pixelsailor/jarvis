@@ -21,7 +21,7 @@
 | Package manager | *(e.g. pnpm)* | From lockfile when present |
 | UI / styling | *(optional)* | |
 | Primary datastore | *(optional)* | |
-| Test runners | *(names only)* | Commands: `PROJ-STACK-001` / validation doc |
+| Test runners | *(names only)* | Commands: `docs/stack/commands.md` / README § Development |
 | Deployment hint | *(optional)* | |
 
 ---
@@ -50,6 +50,7 @@ Stack components **present in repo but out of scope** for new agent guidance (e.
 
 | Doc | When |
 | --- | --- |
+| `docs/stack/commands.md` | Tooling exists — verified install and quality commands (`JR-STACK-003`) |
 | `docs/stack/source-documentation.md` | Production code exists — comment syntax per language |
 | `docs/validation-checklist.md` | Medium/large init — stack-specific validation rows |
 | `docs/stack/upstream-references.md` | After `PROJ-STACK-002` — official docs and MCP index ([`selection.md`](../../stack-scaffolding/selection.md)) |

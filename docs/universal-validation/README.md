@@ -27,7 +27,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 
 1. If the target already has `docs/validation-checklist.md`, **audit** — merge missing generic sections and extension rows; do not delete project-specific IDs without user approval.
 2. Copy [`validation-checklist.md`](../templates/universal-validation/validation-checklist.md) → `docs/validation-checklist.md`.
-3. Replace `REPLACE_WITH_PROJECT_NAME` and `REPLACE_WITH_VERIFY_COMMANDS` (comma-separated list from README § Development or manifests). If alignment gaps live elsewhere, update links per `adrs/GOVERNANCE.md`.
+3. Replace `REPLACE_WITH_PROJECT_NAME` and `REPLACE_WITH_VERIFY_COMMANDS` (comma-separated list from README § Development, `docs/stack/commands.md`, or manifests — see [`stack-scaffolding/commands.md`](../stack-scaffolding/commands.md)). If alignment gaps live elsewhere, update links per `adrs/GOVERNANCE.md`.
 4. Fill **[Stack-specific extensions](#stack-specific-extensions-in-target)** from README boundaries and detected stack (auth, persistence, deployment, UI framework, test runners). Use verified command names only.
 5. Add **ADR-specific annex** subsections when an **Accepted** ADR requires repeatable validation rows (pattern in template § ADR-specific annexes).
 6. When the project uses **orchestrated** task folders, uncomment or complete § Orchestration appendix and align IDs with the project's orchestration doc (`JR-ORCH-*` on the Jarvis platform backlog).

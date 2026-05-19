@@ -2,16 +2,17 @@
 
 Jarvis determines a target project's **language, framework, and related stack facts** before stack-specific rules, playbooks, or validation docs are generated. Detection is **evidence-first**: repository files and the target README supply facts; user questions fill gaps and resolve conflicts.
 
-**Platform tasks:** `JR-STACK-001` (detect/confirm), `JR-STACK-002` (select stack rules/docs)  
-**Downstream (separate tasks):** `JR-STACK-003` (package manager and commands), `JR-STACK-004`–`007` (testing, runtime, dependencies, legacy review).
+**Platform tasks:** `JR-STACK-001` (detect/confirm), `JR-STACK-002` (select stack rules/docs), `JR-STACK-003` (package manager and commands)  
+**Downstream (separate tasks):** `JR-STACK-004`–`007` (testing, runtime, dependencies, legacy review).
 
 **Read order for agents (Jarvis initializing a target project):**
 
 1. Target root `README.md` (if present) — § Technology Stack and § Development
 2. [`detection.md`](./detection.md) — run the detection pass; record confidence per field
 3. [`confirmation.md`](./confirmation.md) — present summary, ask only for gaps/conflicts; write durable stack record
-4. [`selection.md`](./selection.md) + [`source-registry.md`](./source-registry.md) — select and adapt stack rules, playbooks, upstream refs
-5. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — spawn `PROJ-STACK-*` from confirmed stack
+4. [`commands.md`](./commands.md) — record package manager and verified scripts (`PROJ-STACK-001`)
+5. [`selection.md`](./selection.md) + [`source-registry.md`](./source-registry.md) — select and adapt stack rules, playbooks, upstream refs
+6. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — spawn `PROJ-STACK-*` from confirmed stack
 
 **Platform context:** Initialization flow and terminology in [`../roadmap/platform-spec.md`](../roadmap/platform-spec.md). Intake Q5 overlaps when no README exists — see [`../target-readme/intake-questions.md`](../target-readme/intake-questions.md).
 
@@ -23,7 +24,8 @@ Jarvis determines a target project's **language, framework, and related stack fa
 | `JR-STACK-001` | [`confirmation.md`](./confirmation.md) | Turning detection into a user-visible summary, corrections, and target `docs/stack/stack-profile.md` |
 | `JR-STACK-002` | [`selection.md`](./selection.md) | Choosing stack-specific rules and best-practices docs from confirmed capabilities |
 | `JR-STACK-002` | [`source-registry.md`](./source-registry.md) | Mapping capabilities to Jarvis `frameworks/`, `libraries/`, `ai-agents/` copy sources |
-| (target artifacts) | [`../templates/stack-scaffolding/`](../templates/stack-scaffolding/) | `stack-profile`, `upstream-references`, `stack-framework-rule` examples |
+| `JR-STACK-003` | [`commands.md`](./commands.md) | Package manager and validation commands from manifests — no invented scripts |
+| (target artifacts) | [`../templates/stack-scaffolding/`](../templates/stack-scaffolding/) | `stack-profile`, `commands`, `upstream-references`, `stack-framework-rule` examples |
 
 ## Sequence
 
@@ -37,7 +39,8 @@ flowchart TD
   conflict -->|Yes| confirm[confirmation.md — ask batch]
   conflict -->|No| record[Write stack-profile + README § Stack]
   confirm --> record
-  record --> select[selection.md + source-registry]
+  record --> cmds[commands.md → README § Development]
+  cmds --> select[selection.md + source-registry]
   select --> map[scaffolding-map → PROJ-STACK-*]
 ```
 
@@ -62,7 +65,8 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | README § Technology Stack | High-level only; must agree with stack-profile |
 | Infer vs ask | High confidence → record; medium → assumption in confirmation batch; low/conflict → ask before record |
 | Stack profiles catalog | **Composed capabilities** — no profile IDs; selection uses [`source-registry.md`](./source-registry.md) (`JR-STACK-002`) |
-| Greenfield (no manifests) | Ask intake Q5; do not invent stack |
+| Command detail beyond README | Target `docs/stack/commands.md` on medium/large init; README § Development stays minimal |
+| Greenfield (no manifests) | Ask intake Q5; do not invent stack or scripts |
 | Legacy Jarvis `frameworks/` trees | Reference for copy/adapt only; not auto-selected without confirmed capabilities |
 
 ## Related material

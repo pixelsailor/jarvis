@@ -47,7 +47,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | [`../universal-readme/README.md`](../universal-readme/README.md) | README governance; routes contributor docs vs root README |
 | [`../universal-adr/README.md`](../universal-adr/README.md) | ADRs own decisions; architecture docs illustrate |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | README signals → `PROJ-DOC-*` and doc paths |
-| [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) | Stack detection/confirmation (`JR-STACK-001`); fills `docs/stack/stack-profile.md` and `docs/stack/source-documentation.md` |
+| [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) | Stack detection/confirmation (`JR-STACK-001`), commands (`JR-STACK-003`); fills `docs/stack/stack-profile.md`, `docs/stack/commands.md`, `docs/stack/source-documentation.md` |
 | [`../universal-rules/README.md`](../universal-rules/README.md) | Rules index may reference this doc; this scaffold does not ship a default rule |
 
 ## Human input (pause points)

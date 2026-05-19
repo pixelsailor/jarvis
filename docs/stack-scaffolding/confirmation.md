@@ -47,7 +47,7 @@ A **conflict** exists when:
 - README § Technology Stack names a framework that **manifests contradict**.
 - User intake answer disagrees with **high** detection.
 
-**Rule:** Do not write README or `stack-profile.md` until S1/S3 resolves the conflict. Record the open question on `PROJ-STACK-001` in target `docs/roadmap/backlog.md` if the session pauses.
+**Rule:** Do not write README or `stack-profile.md` until S1/S3 resolves the conflict. Record the open question on `PROJ-STACK-000` in target `docs/roadmap/backlog.md` if the session pauses.
 
 ## Recording (target repository)
 
@@ -76,7 +76,7 @@ Minimum rows:
 
 Spawn follow-ups per [`scaffolding-map.md`](../target-readme/scaffolding-map.md):
 
-- `PROJ-STACK-001` — package manager and validation commands (`JR-STACK-003`)
+- `PROJ-STACK-001` — package manager and validation commands ([`commands.md`](./commands.md), `JR-STACK-003`)
 - `PROJ-STACK-002` — framework-specific rules/docs ([`selection.md`](./selection.md))
 - `docs/stack/source-documentation.md` — when production code exists ([`universal-docs`](../universal-docs/README.md))
 

@@ -69,7 +69,7 @@ Use [`scaffolding-map.md` § Signal → backlog](../target-readme/scaffolding-ma
 | Data ownership changed | `PROJ-ADR-*`; may reopen `PROJ-DOC-*` | |
 | New Documentation map link | `PROJ-DOC-*` until path exists or link removed | |
 | Link removed from map | Cancel `PROJ-DOC-*` if only for that path | |
-| Development command added/changed | `PROJ-STACK-*`; verify command in repo before `[x]` | |
+| Development command added/changed | `PROJ-STACK-001`; re-run [`commands.md`](../stack-scaffolding/commands.md) extraction; verify in manifest before `[x]` | |
 | Env var name added | `PROJ-STACK-*` or `PROJ-DOC-*` for env doc | |
 | Roadmap direction (product themes) | Product doc under `docs/` — **not** `docs/roadmap/backlog.md` | `PROJ-DOC-*` |
 | Init path upgrade (small → medium) | Add missing area sections and rows from scaffolding map | Bulk add |
