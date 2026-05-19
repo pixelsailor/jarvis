@@ -23,7 +23,7 @@ Present questions together to reduce round-trips. Skip a question only when the 
 
 | # | Question | When to ask |
 | --- | --- | --- |
-| Q7 | **Initialization size:** small (README + minimal rules), medium (+ ADRs and doc conventions), or large (+ agents and orchestration)? | See [`scaffolding-map.md`](./scaffolding-map.md) |
+| Q7 | **Initialization size:** small (README + minimal rules + validation checklist), medium (+ ADRs and doc conventions), or large (+ agents and orchestration)? | See [`scaffolding-map.md`](./scaffolding-map.md) |
 | Q8 | **Is this greenfield or augmenting existing code?** If augmenting, which paths are authoritative? | Audit vs greenfield; avoid overwriting real stack |
 
 ### Ask only if relevant (do not block on silence)

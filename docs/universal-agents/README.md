@@ -92,7 +92,8 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | **`JR-AGENT-004`** | Handoff prompt / Next Agent Directive blocks for orchestration guide — **not** full duplicate in contracts |
 | **`JR-ORCH-003`** | [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) — stage file contracts |
 | **`JR-ORCH-004`** | [`gates-and-checks.md`](../orchestration/gates-and-checks.md) — lifecycle vs merge-ready vs handoff |
-| **`JR-ORCH-005`–`007`** | Init paths, loops, self-containment |
+| **`JR-ORCH-005`** | [`../orchestration/init-paths.md`](../orchestration/init-paths.md) — init and run-sizing paths |
+| **`JR-ORCH-006`–`007`** | Loops, self-containment |
 
 Keep **small-run path matrices** thin in INDEX and contracts; defer nuance to **`JR-ORCH-005`** and the target orchestration guide.
 

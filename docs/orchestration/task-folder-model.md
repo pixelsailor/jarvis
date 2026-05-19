@@ -113,7 +113,7 @@ Orchestrator sets `risk_tier.level` before skipping stages:
 
 Skipped stages **must** appear in `risk_tier.skipped_stages`, matching `gate_status` keys set to `skipped`, and rationale in `risk_tier.rationale` or `flags`. **Gate 6 is not skipped** for code-changing work.
 
-Small-run path details (Validator skipped vs Tester skipped) are **`JR-ORCH-005`** / target orchestration guide; do not skip Validator on architecture-touching work without user approval.
+Small-run path details (paths A/B/C; Validator vs Tester skipped) are in [`init-paths.md`](./init-paths.md) (`JR-ORCH-005`) and the target orchestration guide; do not skip Validator on architecture-touching work without user approval.
 
 ## Edit ownership (summary)
 
@@ -168,5 +168,6 @@ Treat **NEW SESSION: YES** as the default for Planner, Builder, Tester, and Vali
 | --- | --- |
 | [`task-manifest.md`](./task-manifest.md) | JSON schema |
 | [`artifact-ownership.md`](./artifact-ownership.md) | Per-file contracts (`JR-ORCH-003`) |
+| [`init-paths.md`](./init-paths.md) | Init and run-sizing paths (`JR-ORCH-005`) |
 | [`README.md`](./README.md) | Index and decisions |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | When to scaffold orchestration (large init) |

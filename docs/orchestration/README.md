@@ -2,8 +2,8 @@
 
 Jarvis guidance for **target-project** multi-agent runs: durable **task folders**, a **manifest-owned** pipeline, and stage artifacts that survive context loss. Inspired by What's For Dinner (WFD) discipline — **not** WFD product, stack, or identifiers.
 
-**Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership), `JR-ORCH-004` (lifecycle vs merge-ready vs handoff)  
-**Follow-on (not in this pack):** `JR-ORCH-005`–`007` (init paths, loops, self-containment). **Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
+**Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership), `JR-ORCH-004` (lifecycle vs merge-ready vs handoff), `JR-ORCH-005` (init and run-sizing paths)  
+**Follow-on:** `JR-ORCH-006`–`007` (loops, self-containment). **Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
 
 **Read order for agents (Jarvis initializing orchestration in a target):**
 
@@ -11,10 +11,11 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 2. [`task-folder-model.md`](./task-folder-model.md) — where runs live, artifact set, bootstrap, git policy
 3. [`artifact-ownership.md`](./artifact-ownership.md) — who writes each file, section contracts, freeze/loop rules
 4. [`gates-and-checks.md`](./gates-and-checks.md) — lifecycle gates vs merge-ready vs handoff
-5. [`task-manifest.md`](./task-manifest.md) — JSON field contract and enums
-6. [`../templates/orchestration/`](../templates/orchestration/) — copy `_template/` into the target
-7. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — `PROJ-ORCH-*` backlog rows
-8. [`../universal-validation/README.md`](../universal-validation/README.md) — checklist + orchestration appendix when validation doc exists
+5. [`init-paths.md`](./init-paths.md) — small / medium / large init and run tiers; paths A/B/C
+6. [`task-manifest.md`](./task-manifest.md) — JSON field contract and enums
+7. [`../templates/orchestration/`](../templates/orchestration/) — copy `_template/` into the target
+8. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — `PROJ-ORCH-*` backlog rows
+9. [`../universal-validation/README.md`](../universal-validation/README.md) — checklist + orchestration appendix when validation doc exists
 
 ## Workflow documents
 
@@ -24,6 +25,7 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 | `JR-ORCH-002` | [`task-manifest.md`](./task-manifest.md) | Creating or validating `task-manifest.json`; schema migrations via `manifest_version` |
 | `JR-ORCH-003` | [`artifact-ownership.md`](./artifact-ownership.md) | Per-file writers, required sections, freeze and loop behavior |
 | `JR-ORCH-004` | [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle gates vs merge-ready (**MG-***) vs handoff (**PROJ-HANDOFF-***) |
+| `JR-ORCH-005` | [`init-paths.md`](./init-paths.md) | Init paths (project) and run tiers; small paths A/B/C |
 | (target templates) | [`../templates/orchestration/_template/`](../templates/orchestration/_template/) | Manifest example + seven markdown stage templates |
 
 ## Target layout (after copy)
@@ -73,7 +75,16 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Agent-facing target rule | [`../templates/universal-rules/workflow-gates.mdc`](../templates/universal-rules/workflow-gates.mdc) — globs on orchestration + agents + orchestration guide |
 | Gate 5 vs MG-05 | Explicitly distinct in platform doc, checklist appendix, and workflow-gates template |
 | Handoff | Third vocabulary — not conflated with lifecycle or merge-ready |
-| Small-run paths | Summary in `gates-and-checks.md`; full matrices → `JR-ORCH-005` |
+| Small-run paths | Summary in `gates-and-checks.md`; full matrices → [`init-paths.md`](./init-paths.md) |
+
+## Decisions recorded for `JR-ORCH-005`
+
+| Topic | Decision |
+| --- | --- |
+| Canonical contract | [`init-paths.md`](./init-paths.md) — init path vs run tier; paths A/B/C; **MG-*** substitutes |
+| Default init path | **Medium** when unclear |
+| Default feature run tier | **Medium**; small only when elevation rules allow |
+| Target duplication | Paraphrase into orchestration guide; keep INDEX/contracts thin |
 
 ## Decisions recorded for `JR-ORCH-003`
 

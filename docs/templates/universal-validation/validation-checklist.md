@@ -117,9 +117,23 @@ Orchestrated projects use **three gate vocabularies** — do not conflate them (
 
 Domain sections (**SEC-**, **AUTH-**, stack extensions, annex rows) are usually audited at the **validation** lifecycle stage when applicable — not as separate lifecycle gates.
 
-### Small-run skips
+### Small-run skips (`risk_tier.level: small`)
 
-When the project defines a **small** risk tier with skipped Planner / Tester / Validator stages, document skips in the manifest with rationale. **Do not** claim full orchestrated merge-ready without substitute evidence (human review + PR checklist) when Validator was skipped on architecture- or boundary-touching work.
+Per Orchestrator contract and the project orchestration guide (adapt from Jarvis `init-paths` discipline): skipped Planner / Tester / Validator stages MUST be recorded in `risk_tier.skipped_stages`, `gate_status`, and `flags` with rationale. **Gate 6 is not skipped** for code-changing runs.
+
+| Path | Flow | Skips | `awaiting_human` | Full orchestrated merge-ready? |
+| --- | --- | --- | --- | --- |
+| **A** | Builder → Tester | Planner, Validator | After `test-report.md`; `gate_5_validation` = `skipped` | **No** — **MG-03** via human PR + checklist |
+| **B** | Builder → Validator | Planner, Tester (non-testable only) | After Validator **PASS** / **PASS_WITH_NOTES** | **Yes** when **MG-01**–**MG-05** green |
+| **C** | Builder only | Planner, Tester, Validator | After `build-log.md` | **No** — human substitute audit |
+
+| Skipped stage | `gate_status` | Checklist / merge-ready |
+| --- | --- | --- |
+| **Planner** | `gate_1_*`, `gate_2_*` → `skipped` or `n/a` | **MG-01** / **MG-02** from PR/ADR if architecture touched — prefer **medium** when ADR-governed |
+| **Tester** | `gate_4_tests` → `skipped` | **MG-04** via PR test evidence; document untested risk |
+| **Validator** | `gate_5_validation` → `skipped` | **MG-03** cannot use `validation-report.md`; no full orchestrated merge-ready without substitute audit |
+
+Do **not** skip Validator on architecture- or boundary-touching work without explicit human approval. Prefer path **A** over **C** when any automated test could run.
 
 ### Non-orchestrated PRs
 

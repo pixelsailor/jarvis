@@ -75,8 +75,14 @@ Merge-ready checks (**MG-01**–**MG-05**) are satisfied via Validator and check
 16. **Planner open questions:** If `plan.md` open questions block execution, set `blocked`, append `objective_blocked_by_open_questions`, halt — do not invoke Builder.
 17. **Risk tier:** Classify `small` | `medium` | `large` before first downstream agent; record rationale. Architecture-touching, security-sensitive, or ADR-governed work defaults to at least `medium`.
 18. **Right-sized skips:** When skipping Planner, Tester, or Validator, record skipped stages in `risk_tier.skipped_stages`, `gate_status`, and `flags` per the orchestration guide. Gate 6 is not skipped for code-changing runs.
-19. **Handoffs:** Every downstream handoff MUST include enough context for a fresh session (task folder, tier, objective, scope allowlist, required inputs, outputs, stop conditions). Full directive blocks: target orchestration guide (scaffold from handoff templates when present).
-20. Update `session_counts` and summarize stage command evidence in `command_evidence` when artifacts include them.
+19. **Small-run completion paths** (record path letter in `flags` when `risk_tier.level` is `small`):
+    - **Path A — Builder + Tester (no Validator):** `pipeline` = `["builder", "tester"]`. After `test-report.md`, set `gate_5_validation` to `skipped`, `status` to `awaiting_human`. **Merge-ready:** limited only — **MG-03** via human PR + checklist; do **not** claim full orchestrated merge-ready.
+    - **Path B — Builder + Validator (no Tester):** Only when non-testable (doc-only, copy). `pipeline` = `["builder", "validator"]`; `gate_4_tests` → `skipped`. **MG-04** via PR or Validator notes with untested risk.
+    - **Path C — Builder only:** Trivial non-code or no test surface; still Gate 6. Prefer Path A when tests could run.
+    - **Planner skip:** Only when objective is actionable in manifest; `gate_1_*` / `gate_2_*` → `skipped`. Do not skip Planner on ADR-governed work without approval.
+    - **Validator skip:** Never on architecture- or boundary-touching work without explicit human approval; document `substitute_audit_owner` in `flags` before `awaiting_human`.
+20. **Handoffs:** Every downstream handoff MUST include enough context for a fresh session (task folder, tier, path letter if small, objective, scope allowlist, required inputs, outputs, stop conditions). Full directive blocks: [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH).
+21. Update `session_counts` and summarize stage command evidence in `command_evidence` when artifacts include them.
 
 ## Topic rules
 

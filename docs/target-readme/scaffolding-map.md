@@ -8,11 +8,13 @@ The target README is the **control document** for what Jarvis (or a follow-on ag
 
 Choose once per project (intake Q7). When unclear, default to **medium** and tell the user.
 
+**Canonical matrices (init path vs run tier, paths A/B/C, `PROJ-*` scope):** [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`).
+
 | Path | README work | Typical `PROJ-*` scope | Orchestration |
 | --- | --- | --- | --- |
-| **Small** | Full required outline; minimal Documentation | `PROJ-README`, `PROJ-RULE` (1–2 rules), `PROJ-HANDOFF` | No task folders |
+| **Small** | Full required outline; minimal Documentation + **validation checklist** | `PROJ-README`, `PROJ-RULE` (1–2 rules), `PROJ-DOC` (minimal checklist), `PROJ-HANDOFF` | No task folders |
 | **Medium** | + boundaries refined | + `PROJ-ADR`, `PROJ-DOC`, `PROJ-STACK` | Optional for large doc sets |
-| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model — [`../orchestration/`](../orchestration/) (`JR-ORCH-001`–`003`) |
+| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model — [`../orchestration/`](../orchestration/) (`JR-ORCH-001`–`005`) |
 
 ## Signal → backlog → artifacts
 

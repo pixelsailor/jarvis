@@ -5,7 +5,7 @@ Canonical separation of **three gate vocabularies** used in orchestrated develop
 **Prerequisites:** [`task-folder-model.md`](./task-folder-model.md), [`task-manifest.md`](./task-manifest.md), [`artifact-ownership.md`](./artifact-ownership.md)  
 **Checklist IDs:** [`../templates/universal-validation/validation-checklist.md`](../templates/universal-validation/validation-checklist.md) (**MG-***, **TST-***)  
 **Handoff layer:** [`../universal-handoff/README.md`](../universal-handoff/README.md) — not a fourth lifecycle gate  
-**Small-run path matrices:** `JR-ORCH-005` (init tiers and skip policy)
+**Small-run path matrices:** [`init-paths.md`](./init-paths.md) (`JR-ORCH-005`)
 
 ## Design goals
 
@@ -130,7 +130,7 @@ When `risk_tier.level` is `small` and stages are skipped, record skips in `risk_
 
 **Gate 6** is not skipped for code-changing runs. Do not skip Validator on architecture-touching work without explicit human approval.
 
-Full path tables and tier matrices: **`JR-ORCH-005`**.
+Full path tables and tier matrices: [`init-paths.md`](./init-paths.md).
 
 ## Handoff checks (separate from lifecycle and merge-ready)
 
@@ -187,7 +187,7 @@ Routine copy, placeholder replacement, and aligning checklist appendix keys with
 | Gate 6 vs MG-* | Gate 6 follows green merge-ready path; does not substitute MG rows |
 | `awaiting_human` vs `complete` | Merge-ready path → awaiting human → Gate 6 → `complete` |
 | Handoff | **PROJ-HANDOFF-*** / self-containment — not lifecycle gates |
-| Small-run detail | Summary only; **`JR-ORCH-005`** owns tier matrices |
+| Small-run detail | Summary only; [`init-paths.md`](./init-paths.md) owns tier matrices |
 | WFD source | Dual vocabulary + mapping discipline — no WFD product/stack identifiers |
 
 ## Related
@@ -195,6 +195,7 @@ Routine copy, placeholder replacement, and aligning checklist appendix keys with
 | Doc | Role |
 | --- | --- |
 | [`README.md`](./README.md) | Orchestration pack index |
+| [`init-paths.md`](./init-paths.md) | Init and run-sizing paths (`JR-ORCH-005`) |
 | [`task-folder-model.md`](./task-folder-model.md) | Paths, git policy |
 | [`artifact-ownership.md`](./artifact-ownership.md) | Who writes merge-ready evidence |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Checklist scaffold |

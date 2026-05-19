@@ -84,7 +84,7 @@ Planner and Validator should not be skipped for durable architecture, **Accepted
 
 ### Small-run paths (`risk_tier.level: small`)
 
-Record skips in `risk_tier.skipped_stages` and `gate_status`. Gate 6 is always required for code-changing runs. Document path A/B/C (Tester vs Validator vs Builder-only) in [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH) when the target adopts orchestration — see platform `JR-ORCH-005`.
+Record skips in `risk_tier.skipped_stages` and `gate_status`. Gate 6 is always required for code-changing runs. Path A/B/C matrices (Tester vs Validator vs Builder-only, **MG-*** substitutes) live in [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH) — adapt from Jarvis `init-paths` discipline when scaffolding orchestration.
 
 ## Rule bindings (topic rules, not per-role)
 

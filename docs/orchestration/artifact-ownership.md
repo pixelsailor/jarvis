@@ -27,7 +27,7 @@ Canonical contracts for **who writes which file** under `.cursor/orchestrations/
 | `validation-report.md` | **Validator** | Orchestrator, human (Gate 6) | 5 |
 | `human-approval.md` | **Orchestrator** (from human decision) | Human, Orchestrator | 6 |
 
-**Merge-ready and handoff vocabulary:** [`gates-and-checks.md`](./gates-and-checks.md) (`JR-ORCH-004`). Small-run skip path matrices — `JR-ORCH-005`.
+**Merge-ready and handoff vocabulary:** [`gates-and-checks.md`](./gates-and-checks.md) (`JR-ORCH-004`). Small-run skip path matrices — [`init-paths.md`](./init-paths.md) (`JR-ORCH-005`).
 
 ## Global rules
 
@@ -213,7 +213,7 @@ After the Orchestrator marks a gate **passed**, the owning role must not rewrite
 7. Orchestrator → human: human-approval.md + manifest human_approval
 ```
 
-Skipped stages must align with `risk_tier.skipped_stages` and `gate_status` (`JR-ORCH-005` for tier matrices).
+Skipped stages must align with `risk_tier.skipped_stages` and `gate_status` ([`init-paths.md`](./init-paths.md) for tier matrices).
 
 ## Cross-artifact dependencies
 

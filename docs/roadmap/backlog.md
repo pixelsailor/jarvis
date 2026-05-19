@@ -102,7 +102,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md); stage templates in [`docs/templates/orchestration/_template/`](../templates/orchestration/_template/) (`plan.md`, `acceptance-criteria.md`, `test-matrix.md`, `build-log.md`, `test-report.md`, `validation-report.md`, `human-approval.md`).
 - [x] `JR-ORCH-004`: Separate lifecycle gates from merge-ready or handoff checks.
   - [`docs/orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md); target template [`docs/templates/universal-rules/workflow-gates.mdc`](../templates/universal-rules/workflow-gates.mdc).
-- [ ] `JR-ORCH-005`: Define small, medium, and large initialization paths.
+- [x] `JR-ORCH-005`: Define small, medium, and large initialization paths.
+  - [`docs/orchestration/init-paths.md`](../orchestration/init-paths.md) — project init paths, run risk tiers, small paths A/B/C; cross-links in orchestration pack and scaffolding map.
 - [ ] `JR-ORCH-006`: Define loop behavior for failed validation or human rework.
 - [ ] `JR-ORCH-007`: Ensure copied orchestration artifacts are self-contained inside the target project.
 

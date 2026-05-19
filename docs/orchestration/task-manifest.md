@@ -75,11 +75,11 @@ Do **not** include `orchestrator` in `pipeline`.
 
 | `level` | Use |
 | --- | --- |
-| `small` | Minimal scope; may skip stages with documented rationale |
+| `small` | Minimal scope; may skip stages with documented rationale — paths **A** / **B** / **C** in [`init-paths.md`](./init-paths.md) |
 | `medium` | Default feature work; full pipeline unless justified |
 | `large` | Cross-cutting / ADR-heavy; Planner required |
 
-`skipped_stages` lists **pipeline role names** skipped (not gate keys). Each skip must align with `gate_status` `skipped` and narrative in `rationale` or `flags`.
+`skipped_stages` lists **pipeline role names** skipped (not gate keys). Each skip must align with `gate_status` `skipped` and narrative in `rationale` or `flags`. Full tier and skip matrices: [`init-paths.md`](./init-paths.md) (`JR-ORCH-005`).
 
 ## Gate status
 
@@ -165,8 +165,10 @@ Gate 6 must also be recorded in `human-approval.md` with the same facts — see 
 
 Free-form string tags for routing and audits. Examples (targets may extend):
 
+- `small_run_path_a` | `small_run_path_b` | `small_run_path_c`
 - `skipped_validator_small_run`
 - `skipped_tester_non_testable`
+- `substitute_audit_owner: human`
 - `adr_conflict`
 - `objective_blocked`
 

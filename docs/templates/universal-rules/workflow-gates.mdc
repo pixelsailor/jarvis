@@ -68,13 +68,13 @@ Verified check/lint/test commands pass for touched paths: `REPLACE_WITH_VERIFY_C
 
 ## Small orchestrated runs
 
-When `risk_tier.level` is `small` and stages are skipped per the orchestration guide:
+When `risk_tier.level` is `small` and stages are skipped per the orchestration guide (paths **A** / **B** / **C**):
 
-- **Validator skipped:** Do **not** claim full orchestrated merge-ready without substitute human audit; **MG-03** via PR + review, not `validation-report.md`, unless policy allows.
-- **Validator runs:** **MG-03**–**MG-05** apply on **PASS** / **PASS_WITH_NOTES**.
-- **Tester skipped:** **MG-04** via PR test evidence.
+- **Path A (Validator skipped):** Do **not** claim full orchestrated merge-ready. Satisfy **MG-01**, **MG-02**, **MG-04**, **MG-05** via stage artifacts and PR; **MG-03** via documented human substitute audit (not `validation-report.md`). Orchestrator may set `awaiting_human` after Tester.
+- **Path B (Validator runs, Tester skipped):** **MG-03**–**MG-05** apply on **PASS** / **PASS_WITH_NOTES**; **MG-04** via PR or Validator notes with untested risk.
+- **Path C (Builder only):** Do **not** claim full orchestrated merge-ready; human substitute for **MG-03** and **MG-04**. Prefer Path A when tests exist.
 
-See checklist appendix — small-run skips.
+See checklist appendix — [small-run skips](../../docs/validation-checklist.md#small-run-skips-risk_tierlevel-small) (anchor name may differ until target checklist is authored).
 
 ## Orchestrator and human completion
 

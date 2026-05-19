@@ -11,7 +11,7 @@ Generic **validation checklist** for target projects: reusable audit rows for Va
 | `docs/validation-checklist.md` | Canonical checklist (from `validation-checklist.md` template) |
 | `.cursor/rules/validation-checklist.mdc` | Optional — globs load when orchestration or checklist is in context |
 
-**Related (when present):** [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR template and guide link checklist rows); [`../orchestration/README.md`](../orchestration/README.md) (`JR-ORCH-001`/`002` — task folders and manifest); [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004` — lifecycle vs merge-ready vs handoff); [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) (`JR-ORCH-003`); `JR-ORCH-005`+ and `JR-VALIDATION-*` (init paths, evidence tiers).
+**Related (when present):** [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR template and guide link checklist rows); [`../orchestration/README.md`](../orchestration/README.md) (`JR-ORCH-001`/`002` — task folders and manifest); [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004` — lifecycle vs merge-ready vs handoff); [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) (`JR-ORCH-003`); [`JR-ORCH-005`](../orchestration/init-paths.md) and `JR-VALIDATION-*` (init paths, evidence tiers).
 
 ## When to scaffold
 
