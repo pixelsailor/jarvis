@@ -2,8 +2,9 @@
 
 Jarvis guidance for **target-project** multi-agent **rosters** and **role contracts**: an INDEX routes Orchestrator, Planner, Builder, Tester, and Validator work; per-role `.md` files define boundaries, artifact ownership, and gate responsibilities without embedding stack commands or product domains.
 
-**Platform tasks:** `JR-AGENT-001` (roster INDEX), `JR-AGENT-002` (role contracts)  
+**Platform tasks:** `JR-AGENT-001` (roster INDEX), `JR-AGENT-002` (role contracts), `JR-AGENT-003` (minimum read sets)  
 **Copy source:** [`../templates/universal-agents/`](../templates/universal-agents/)  
+**Read sets (canonical):** [`minimum-read-sets.md`](./minimum-read-sets.md)  
 **Target layout (default):**
 
 | Path | Role |
@@ -45,6 +46,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 6. Align **Test runners** with [`../stack-scaffolding/testing.md`](../stack-scaffolding/testing.md) and `docs/stack/testing-strategy.md` — **no invented commands**.
 7. Register `PROJ-AGENT-*` rows in `docs/roadmap/backlog.md` with evidence paths.
 8. Link roster from root README § Documentation on **large** path; optional on **medium** when INDEX was copied early.
+9. Paste minimum read set tables from [`minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md) into INDEX § **Minimum read sets** (see [`minimum-read-sets.md`](./minimum-read-sets.md)).
 
 ### Role contracts (five files)
 
@@ -88,7 +90,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | --- | --- |
 | **`JR-AGENT-001`** | Roster / INDEX template |
 | **`JR-AGENT-002`** | Five per-role contract templates |
-| **`JR-AGENT-003`** | Minimum read set tables per role (efficiency) — **not** in contract templates |
+| **`JR-AGENT-003`** | [`minimum-read-sets.md`](./minimum-read-sets.md) + [`minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md) — efficiency tables in target INDEX (not contract templates) |
 | **`JR-AGENT-004`** | Handoff prompt / Next Agent Directive blocks for orchestration guide — **not** full duplicate in contracts |
 | **`JR-ORCH-003`** | [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) — stage file contracts |
 | **`JR-ORCH-004`** | [`gates-and-checks.md`](../orchestration/gates-and-checks.md) — lifecycle vs merge-ready vs handoff |
@@ -133,15 +135,24 @@ Routine copy of INDEX and contracts, placeholder replacement, and backlog eviden
 | Gate detail in contracts | **Role-level** lifecycle 0–6 summary | Skip-path matrices stay in orchestration guide / **`JR-ORCH-005`** — not duplicated from WFD |
 | Monorepo | **Single** repo-root `.cursor/agents/` | Per-package indexes only when user specifies |
 | Commands in contracts | **Placeholder** → `docs/stack/commands.md` or README § Development | No invented test or lint commands in Jarvis templates |
-| Minimum read sets | **Deferred** to **`JR-AGENT-003`** | Contracts list mandatory inputs; efficiency tables come later |
+| Minimum read sets | **INDEX § Minimum read sets** (default) | Canonical: [`minimum-read-sets.md`](./minimum-read-sets.md); contracts keep **Inputs** only |
 | Handoff directive blocks | **Deferred** to **`JR-AGENT-004`** | Orchestrator contract points to target orchestration guide |
 | Template filenames | `*.example.md` under `docs/templates/universal-agents/` | Target drops `.example` suffix |
+
+## Decisions recorded for `JR-AGENT-003`
+
+| Topic | Default | Notes |
+| --- | --- | --- |
+| Canonical platform doc | [`minimum-read-sets.md`](./minimum-read-sets.md) | Tables + tier/session variants |
+| Target publication | **`.cursor/agents/INDEX.md` § Minimum read sets** | Paste from [`minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md) |
+| Contract templates | **No read-set tables** | **Inputs** = mandatory; read sets = efficiency order |
+| Table columns | **Always read** \| **Read when applicable** | ADR/checklist depth per role in platform doc |
+| Jarvis paths in targets | **Forbidden** | Handoff **IND-08** |
 
 ## Follow-on platform tasks
 
 | ID | Outcome |
 | --- | --- |
-| `JR-AGENT-003` | Minimum read set tables per role (target INDEX or orchestration guide) |
 | `JR-AGENT-004` | Next Agent Directive / handoff prompt templates for target orchestration guide |
 
 ## Related material
@@ -149,6 +160,8 @@ Routine copy of INDEX and contracts, placeholder replacement, and backlog eviden
 | Resource | Role |
 | --- | --- |
 | [`../templates/universal-agents/INDEX.example.md`](../templates/universal-agents/INDEX.example.md) | Roster template — links to five contract templates |
+| [`minimum-read-sets.md`](./minimum-read-sets.md) | Per-role minimum read sets (`JR-AGENT-003`) |
+| [`../templates/universal-agents/minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md) | Paste-ready read-set tables for target INDEX |
 | [`../roadmap/backlog.md`](../roadmap/backlog.md) | `JR-AGENT-*` platform tasks |
 | [`../roadmap/platform-spec.md`](../roadmap/platform-spec.md) | WFD concepts to generalize |
 | WFD reference (conceptual) | Mature `.cursor/agents/` — do not link from target artifacts |

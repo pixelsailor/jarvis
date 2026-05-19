@@ -43,6 +43,8 @@ Read `task_id` and `risk_tier`. Do not edit the manifest. Orchestrator sets `cur
 6. Verified test commands from [`REPLACE_WITH_COMMANDS_DOC`](../../REPLACE_WITH_COMMANDS_DOC) and [`REPLACE_WITH_TEST_MATRIX_PATH`](../../REPLACE_WITH_TEST_MATRIX_PATH) / `docs/stack/testing-strategy.md`.
 7. `test-matrix.md` when required (complete **Actual coverage**).
 
+**Minimum read sets** for efficiency are in the target `.cursor/agents/INDEX.md` § Minimum read sets (see [`minimum-read-sets.example.md`](./minimum-read-sets.example.md)); do not omit mandatory inputs above.
+
 ## Rules
 
 1. Produce `test-report.md` before handoff.

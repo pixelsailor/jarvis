@@ -3,7 +3,7 @@
 Jarvis guidance for **target-project** multi-agent runs: durable **task folders**, a **manifest-owned** pipeline, and stage artifacts that survive context loss. Inspired by What's For Dinner (WFD) discipline — **not** WFD product, stack, or identifiers.
 
 **Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership), `JR-ORCH-004` (lifecycle vs merge-ready vs handoff), `JR-ORCH-005` (init and run-sizing paths), `JR-ORCH-006` (loops and rework), `JR-ORCH-007` (orchestration self-containment)  
-**Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
+**Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts), `JR-AGENT-003` ([`minimum-read-sets.md`](../universal-agents/minimum-read-sets.md)); `JR-AGENT-004` (handoff prompts).
 
 **Read order for agents (Jarvis initializing orchestration in a target):**
 

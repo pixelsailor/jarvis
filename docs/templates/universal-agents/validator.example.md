@@ -42,6 +42,8 @@ Merge-ready **MG-01**–**MG-05** evidence is recorded in **Checklist audit** pe
 5. `adrs/INDEX.md` and every Accepted ADR cited in `plan.md`.
 6. Source and test files named in plan, build log, and test report.
 
+**Minimum read sets** for efficiency are in the target `.cursor/agents/INDEX.md` § Minimum read sets (see [`minimum-read-sets.example.md`](./minimum-read-sets.example.md)); do not omit mandatory inputs above.
+
 ## Rules
 
 1. Write `validation-report.md` before handoff.

@@ -81,7 +81,7 @@ After Tester finishes → Validator: `current_agent` → `validator`; `gate_5_va
 
 ### Builder inputs (remediation)
 
-Minimum read set for the remediation Builder session:
+Minimum read set for the remediation Builder session (full tables: [`../universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md)):
 
 - `task-manifest.json` (`loop_count`, `max_loops`, `locked_artifacts`)
 - `plan.md`, `acceptance-criteria.md` (frozen)

@@ -112,10 +112,19 @@ When sources conflict:
 4. **Orchestration templates** — `.cursor/orchestrations/_template/`
 5. **[`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH)** — human quickstart
 
+## Minimum read sets
+
+Fresh-session efficiency tables — **mandatory Inputs** stay in each role contract. Copy from [`minimum-read-sets.example.md`](./minimum-read-sets.example.md), replace `REPLACE_WITH_*` paths, and keep tables here (default) or in the orchestration guide with a single cross-link (avoid two conflicting copies).
+
+**Project baseline (any agent):** root `README.md` → `docs/roadmap/` when resuming platform work → `adrs/INDEX.md` when architecture may change → `.cursor/rules/index.md` when editing code.
+
+Per-role **Always read** / **Read when applicable** tables: see pasted content from `minimum-read-sets.example.md` (Orchestrator, Planner, Builder, Tester, Validator, session variants).
+
 ## Binding references
 
 | Area | Reference |
 | --- | --- |
+| Minimum read set template | [`minimum-read-sets.example.md`](./minimum-read-sets.example.md) |
 | Role contract templates | [`orchestrator.example.md`](./orchestrator.example.md), [`planner.example.md`](./planner.example.md), [`builder.example.md`](./builder.example.md), [`tester.example.md`](./tester.example.md), [`validator.example.md`](./validator.example.md) → target `.cursor/agents/*.md` |
 | Commands (verified) | [`REPLACE_WITH_COMMANDS_DOC`](../../REPLACE_WITH_COMMANDS_DOC) — e.g. `docs/stack/commands.md`; do not invent scripts in contracts |
 | Artifact edit ownership | Target orchestration guide — paraphrase [`artifact-ownership`](../../../orchestration/artifact-ownership.md) (`JR-ORCH-003`); optional `orchestration-artifacts` rule |

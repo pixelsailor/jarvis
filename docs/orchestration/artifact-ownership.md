@@ -226,6 +226,8 @@ Skipped stages must align with `risk_tier.skipped_stages` and `gate_status` ([`i
 | Validator | `plan.md`, `acceptance-criteria.md`, `build-log.md`, `test-report.md`, checklist doc |
 | Orchestrator (Gate 6) | `build-log.md`, `test-report.md`, `validation-report.md` (when Validator ran), manifest |
 
+**Efficiency (read order, tier skips, remediation):** [`../universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md) (`JR-AGENT-003`) — targets paste tables into `.cursor/agents/INDEX.md`.
+
 ## Target adoption
 
 | Step | Action |

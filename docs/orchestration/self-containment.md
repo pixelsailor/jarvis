@@ -153,7 +153,7 @@ Jarvis or the init agent must **stop and ask** before:
 - Leaving **Jarvis URLs** in target orchestration or agent files because the team uses a **monorepo** with Jarvis as a sibling (document an approved exception in target `docs/roadmap/` and narrow required-reading scope).
 - **Skipping** the target orchestration guide on large init (agents will re-derive gates from chat).
 - Shipping `_template/` with **unsanitized** `README.example.md` (Jarvis links) as the only README in `_template/`.
-- Pointing agent **minimum read sets** at Jarvis platform docs instead of target guide + checklist (**defer** full read-set tables to `JR-AGENT-003` — but do not list Jarvis paths as mandatory reads).
+- Pointing agent **minimum read sets** at Jarvis platform docs instead of target INDEX § Minimum read sets + checklist — use [`../universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md) when scaffolding; targets must not list Jarvis paths as mandatory reads (**IND-08**).
 - **Committing** filled `.cursor/orchestrations/{task-id}/` to git when the team default is local-only ([`task-folder-model.md` § Git policy](./task-folder-model.md#git-policy)).
 
 Routine copy, placeholder replacement, ORCH-IND verification, and backlog evidence sub-bullets do **not** require extra approval.

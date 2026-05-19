@@ -86,7 +86,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/universal-agents/README.md`](../universal-agents/README.md); template [`docs/templates/universal-agents/INDEX.example.md`](../templates/universal-agents/INDEX.example.md).
 - [x] `JR-AGENT-002`: Create role contracts for Orchestrator, Planner, Builder, Tester, and Validator.
   - Templates: [`docs/templates/universal-agents/orchestrator.example.md`](../templates/universal-agents/orchestrator.example.md), [`planner.example.md`](../templates/universal-agents/planner.example.md), [`builder.example.md`](../templates/universal-agents/builder.example.md), [`tester.example.md`](../templates/universal-agents/tester.example.md), [`validator.example.md`](../templates/universal-agents/validator.example.md); pack README [`docs/universal-agents/README.md`](../universal-agents/README.md) § Copy and adapt (role contracts).
-- [ ] `JR-AGENT-003`: Define minimum read sets for each role to keep future sessions efficient.
+- [x] `JR-AGENT-003`: Define minimum read sets for each role to keep future sessions efficient.
+  - [`docs/universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md); target paste [`docs/templates/universal-agents/minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md); INDEX hook in [`INDEX.example.md`](../templates/universal-agents/INDEX.example.md).
 - [ ] `JR-AGENT-004`: Define handoff prompts that target projects can copy and own.
 - [ ] `JR-RULE-001`: Define always-apply versus topic-specific rule conventions.
 - [ ] `JR-RULE-002`: Define rule authoring guidance for target projects.

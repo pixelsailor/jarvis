@@ -44,6 +44,8 @@ Read `task_id`, `objective`, `locked_artifacts`, and `risk_tier`. Do not edit `t
 
 Accepted ADRs cited in `plan.md` — read when implementation touches those boundaries.
 
+**Minimum read sets** for efficiency are in the target `.cursor/agents/INDEX.md` § Minimum read sets (see [`minimum-read-sets.example.md`](./minimum-read-sets.example.md)); do not omit mandatory inputs above.
+
 ## Rules
 
 1. Treat `plan.md` as the only design truth; deviations go under **Deviations from plan** in `build-log.md` with reason.

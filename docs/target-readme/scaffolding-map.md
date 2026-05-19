@@ -44,14 +44,16 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 
 ## Agent read sets (by role)
 
-Minimize cold-start token load:
+Minimize cold-start token load. **Canonical tables:** [`../universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md) (`JR-AGENT-003`). On **large** init, paste [`../templates/universal-agents/minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md) into `.cursor/agents/INDEX.md` § **Minimum read sets** after role contracts land.
 
-| Role | Minimum read set |
+| Role | Minimum read set (summary) |
 | --- | --- |
-| **Any agent** | Target `README.md` → `docs/roadmap/README.md` → `docs/roadmap/backlog.md` |
-| **Planner** | + `adrs/INDEX.md` (if exists) + open `PROJ-*` dependencies |
-| **Builder** | + relevant Accepted ADR + `.cursor/rules/index.md` + topic doc for the task |
-| **Validator** | + validation checklist doc + `PROJ-HANDOFF-*` open items |
+| **Any agent** | `README.md` → `docs/roadmap/` (when resuming) → `adrs/INDEX.md` when architectural → `.cursor/rules/index.md` when editing code |
+| **Orchestrator** | `task-manifest.json` + orchestration guide policy + stage artifacts for routing / Gate 6 |
+| **Planner** | + cited Accepted ADRs (full), commands doc, checklist slices, test matrix when required |
+| **Builder** | + `plan.md` / ACs; cited ADRs only; topic rules for touched paths |
+| **Tester** | + `acceptance-criteria.md`, `build-log.md`, tests near changes |
+| **Validator** | + checklist applicable sections, plan/build/test artifacts, cited ADRs |
 
 ## When README changes → update backlog
 

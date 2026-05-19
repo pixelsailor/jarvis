@@ -47,7 +47,7 @@ Read `task_id`, `objective`, `locked_artifacts`, `flags`, and `risk_tier` from t
 7. [`REPLACE_WITH_VALIDATION_CHECKLIST_PATH`](../../REPLACE_WITH_VALIDATION_CHECKLIST_PATH) — applicable rows when the task touches architecture, auth, data, security, accessibility, or other checklist domains.
 8. [`REPLACE_WITH_TEST_MATRIX_PATH`](../../REPLACE_WITH_TEST_MATRIX_PATH) or `docs/stack/testing-strategy.md` — layer definitions when `test-matrix.md` is required.
 
-**Minimum read sets** for efficiency are defined in the target orchestration guide or agent INDEX — optimize in a separate scaffolding step; do not omit mandatory inputs above.
+**Minimum read sets** for efficiency are in the target `.cursor/agents/INDEX.md` § Minimum read sets (see [`minimum-read-sets.example.md`](./minimum-read-sets.example.md)); do not omit mandatory inputs above.
 
 ## Rules
 

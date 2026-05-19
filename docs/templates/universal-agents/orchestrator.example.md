@@ -55,6 +55,8 @@ Merge-ready checks (**MG-01**–**MG-05**) are satisfied via Validator and check
 4. Prior stage outputs listed in `completed_stages[].output_artifacts`.
 5. Optional: `human-approval.md` when resuming Gate 6 or rework.
 
+**Minimum read sets** for efficiency are in the target `.cursor/agents/INDEX.md` § Minimum read sets (see [`minimum-read-sets.example.md`](./minimum-read-sets.example.md)); do not omit mandatory inputs above.
+
 ## Rules
 
 1. The Orchestrator MUST NOT modify files under `.cursor/orchestrations/{task-id}/` except `task-manifest.json` and `human-approval.md`.

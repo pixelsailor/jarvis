@@ -22,7 +22,7 @@ Rules for humans and agents editing files under `docs/roadmap/`. Goal: resumable
 | Universal handoff self-containment scaffold (copy/adapt for targets) | [`../universal-handoff/README.md`](../universal-handoff/README.md) |
 | Stack detection, confirmation, commands, testing, runtime, dependencies, and rule/doc selection | [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) |
 | Universal orchestration task-folder model, manifest schema, artifact ownership, gates vs merge-ready, init/run paths, loops/rework, self-containment on copy | [`../orchestration/README.md`](../orchestration/README.md) |
-| Universal agent roster and role contract scaffolds | [`../universal-agents/README.md`](../universal-agents/README.md) |
+| Universal agent roster, role contracts, and minimum read sets | [`../universal-agents/README.md`](../universal-agents/README.md), [`../universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md) |
 
 Do not duplicate backlog tasks in `platform-spec.md` or prose summaries of the backlog in the root README.
 
