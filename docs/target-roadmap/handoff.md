@@ -128,6 +128,7 @@ When path and README disagree, **pause and ask** ([`readme-sync.md`](./readme-sy
 | --- | --- |
 | **required for handoff** | Required sub-bullet — paths, commands run, or audit date |
 | `PROJ-HANDOFF-001` | Target `docs/handoff-self-containment.md` **IND-01**–**IND-06** pass (or list fixes); note scan date — scaffold: [`../universal-handoff/README.md`](../universal-handoff/README.md) |
+| `PROJ-ORCH-001` (large path) | **ORCH-IND-01**–**ORCH-IND-10** pass when `.cursor/orchestrations/` exists — [`../orchestration/self-containment.md`](../orchestration/self-containment.md) |
 | `PROJ-HANDOFF-002` | Same checklist **IND-07**–**IND-09** pass; sample rule/agent paths |
 | `PROJ-HANDOFF-003` | User confirmation quoted or paraphrased with date |
 | Optional open tasks | No evidence required to hand off |

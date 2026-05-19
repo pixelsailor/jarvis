@@ -136,7 +136,7 @@ WFD should guide Jarvis's documentation and orchestration discipline, especially
 - Fresh-session handoffs that avoid reliance on chat memory.
 - Right-sized workflows for small, medium, and large changes.
 
-**Canonical Jarvis docs (generalized, not WFD copies):** [`../orchestration/README.md`](../orchestration/README.md) — task folders under `.cursor/orchestrations/{task-id}/`, `{project-slug}-NNN` IDs, `task-manifest.json` schema (`JR-ORCH-001`, `JR-ORCH-002`); lifecycle vs merge-ready vs handoff — [`gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`); init and run-sizing paths — [`init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`); validation remediation and human rework loops — [`loops-and-rework.md`](../orchestration/loops-and-rework.md) (`JR-ORCH-006`).
+**Canonical Jarvis docs (generalized, not WFD copies):** [`../orchestration/README.md`](../orchestration/README.md) — task folders under `.cursor/orchestrations/{task-id}/`, `{project-slug}-NNN` IDs, `task-manifest.json` schema (`JR-ORCH-001`, `JR-ORCH-002`); lifecycle vs merge-ready vs handoff — [`gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`); init and run-sizing paths — [`init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`); validation remediation and human rework loops — [`loops-and-rework.md`](../orchestration/loops-and-rework.md) (`JR-ORCH-006`); orchestration self-containment on copy — [`self-containment.md`](../orchestration/self-containment.md) (`JR-ORCH-007`).
 
 Do not copy WFD-specific details into Jarvis defaults, including:
 
@@ -158,7 +158,7 @@ Before considering a target project initialized, Jarvis should confirm:
 - The target README stands alone.
 - The target project has a durable `docs/roadmap/` backlog or equivalent completion record.
 - Generated ADRs, rules, agents, and docs live inside the target project.
-- Target `docs/handoff-self-containment.md` (or equivalent) passes — no required links to Jarvis; rules and agents cite target paths only.
+- Target `docs/handoff-self-containment.md` (or equivalent) passes — no required links to Jarvis; rules and agents cite target paths only; when orchestration exists, **ORCH-IND-01–10** pass per [`self-containment.md`](../orchestration/self-containment.md).
 - Generated docs do not require relative links to Jarvis.
 - Generated rules and agents cite target-project files, not Jarvis-local files.
 - Stack-specific guidance matches the target project's actual tools.

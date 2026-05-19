@@ -231,9 +231,11 @@ Skipped stages must align with `risk_tier.skipped_stages` and `gate_status` ([`i
 | Step | Action |
 | --- | --- |
 | 1 | Copy Jarvis [`../templates/orchestration/_template/`](../templates/orchestration/_template/) into target `.cursor/orchestrations/_template/` |
-| 2 | Add `PROJ-ORCH-*` row(s) in target `docs/roadmap/backlog.md` if not already present |
-| 3 | Point target `.cursor/agents/*.md` and orchestration guide at this contract (paraphrase — no Jarvis links in target artifacts) |
-| 4 | Add topic rule `orchestration-artifacts` (optional) summarizing the master matrix |
+| 2 | Sanitize and wire per [`self-containment.md`](./self-containment.md) (`JR-ORCH-007`) — placeholders, strip template callouts, `_template/README.md` |
+| 3 | Add `PROJ-ORCH-*` row(s) in target `docs/roadmap/backlog.md` if not already present |
+| 4 | Point target `.cursor/agents/*.md` and orchestration guide at this contract (paraphrase — no Jarvis links in target artifacts) |
+| 5 | Run **ORCH-IND-01–10** in target `docs/handoff-self-containment.md` before marking `PROJ-ORCH-001` / handoff rows complete |
+| 6 | Add topic rule `orchestration-artifacts` (optional) summarizing the master matrix |
 
 ## Decisions recorded for `JR-ORCH-003`
 
@@ -259,4 +261,5 @@ Defaults favor long-term agent clarity; override in the target orchestration gui
 | [`../templates/universal-agents/`](../templates/universal-agents/) | Per-role rules and output contracts |
 | [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle vs merge-ready vs handoff |
 | [`loops-and-rework.md`](./loops-and-rework.md) | Remediation vs human rework routing (`JR-ORCH-006`) |
+| [`self-containment.md`](./self-containment.md) | Copy sanitize and **ORCH-IND-*** (`JR-ORCH-007`) |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Checklist and MG-* |

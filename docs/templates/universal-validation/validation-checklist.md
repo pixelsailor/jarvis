@@ -93,7 +93,7 @@ _Delete this subsection until the first annex is required._
 
 **Enable when** the project scaffolds orchestration (`task-manifest.json`, lifecycle gates, `validation-report.md` template). Until then, leave this section as reference or delete it.
 
-Orchestrated projects use **three gate vocabularies** — do not conflate them (narrative in the project orchestration guide, adapted from Jarvis `gates-and-checks` discipline):
+Orchestrated projects use **three gate vocabularies** — do not conflate them (narrative in the project orchestration guide):
 
 | Vocabulary | Typical range | Tracks | Recorded in |
 | --- | --- | --- | --- |
@@ -119,7 +119,7 @@ Domain sections (**SEC-**, **AUTH-**, stack extensions, annex rows) are usually 
 
 ### Small-run skips (`risk_tier.level: small`)
 
-Per Orchestrator contract and the project orchestration guide (adapt from Jarvis `init-paths` discipline): skipped Planner / Tester / Validator stages MUST be recorded in `risk_tier.skipped_stages`, `gate_status`, and `flags` with rationale. **Gate 6 is not skipped** for code-changing runs.
+Per Orchestrator contract and the project orchestration guide: skipped Planner / Tester / Validator stages MUST be recorded in `risk_tier.skipped_stages`, `gate_status`, and `flags` with rationale. **Gate 6 is not skipped** for code-changing runs.
 
 | Path | Flow | Skips | `awaiting_human` | Full orchestrated merge-ready? |
 | --- | --- | --- | --- | --- |

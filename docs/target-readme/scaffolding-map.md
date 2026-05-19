@@ -14,7 +14,7 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 | --- | --- | --- | --- |
 | **Small** | Full required outline; minimal Documentation + **validation checklist** | `PROJ-README`, `PROJ-RULE` (1–2 rules), `PROJ-DOC` (minimal checklist), `PROJ-HANDOFF` | No task folders |
 | **Medium** | + boundaries refined | + `PROJ-ADR`, `PROJ-DOC`, `PROJ-STACK` | Optional for large doc sets |
-| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model — [`../orchestration/`](../orchestration/) (`JR-ORCH-001`–`006`) |
+| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model — [`../orchestration/`](../orchestration/) (`JR-ORCH-001`–`007`) |
 
 ## Signal → backlog → artifacts
 
@@ -76,8 +76,8 @@ Summary: after any **material** README edit, update `docs/roadmap/backlog.md` in
 3. adrs/ index + governance + first Accepted ADRs from boundaries
 4. .cursor/rules/ index + always-apply + topic rules
 5. docs/readme-governance.md (+ optional readme-governance rule) + docs/documentation-conventions.md + docs/pr-and-commit-guide.md (+ .github/pull_request_template.md on GitHub medium/large) + docs/validation-checklist.md (medium/large default) + docs/architecture/ (+ docs/guides/ when applicable) + topic docs referenced from README
-6. `.cursor/orchestrations/_template/` + orchestration guide + `.cursor/agents/INDEX.md` + five role contracts (large path; from [`../universal-agents/README.md`](../universal-agents/README.md)) — [`../orchestration/README.md`](../orchestration/README.md)
-7. docs/handoff-self-containment.md + PROJ-HANDOFF-* verification
+6. `.cursor/orchestrations/_template/` + orchestration guide + `.cursor/agents/INDEX.md` + five role contracts (large path; from [`../universal-agents/README.md`](../universal-agents/README.md)) — [`../orchestration/README.md`](../orchestration/README.md); sanitize per [`../orchestration/self-containment.md`](../orchestration/self-containment.md) (`JR-ORCH-007`)
+7. docs/handoff-self-containment.md + PROJ-HANDOFF-* verification (include **ORCH-IND-*** when step 6 ran)
 ```
 
 Do not generate step 6 before step 3 when boundaries are still Weak in the audit.

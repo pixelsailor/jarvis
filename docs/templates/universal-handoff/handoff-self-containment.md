@@ -58,6 +58,21 @@ Mark each item **pass** / **fail** / **N/A** when auditing. **Fail** on any requ
 - [ ] **IND-16:** No setup promise exists only in chat — open work is recorded in `docs/roadmap/backlog.md` (or **Deferred** / **Cancelled** with reason).
 - [ ] **IND-17:** README, ADRs, and backlog do not contradict on boundaries, stack, or data ownership (run README sync workflow if README changed late).
 
+### Orchestration artifacts
+
+Run when `.cursor/orchestrations/` exists or `PROJ-ORCH-*` is in scope. At init, agents sanitize the template pack per the orchestration guide (placeholders, no scaffold-repo links, strip template callouts in `_template/README.md`).
+
+- [ ] **ORCH-IND-01:** No links to the Jarvis (or other scaffold) repository as required reading under `.cursor/orchestrations/`, `.cursor/agents/`, the orchestration guide, or `workflow-gates.mdc`.
+- [ ] **ORCH-IND-02:** No `JR-*` platform task IDs in `.cursor/orchestrations/` or the orchestration guide (historical mentions in `docs/roadmap/` only).
+- [ ] **ORCH-IND-03:** No paths escaping the repo to reach a scaffold repo (`../jarvis/`, `../../../orchestration/`, etc.).
+- [ ] **ORCH-IND-04:** `.cursor/orchestrations/_template/README.md` (if present) cites only target-local paths.
+- [ ] **ORCH-IND-05:** No unreplaced `REPLACE_WITH_*` in required orchestration or agent paths (active runs and contracts).
+- [ ] **ORCH-IND-06:** Orchestration guide exists and is linked from `.cursor/agents/INDEX.md`.
+- [ ] **ORCH-IND-07:** Active `task-manifest.json` files contain no scaffold-repo URLs or foreign schema links.
+- [ ] **ORCH-IND-08:** Per-run stage markdown cites target ADRs, rules, and `docs/` — not external scaffold repos.
+- [ ] **ORCH-IND-09:** Validation checklist orchestration appendix is interpretable without opening Jarvis docs.
+- [ ] **ORCH-IND-10:** Each active run folder name equals manifest `task_id` exactly.
+
 ---
 
 ## Suggested scans (agents)
@@ -73,6 +88,9 @@ rg '\.\./.*jarvis|Projects/jarvis' --glob '!node_modules' --glob '!.git' 2>/dev/
 
 # Platform task IDs in generated docs (optional — flag JR- in non-roadmap docs)
 rg 'JR-[A-Z]+-[0-9]+' docs adrs .cursor .github README.md 2>/dev/null || true
+
+# Orchestration + agents (when .cursor/orchestrations exists)
+rg -i 'jarvis|REPLACE_WITH_|\.\./.*orchestration' .cursor/orchestrations .cursor/agents 2>/dev/null || true
 ```
 
 Review hits manually: **historical mentions** in `docs/roadmap/` may be acceptable; **required links** to Jarvis are not.
@@ -112,7 +130,7 @@ When marking handoff tasks complete, add sub-bullets like:
 
 | Item | Guidance |
 | --- | --- |
-| Re-run this checklist | When adding orchestration, new agent contracts, or bulk template imports |
+| Re-run this checklist | When adding orchestration, new agent contracts, or bulk template imports — include **ORCH-IND-*** when `.cursor/orchestrations/` changes |
 | Root README link | Team may remove `docs/handoff-self-containment.md` from Documentation map when setup is complete |
 | Ongoing independence | New ADRs and rules must keep target-local `see` links — same discipline as IND-07 |
 | Jarvis for later questions | Optional for humans; **not** required for agents working in this repo |
@@ -124,5 +142,6 @@ When marking handoff tasks complete, add sub-bullets like:
 | Version | Date | Notes |
 | --- | --- | --- |
 | 1.0.0 | _YYYY-MM-DD_ | Initial checklist from Jarvis universal handoff template |
+| 1.1.0 | _YYYY-MM-DD_ | Orchestration artifacts (**ORCH-IND-01**–**10**) — `JR-ORCH-007` |
 
 Bump when required rows change; sync `PROJ-HANDOFF-*` evidence expectations if IDs change.

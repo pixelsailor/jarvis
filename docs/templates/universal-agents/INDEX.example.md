@@ -1,10 +1,10 @@
 # Agents Index — REPLACE_WITH_PROJECT_NAME
 
-> **Version 1.0.0** | Roster scaffold from Jarvis universal agents pack (`JR-AGENT-001`)
+> **Template** — Copy to `.cursor/agents/INDEX.md`, replace `REPLACE_WITH_*` placeholders, and **delete this callout block**. Do not leave Jarvis or platform task IDs in the target file.
 
 Quick reference for routing work through the task-folder orchestration model. The detailed guide lives in [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH).
 
-**Role contracts:** Copy from Jarvis universal agents pack (`JR-AGENT-002`) — `orchestrator.example.md`, `planner.example.md`, `builder.example.md`, `tester.example.md`, `validator.example.md` → `.cursor/agents/*.md` (drop `.example` suffix). See [`docs/universal-agents/README.md`](../../universal-agents/README.md).
+**Role contracts:** `.cursor/agents/orchestrator.md`, `planner.md`, `builder.md`, `tester.md`, `validator.md` — same directory as this index.
 
 ## Agents
 
@@ -84,7 +84,7 @@ Planner and Validator should not be skipped for durable architecture, **Accepted
 
 ### Small-run paths (`risk_tier.level: small`)
 
-Record skips in `risk_tier.skipped_stages` and `gate_status`. Gate 6 is always required for code-changing runs. Path A/B/C matrices (Tester vs Validator vs Builder-only, **MG-*** substitutes) live in [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH) — adapt from Jarvis `init-paths` discipline when scaffolding orchestration.
+Record skips in `risk_tier.skipped_stages` and `gate_status`. Gate 6 is always required for code-changing runs. Path A/B/C matrices (Tester vs Validator vs Builder-only, **MG-*** substitutes) live in [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH).
 
 ## Rule bindings (topic rules, not per-role)
 

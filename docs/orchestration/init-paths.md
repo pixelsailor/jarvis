@@ -72,7 +72,7 @@ Default sequence from [`../target-readme/scaffolding-map.md`](../target-readme/s
 4. `.cursor/rules/`  
 5. Topic docs (PR guide, validation checklist, stack docs) per path  
 6. `.cursor/orchestrations/_template/` + agents + orchestration guide — **large only** (do not run step 6 before step 3 when README boundaries are still weak)  
-7. `docs/handoff-self-containment.md` + `PROJ-HANDOFF-*` verification  
+7. `docs/handoff-self-containment.md` + `PROJ-HANDOFF-*` verification (include **ORCH-IND-*** when orchestration scaffolded — [`self-containment.md`](./self-containment.md))  
 
 ### A.5 Using orchestration during init (large / selective medium)
 

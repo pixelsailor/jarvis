@@ -1,10 +1,10 @@
 # Orchestration task templates
 
+> **Template** — After copy to `.cursor/orchestrations/_template/`, rename to `README.md`, replace placeholders below, and **delete this callout block**. Do not leave Jarvis or platform task IDs in the target file. Sanitization: Jarvis `docs/orchestration/self-containment.md` (`JR-ORCH-007`).
+
 Copy these files into **`.cursor/orchestrations/{task-id}/`** when starting a new run. The directory name and manifest `task_id` **must match exactly** (replace `REPLACE_WITH_PROJECT_SLUG-000` with your slug, e.g. `acme-001`).
 
-**Jarvis source:** Universal orchestration templates — adapt contracts in the target orchestration guide.  
-**Artifact ownership:** [`docs/orchestration/artifact-ownership.md`](../../../orchestration/artifact-ownership.md) (`JR-ORCH-003`).  
-**Manifest schema:** [`docs/orchestration/task-manifest.md`](../../../orchestration/task-manifest.md) (`JR-ORCH-002`).
+**Contracts:** Artifact sections and freeze rules — target orchestration guide ([`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH)) and `.cursor/agents/planner.md` (and sibling role contracts). Manifest field definitions — same guide or target manifest appendix.
 
 ## Files in this template pack
 
@@ -18,7 +18,7 @@ Copy these files into **`.cursor/orchestrations/{task-id}/`** when starting a ne
 | `test-report.md` | Tester | Before Validator |
 | `validation-report.md` | Validator | Before `awaiting_human` (when Validator runs) |
 | `human-approval.md` | Orchestrator | Gate 6 — mirrors manifest `human_approval` |
-| This README | — | Reference only; do not copy into `{task-id}/` |
+| This README | — | Reference only in `_template/`; do not copy into `{task-id}/` |
 
 Copy all markdown templates at bootstrap; delete or leave empty sections roles do not use only when `risk_tier` and skip policy allow (document skips in manifest).
 
@@ -34,10 +34,10 @@ During the run, agents do **not** commit on their own. After Gate 6 (`human-appr
 
 Until then, keep task folders local and put **review evidence in the PR** (commands, verdict, AC coverage, MG-* checklist).
 
-## Related (target repo, after scaffold)
+## Related (this repository)
 
-- `docs/ORCHESTRATED_DEVELOPMENT.md` — human orchestration guide (name chosen by project)
-- `.cursor/agents/INDEX.md` — agent roster ([`universal-agents`](../../../universal-agents/) `JR-AGENT-001`)
-- `.cursor/agents/orchestrator.md`, `planner.md`, `builder.md`, `tester.md`, `validator.md` — role contracts (`JR-AGENT-002`)
-- `docs/validation-checklist.md` — merge-ready **MG-*** and lifecycle mapping (three vocabularies: lifecycle, merge-ready, handoff)
+- [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH) — human orchestration guide
+- `.cursor/agents/INDEX.md` — agent roster
+- `.cursor/agents/orchestrator.md`, `planner.md`, `builder.md`, `tester.md`, `validator.md` — role contracts
+- [`REPLACE_WITH_VALIDATION_CHECKLIST_PATH`](../../REPLACE_WITH_VALIDATION_CHECKLIST_PATH) — merge-ready **MG-*** and lifecycle mapping (lifecycle, merge-ready, handoff — three vocabularies)
 - `.cursor/rules/workflow-gates.mdc` — agent-facing merge-ready contract (when present)

@@ -106,7 +106,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/orchestration/init-paths.md`](../orchestration/init-paths.md) — project init paths, run risk tiers, small paths A/B/C; cross-links in orchestration pack and scaffolding map.
 - [x] `JR-ORCH-006`: Define loop behavior for failed validation or human rework.
   - [`docs/orchestration/loops-and-rework.md`](../orchestration/loops-and-rework.md); cross-links in orchestration pack README, artifact-ownership, task-manifest, agent templates.
-- [ ] `JR-ORCH-007`: Ensure copied orchestration artifacts are self-contained inside the target project.
+- [x] `JR-ORCH-007`: Ensure copied orchestration artifacts are self-contained inside the target project.
+  - [`docs/orchestration/self-containment.md`](../orchestration/self-containment.md); **ORCH-IND-01–10** in [`handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md); sanitized [`README.example.md`](../templates/orchestration/_template/README.example.md).
 
 ## Validation and handoff
 

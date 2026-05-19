@@ -65,7 +65,7 @@ Stable `PROJ-*` IDs support stop/resume across agent sessions. Field rules: [`..
   - Run: `docs/handoff-self-containment.md` **IND-01**–**IND-06** (copy from Jarvis [`universal-handoff`](../../universal-handoff/README.md) during init)
   - Owner: agent
 - [ ] `PROJ-HANDOFF-002`: Confirm rules and agents cite only target-project paths. **required for handoff**
-  - Run: same checklist **IND-07**–**IND-09**
+  - Run: same checklist **IND-07**–**IND-09**; when orchestration exists, **ORCH-IND-01**–**ORCH-IND-06**
   - Depends on: `PROJ-RULE-001`
   - Owner: agent
 - [ ] `PROJ-HANDOFF-003`: User acknowledges remaining non-handoff tasks before normal feature development. **required for handoff**
@@ -86,8 +86,8 @@ Stable `PROJ-*` IDs support stop/resume across agent sessions. Field rules: [`..
 
 ## Deferred
 
-- [ ] `PROJ-ORCH-001`: Seed `.cursor/orchestrations/_template/` from Jarvis orchestration templates; set `project-slug` for `{slug}-NNN` task IDs.
-  - Jarvis: [`docs/orchestration/`](../../orchestration/) (`JR-ORCH-001`–`003`), full `_template/` pack (manifest + seven markdown artifacts).
+- [ ] `PROJ-ORCH-001`: Seed `.cursor/orchestrations/_template/`; sanitize per orchestration self-containment; set `project-slug` for `{slug}-NNN` task IDs. **required for handoff** (large path)
+  - Deliverables: full `_template/` pack (manifest example + seven markdown artifacts + `_template/README.md`); target orchestration guide; **ORCH-IND-01–10** pass in `docs/handoff-self-containment.md`
   - Owner: agent
 
 ---

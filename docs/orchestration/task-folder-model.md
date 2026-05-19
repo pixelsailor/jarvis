@@ -169,5 +169,6 @@ Treat **NEW SESSION: YES** as the default for Planner, Builder, Tester, and Vali
 | [`task-manifest.md`](./task-manifest.md) | JSON schema |
 | [`artifact-ownership.md`](./artifact-ownership.md) | Per-file contracts (`JR-ORCH-003`) |
 | [`init-paths.md`](./init-paths.md) | Init and run-sizing paths (`JR-ORCH-005`) |
+| [`self-containment.md`](./self-containment.md) | Copy sanitize and **ORCH-IND-*** (`JR-ORCH-007`) |
 | [`README.md`](./README.md) | Index and decisions |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | When to scaffold orchestration (large init) |

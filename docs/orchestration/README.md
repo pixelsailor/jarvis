@@ -2,8 +2,8 @@
 
 Jarvis guidance for **target-project** multi-agent runs: durable **task folders**, a **manifest-owned** pipeline, and stage artifacts that survive context loss. Inspired by What's For Dinner (WFD) discipline — **not** WFD product, stack, or identifiers.
 
-**Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership), `JR-ORCH-004` (lifecycle vs merge-ready vs handoff), `JR-ORCH-005` (init and run-sizing paths), `JR-ORCH-006` (loops and rework)  
-**Follow-on:** `JR-ORCH-007` (self-containment). **Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
+**Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership), `JR-ORCH-004` (lifecycle vs merge-ready vs handoff), `JR-ORCH-005` (init and run-sizing paths), `JR-ORCH-006` (loops and rework), `JR-ORCH-007` (orchestration self-containment)  
+**Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
 
 **Read order for agents (Jarvis initializing orchestration in a target):**
 
@@ -14,9 +14,10 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 5. [`init-paths.md`](./init-paths.md) — small / medium / large init and run tiers; paths A/B/C
 6. [`loops-and-rework.md`](./loops-and-rework.md) — validation remediation vs human rework; counters and routing
 7. [`task-manifest.md`](./task-manifest.md) — JSON field contract and enums
-8. [`../templates/orchestration/`](../templates/orchestration/) — copy `_template/` into the target
-9. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — `PROJ-ORCH-*` backlog rows
-10. [`../universal-validation/README.md`](../universal-validation/README.md) — checklist + orchestration appendix when validation doc exists
+8. [`self-containment.md`](./self-containment.md) — copy-time sanitization and **ORCH-IND-*** verification
+9. [`../templates/orchestration/`](../templates/orchestration/) — copy `_template/` into the target
+10. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — `PROJ-ORCH-*` backlog rows
+11. [`../universal-validation/README.md`](../universal-validation/README.md) — checklist + orchestration appendix when validation doc exists
 
 ## Workflow documents
 
@@ -28,7 +29,8 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 | `JR-ORCH-004` | [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle gates vs merge-ready (**MG-***) vs handoff (**PROJ-HANDOFF-***) |
 | `JR-ORCH-005` | [`init-paths.md`](./init-paths.md) | Init paths (project) and run tiers; small paths A/B/C |
 | `JR-ORCH-006` | [`loops-and-rework.md`](./loops-and-rework.md) | Validation remediation vs human rework; `loop_count` / `rework_count`; routing |
-| (target templates) | [`../templates/orchestration/_template/`](../templates/orchestration/_template/) | Manifest example + seven markdown stage templates |
+| `JR-ORCH-007` | [`self-containment.md`](./self-containment.md) | Copy-time sanitization; **ORCH-IND-*** in target handoff checklist |
+| (target templates) | [`../templates/orchestration/_template/`](../templates/orchestration/_template/) | Manifest example + seven markdown stage templates + target-safe `README.example.md` |
 
 ## Target layout (after copy)
 
@@ -99,6 +101,15 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Human rework | `rework_count` + `rework_history`; Planner when scope changes |
 | Large-run loops | **`max_loops` per phase**; reset `loop_count` at phase boundary |
 
+## Decisions recorded for `JR-ORCH-007`
+
+| Topic | Decision |
+| --- | --- |
+| Canonical contract | [`self-containment.md`](./self-containment.md) — copy sanitize + **ORCH-IND-01–10** |
+| Target checks | Rows in `docs/handoff-self-containment.md` — no separate target orchestration checklist file |
+| `_template/README` | Sanitized `README.example.md` → `_template/README.md`; strip template callout after copy |
+| Re-verify | Template import, post-handoff orchestration enablement, bulk agent refresh |
+
 ## Decisions recorded for `JR-ORCH-003`
 
 | Topic | Decision |
@@ -118,6 +129,7 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | [`../roadmap/platform-spec.md`](../roadmap/platform-spec.md) | WFD concepts to generalize; `PROJ-ORCH-*` prefix |
 | [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle vs merge-ready vs handoff (`JR-ORCH-004`) |
 | [`loops-and-rework.md`](./loops-and-rework.md) | Remediation and human rework (`JR-ORCH-006`) |
+| [`self-containment.md`](./self-containment.md) | Orchestration copy sanitize and **ORCH-IND-*** (`JR-ORCH-007`) |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Checklist **MG-*** rows and orchestration appendix |
 | [`../templates/universal-rules/workflow-gates.mdc`](../templates/universal-rules/workflow-gates.mdc) | Target merge-ready agent contract |
 | [`../templates/universal-validation/validation-checklist.md`](../templates/universal-validation/validation-checklist.md) | Orchestration appendix (lifecycle ↔ checklist) |

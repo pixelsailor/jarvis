@@ -94,7 +94,7 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | **`JR-ORCH-004`** | [`gates-and-checks.md`](../orchestration/gates-and-checks.md) — lifecycle vs merge-ready vs handoff |
 | **`JR-ORCH-005`** | [`../orchestration/init-paths.md`](../orchestration/init-paths.md) — init and run-sizing paths |
 | **`JR-ORCH-006`** | [`../orchestration/loops-and-rework.md`](../orchestration/loops-and-rework.md) |
-| **`JR-ORCH-007`** | Self-containment |
+| **`JR-ORCH-007`** | [`../orchestration/self-containment.md`](../orchestration/self-containment.md) — orchestration copy sanitize + **ORCH-IND-*** |
 
 Keep **small-run path matrices** thin in INDEX and contracts; defer nuance to **`JR-ORCH-005`** and the target orchestration guide.
 
