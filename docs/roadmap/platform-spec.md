@@ -56,19 +56,19 @@ The target README should:
 
 ## Stack identification
 
-Before stack-specific rules or playbooks are copied into the target project, Jarvis:
+Before stack-specific rules and upstream docs are authored in the target project, Jarvis:
 
 1. Runs an evidence-based **detection pass** on the target repository (and named package root in monorepos).
 2. Compares results to README § Technology Stack when present.
 3. Presents a **single confirmation batch** for gaps, medium-confidence assumptions, and conflicts — not field-by-field re-asks when lockfiles are clear.
 4. Records confirmed facts in target `docs/stack/stack-profile.md` and aligns README § Technology Stack.
-5. **Selects** stack-specific rules and docs by **composing** confirmed capabilities (framework, libraries, language) via [`source-registry.md`](../stack-scaffolding/source-registry.md) — not opaque stack profile IDs.
+5. **Selects** stack-specific rules and docs by **composing** confirmed capabilities (framework, libraries, language) via [`upstream-capabilities.md`](../stack-scaffolding/upstream-capabilities.md) and [`selection.md`](../stack-scaffolding/selection.md) — not opaque stack profile IDs; Jarvis does not host framework playbooks ([`legacy-review.md`](../stack-scaffolding/legacy-review.md)).
 6. **Records** package manager and validation commands from manifests into README § Development and `docs/stack/commands.md` — never invented scripts ([`commands.md`](../stack-scaffolding/commands.md)).
 7. **Maps** test layers to verified commands in `docs/stack/testing-strategy.md` when tooling exists ([`testing.md`](../stack-scaffolding/testing.md)).
 8. **Documents** runtime, deployment, and secrets/env boundaries (names only) in `docs/stack/runtime-boundaries.md` when applicable ([`runtime.md`](../stack-scaffolding/runtime.md)).
 9. **Reviews** dependencies and tooling alignment read-only — no automatic upgrades ([`dependencies.md`](../stack-scaffolding/dependencies.md)).
 
-**Workflow:** [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) (detect → confirm → [commands](../stack-scaffolding/commands.md) → [testing](../stack-scaffolding/testing.md) → [runtime](../stack-scaffolding/runtime.md) → [dependencies](../stack-scaffolding/dependencies.md) → [select rules/docs](../stack-scaffolding/selection.md)). **Do not** treat Jarvis legacy `frameworks/` trees or co-located reference repos (e.g. WFD) as automatic stack evidence.
+**Workflow:** [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) (detect → confirm → [commands](../stack-scaffolding/commands.md) → [testing](../stack-scaffolding/testing.md) → [runtime](../stack-scaffolding/runtime.md) → [dependencies](../stack-scaffolding/dependencies.md) → [select rules/docs](../stack-scaffolding/selection.md)). **Do not** treat co-located reference repos (e.g. WFD) as automatic stack evidence; stack idioms live in target `docs/stack/upstream-references.md`.
 
 ## Target project roadmap requirements
 

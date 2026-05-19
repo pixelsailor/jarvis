@@ -172,8 +172,8 @@ package_manager       | pnpm            | high       | pnpm-lock.yaml
 ...
 ```
 
-## WFD and Jarvis legacy
+## Reference repos and stack playbooks
 
 What's For Dinner and other reference repos may appear in the same workspace. **Detection runs on the target path only.** WFD is a discipline template, not automatic stack evidence ([root README](../../README.md)).
 
-Jarvis `frameworks/*` and `libraries/*` are **not** scanned during detection — they are copy sources after capabilities are confirmed ([`selection.md`](./selection.md), [`source-registry.md`](./source-registry.md); legacy review `JR-STACK-007`).
+Jarvis does **not** host framework or library playbooks. After capabilities are confirmed, [`selection.md`](./selection.md) and [`upstream-capabilities.md`](./upstream-capabilities.md) guide **target-authored** rules and upstream links ([`legacy-review.md`](./legacy-review.md)).

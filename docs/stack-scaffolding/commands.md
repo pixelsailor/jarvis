@@ -1,6 +1,6 @@
 # Package manager and validation commands
 
-Jarvis records **how to install dependencies and run quality checks** in the target project using **only evidence from manifests** — never invented `pnpm test`, `npm run lint`, or framework defaults from Jarvis legacy playbooks.
+Jarvis records **how to install dependencies and run quality checks** in the target project using **only evidence from manifests** — never invented `pnpm test`, `npm run lint`, or framework defaults from reference playbooks.
 
 **Platform task:** `JR-STACK-003`  
 **Prerequisite:** `PROJ-STACK-000` complete ([`confirmation.md`](./confirmation.md) — `docs/stack/stack-profile.md` with package manager and primary package path).  
@@ -220,7 +220,7 @@ Update `last_verified`, evidence paths, and validation checklist placeholders in
 | Anti-pattern | Correct action |
 | --- | --- |
 | `pnpm test` in README with no `"test"` script | Omit or add script in repo first — Jarvis does not add scripts |
-| Copying WFD or Jarvis `frameworks/*/README.md` command blocks | Extract from **target** manifests only |
+| Copying WFD or other reference-repo command blocks | Extract from **target** manifests only |
 | `npm run` when lockfile is `pnpm-lock.yaml` | Use pnpm invocations |
 | Documenting every script including one-off `postinstall` | commands.md may list; README stays minimal |
 | Claiming `PROJ-STACK-001` complete without manifest paths in Evidence | Always cite inspected files and date |

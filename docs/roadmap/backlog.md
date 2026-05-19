@@ -68,7 +68,7 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 - [x] `JR-STACK-001`: Define how Jarvis detects or asks for a target project's language and framework.
   - [`docs/stack-scaffolding/`](../stack-scaffolding/) (`detection.md`, `confirmation.md`); target template [`docs/templates/stack-scaffolding/stack-profile.example.md`](../templates/stack-scaffolding/stack-profile.example.md).
 - [x] `JR-STACK-002`: Define how Jarvis selects stack-specific rules and best-practices docs.
-  - [`docs/stack-scaffolding/selection.md`](../stack-scaffolding/selection.md), [`source-registry.md`](../stack-scaffolding/source-registry.md); templates `upstream-references.example.md`, `stack-framework-rule.example.mdc`.
+  - [`docs/stack-scaffolding/selection.md`](../stack-scaffolding/selection.md), [`upstream-capabilities.md`](../stack-scaffolding/upstream-capabilities.md); templates `upstream-references.example.md`, `stack-framework-rule.example.mdc`.
 - [x] `JR-STACK-003`: Define how Jarvis records package manager and validation commands without inventing commands.
   - [`docs/stack-scaffolding/commands.md`](../stack-scaffolding/commands.md); target template [`docs/templates/stack-scaffolding/commands.example.md`](../templates/stack-scaffolding/commands.example.md).
 - [x] `JR-STACK-004`: Define testing strategy prompts for unit, integration, component, browser, and end-to-end layers.
@@ -77,7 +77,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/stack-scaffolding/runtime.md`](../stack-scaffolding/runtime.md); target template [`docs/templates/stack-scaffolding/runtime-boundaries.example.md`](../templates/stack-scaffolding/runtime-boundaries.example.md); target `PROJ-STACK-004`.
 - [x] `JR-STACK-006`: Define dependency and tooling review guidance for generated project docs.
   - [`docs/stack-scaffolding/dependencies.md`](../stack-scaffolding/dependencies.md); optional target `docs/stack/dependency-review.md`; target `PROJ-STACK-005`.
-- [ ] `JR-STACK-007`: Review legacy framework and library docs for possible generalized reuse.
+- [x] `JR-STACK-007`: Review legacy framework and library docs for possible generalized reuse.
+  - [`docs/stack-scaffolding/legacy-review.md`](../stack-scaffolding/legacy-review.md); removed `frameworks/`, `libraries/`, `ai-agents/`, `mcp-servers/`, stack `.cursor/rules`; `source-registry.md` → [`upstream-capabilities.md`](../stack-scaffolding/upstream-capabilities.md).
 
 ## Agent and rule scaffolding
 
@@ -111,7 +112,10 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 ## Legacy repository review
 
 - [ ] `JR-LEGACY-001`: Inventory current legacy files and mark each as keep, generalize, replace, or remove.
+  - Partial: framework/library/MCP trees — see [`legacy-review.md`](../stack-scaffolding/legacy-review.md) § Inventory (`JR-STACK-007`); `standards/`, `tools/`, `architecture/`, `testing/`, `documentation/` still open.
 - [ ] `JR-LEGACY-002`: Remove or fix broken references from legacy configuration files.
 - [ ] `JR-LEGACY-003`: Decide whether `jarvis-config.json` remains useful under the new model.
+  - Interim: deprecated stub (`JR-STACK-007`); remove file or replace with target-only template when closing task.
 - [ ] `JR-LEGACY-004`: Decide whether `.cursor.json` remains useful under the new model.
+  - Interim: deprecated router (`JR-STACK-007`); remove when closing task.
 - [ ] `JR-LEGACY-005`: Move reviewed legacy material into the new documentation structure or delete it.

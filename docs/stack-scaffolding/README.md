@@ -3,7 +3,7 @@
 Jarvis determines a target project's **language, framework, and related stack facts** before stack-specific rules, playbooks, or validation docs are generated. Detection is **evidence-first**: repository files and the target README supply facts; user questions fill gaps and resolve conflicts.
 
 **Platform tasks:** `JR-STACK-001` (detect/confirm), `JR-STACK-002` (select stack rules/docs), `JR-STACK-003` (package manager and commands), `JR-STACK-004` (testing layers), `JR-STACK-005` (runtime and secrets), `JR-STACK-006` (dependency review)  
-**Downstream:** `JR-STACK-007` (legacy framework/library review).
+**Completed:** `JR-STACK-007` — [`legacy-review.md`](./legacy-review.md); upstream index [`upstream-capabilities.md`](./upstream-capabilities.md).
 
 **Read order for agents (Jarvis initializing a target project):**
 
@@ -14,7 +14,7 @@ Jarvis determines a target project's **language, framework, and related stack fa
 5. [`testing.md`](./testing.md) — map test layers and verified commands (`PROJ-STACK-003`)
 6. [`runtime.md`](./runtime.md) — runtime, deploy, secrets/env boundaries (`PROJ-STACK-004`)
 7. [`dependencies.md`](./dependencies.md) — read-only manifest review (`PROJ-STACK-005`)
-8. [`selection.md`](./selection.md) + [`source-registry.md`](./source-registry.md) — select and adapt stack rules, playbooks, upstream refs
+8. [`selection.md`](./selection.md) + [`upstream-capabilities.md`](./upstream-capabilities.md) — author target stack rules and upstream refs
 9. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — spawn `PROJ-STACK-*` from confirmed stack
 
 **Platform context:** Initialization flow and terminology in [`../roadmap/platform-spec.md`](../roadmap/platform-spec.md). Intake Q5 overlaps when no README exists — see [`../target-readme/intake-questions.md`](../target-readme/intake-questions.md).
@@ -26,7 +26,8 @@ Jarvis determines a target project's **language, framework, and related stack fa
 | `JR-STACK-001` | [`detection.md`](./detection.md) | Inspecting the target repo for language, framework, package manager, and datastore signals |
 | `JR-STACK-001` | [`confirmation.md`](./confirmation.md) | Turning detection into a user-visible summary, corrections, and target `docs/stack/stack-profile.md` |
 | `JR-STACK-002` | [`selection.md`](./selection.md) | Choosing stack-specific rules and best-practices docs from confirmed capabilities |
-| `JR-STACK-002` | [`source-registry.md`](./source-registry.md) | Mapping capabilities to Jarvis `frameworks/`, `libraries/`, `ai-agents/` copy sources |
+| `JR-STACK-002` | [`upstream-capabilities.md`](./upstream-capabilities.md) | Upstream docs and target artifact names per capability |
+| `JR-STACK-007` | [`legacy-review.md`](./legacy-review.md) | Legacy framework/library trees removed; decisions recorded |
 | `JR-STACK-003` | [`commands.md`](./commands.md) | Package manager and validation commands from manifests — no invented scripts |
 | `JR-STACK-004` | [`testing.md`](./testing.md) | Unit / integration / component / browser / e2e layers tied to verified scripts |
 | `JR-STACK-005` | [`runtime.md`](./runtime.md) | Adapter, deployment, secrets, and env var boundaries (names only) |
@@ -49,7 +50,7 @@ flowchart TD
   cmds --> test[testing.md → testing-strategy.md]
   test --> rt[runtime.md → runtime-boundaries.md]
   rt --> deps[dependencies.md — review only]
-  deps --> select[selection.md + source-registry]
+  deps --> select[selection.md + upstream-capabilities]
   select --> map[scaffolding-map → PROJ-STACK-*]
 ```
 
@@ -75,13 +76,13 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Canonical stack detail (beyond README bullets) | Target `docs/stack/stack-profile.md` |
 | README § Technology Stack | High-level only; must agree with stack-profile |
 | Infer vs ask | High confidence → record; medium → assumption in confirmation batch; low/conflict → ask before record |
-| Stack profiles catalog | **Composed capabilities** — no profile IDs; selection uses [`source-registry.md`](./source-registry.md) (`JR-STACK-002`) |
+| Stack profiles catalog | **Composed capabilities** — no profile IDs; selection uses [`upstream-capabilities.md`](./upstream-capabilities.md) (`JR-STACK-002`) |
 | Command detail beyond README | Target `docs/stack/commands.md` on medium/large init; README § Development stays minimal |
 | Testing layer detail | Target `docs/stack/testing-strategy.md` on medium/large when test tooling exists |
 | Runtime / secrets detail | Target `docs/stack/runtime-boundaries.md` on medium/large when deploy or secrets split exists |
 | Dependency changes | **Never automatic** — review only; user approves manifest edits |
 | Greenfield (no manifests) | Ask intake Q5; do not invent stack or scripts |
-| Legacy Jarvis `frameworks/` trees | Reference for copy/adapt only; not auto-selected without confirmed capabilities |
+| Framework/library playbooks in Jarvis | **Out of scope** — target owns stack rules and upstream refs ([`legacy-review.md`](./legacy-review.md)) |
 
 ## Related material
 
@@ -90,5 +91,5 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | [`../target-readme/intake-questions.md`](../target-readme/intake-questions.md) | Q5 stack question when README missing |
 | [`../universal-docs/README.md`](../universal-docs/README.md) | `docs/stack/source-documentation.md` after language is known |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | **TST-** / **TOOL-** / **DEPLOY-** checklist extensions |
-| Jarvis `frameworks/`, `libraries/`, `ai-agents/` (legacy) | Candidate copy sources — reviewed per `JR-STACK-007` |
+| [`legacy-review.md`](./legacy-review.md) | `JR-STACK-007` inventory and disposition |
 | [`../roadmap/open-decisions.md`](../roadmap/open-decisions.md) | Stack profiles catalog; full infer-vs-ask for non-stack fields |

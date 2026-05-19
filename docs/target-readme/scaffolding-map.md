@@ -36,7 +36,7 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 | Layer | Driven by | Jarvis source (copy/adapt into target) |
 | --- | --- | --- |
 | **Universal** | Any initialized project | [`docs/universal-adr/README.md`](../universal-adr/README.md) (ADR layout); [`docs/universal-readme/README.md`](../universal-readme/README.md) (README governance); [`docs/universal-docs/README.md`](../universal-docs/README.md) (doc conventions); [`docs/universal-rules/README.md`](../universal-rules/README.md) (Cursor rules layout + index); [`docs/universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR/commit guide + GitHub template); [`docs/universal-validation/README.md`](../universal-validation/README.md) (validation checklist + optional rule); [`docs/universal-handoff/README.md`](../universal-handoff/README.md) (handoff self-containment audit) |
-| **Stack-specific** | README stack + `docs/stack/stack-profile.md` + detected files | [`stack-scaffolding/`](../stack-scaffolding/README.md) — detect/confirm then [`selection.md`](../stack-scaffolding/selection.md) + [`source-registry.md`](../stack-scaffolding/source-registry.md); Jarvis `frameworks/`, `libraries/` — **adapted**, not symlinked |
+| **Stack-specific** | README stack + `docs/stack/stack-profile.md` + detected files | [`stack-scaffolding/`](../stack-scaffolding/README.md) — detect/confirm then [`selection.md`](../stack-scaffolding/selection.md) + [`upstream-capabilities.md`](../stack-scaffolding/upstream-capabilities.md); rules and upstream refs **authored in target**, not copied from Jarvis |
 
 **Rule:** Generated files live in the target repo. Jarvis repository paths are not valid `see` targets in target rules or ADRs.
 
