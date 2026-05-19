@@ -51,6 +51,9 @@ Stack components **present in repo but out of scope** for new agent guidance (e.
 | Doc | When |
 | --- | --- |
 | `docs/stack/commands.md` | Tooling exists — verified install and quality commands (`JR-STACK-003`) |
+| `docs/stack/testing-strategy.md` | Test tooling exists — layers and verified test commands (`JR-STACK-004`) |
+| `docs/stack/runtime-boundaries.md` | Deploy adapter, platform, or secrets split (`JR-STACK-005`) |
+| `docs/stack/dependency-review.md` | Optional — findings from manifest review (`JR-STACK-006`) |
 | `docs/stack/source-documentation.md` | Production code exists — comment syntax per language |
 | `docs/validation-checklist.md` | Medium/large init — stack-specific validation rows |
 | `docs/stack/upstream-references.md` | After `PROJ-STACK-002` — official docs and MCP index ([`selection.md`](../../stack-scaffolding/selection.md)) |

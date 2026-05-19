@@ -71,9 +71,12 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/stack-scaffolding/selection.md`](../stack-scaffolding/selection.md), [`source-registry.md`](../stack-scaffolding/source-registry.md); templates `upstream-references.example.md`, `stack-framework-rule.example.mdc`.
 - [x] `JR-STACK-003`: Define how Jarvis records package manager and validation commands without inventing commands.
   - [`docs/stack-scaffolding/commands.md`](../stack-scaffolding/commands.md); target template [`docs/templates/stack-scaffolding/commands.example.md`](../templates/stack-scaffolding/commands.example.md).
-- [ ] `JR-STACK-004`: Define testing strategy prompts for unit, integration, component, browser, and end-to-end layers.
-- [ ] `JR-STACK-005`: Define runtime, deployment, secrets, and environment boundary prompts.
-- [ ] `JR-STACK-006`: Define dependency and tooling review guidance for generated project docs.
+- [x] `JR-STACK-004`: Define testing strategy prompts for unit, integration, component, browser, and end-to-end layers.
+  - [`docs/stack-scaffolding/testing.md`](../stack-scaffolding/testing.md); target template [`docs/templates/stack-scaffolding/testing-strategy.example.md`](../templates/stack-scaffolding/testing-strategy.example.md); target `PROJ-STACK-003`.
+- [x] `JR-STACK-005`: Define runtime, deployment, secrets, and environment boundary prompts.
+  - [`docs/stack-scaffolding/runtime.md`](../stack-scaffolding/runtime.md); target template [`docs/templates/stack-scaffolding/runtime-boundaries.example.md`](../templates/stack-scaffolding/runtime-boundaries.example.md); target `PROJ-STACK-004`.
+- [x] `JR-STACK-006`: Define dependency and tooling review guidance for generated project docs.
+  - [`docs/stack-scaffolding/dependencies.md`](../stack-scaffolding/dependencies.md); optional target `docs/stack/dependency-review.md`; target `PROJ-STACK-005`.
 - [ ] `JR-STACK-007`: Review legacy framework and library docs for possible generalized reuse.
 
 ## Agent and rule scaffolding

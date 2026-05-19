@@ -57,6 +57,9 @@ Use stable IDs so `validation-report.md`, PR comments, and `plan.md` → Validat
 | [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) | Guide §3–§4 and PR template link checklist when present |
 | [`../universal-rules/README.md`](../universal-rules/README.md) | Optional `validation-checklist.mdc`; index Workflow row |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | Validator minimum read set includes checklist |
+| [`../stack-scaffolding/testing.md`](../stack-scaffolding/testing.md) | **TST-** extension rows per verified test layer |
+| [`../stack-scaffolding/runtime.md`](../stack-scaffolding/runtime.md) | **SEC-** / **DEPLOY-** rows for secrets and deploy boundaries |
+| [`../stack-scaffolding/dependencies.md`](../stack-scaffolding/dependencies.md) | **TOOL-** rows for lockfile/script alignment |
 | `JR-ORCH-*` (future) | Lifecycle gate ↔ checklist mapping lives in checklist orchestration appendix |
 | `JR-VALIDATION-*` (future) | Doc-only vs code init evidence; does not replace this checklist |
 

@@ -36,8 +36,8 @@ Skip questions already answered in intake or unambiguous README text **unless** 
 | Package manager when lockfile exists | [`intake-questions.md`](../target-readme/intake-questions.md) |
 | Framework tutorial / MCP preferences | Optional in [`selection.md`](./selection.md) pause table — default: upstream refs only |
 | Exact library versions | README outline — versions only when architectural |
-| Every test layer setup | `JR-STACK-004` |
-| Deployment secrets / env values | Security; `JR-STACK-005` |
+| Every test layer setup | [`testing.md`](./testing.md) (`JR-STACK-004`) |
+| Deployment secrets / env values | Security; [`runtime.md`](./runtime.md) (`JR-STACK-005`) — names only |
 
 ## Conflicts
 
@@ -78,6 +78,9 @@ Spawn follow-ups per [`scaffolding-map.md`](../target-readme/scaffolding-map.md)
 
 - `PROJ-STACK-001` — package manager and validation commands ([`commands.md`](./commands.md), `JR-STACK-003`)
 - `PROJ-STACK-002` — framework-specific rules/docs ([`selection.md`](./selection.md))
+- `PROJ-STACK-003` — testing layers ([`testing.md`](./testing.md), `JR-STACK-004`) when test tooling exists
+- `PROJ-STACK-004` — runtime and secrets boundaries ([`runtime.md`](./runtime.md), `JR-STACK-005`) when deploy/secrets apply
+- `PROJ-STACK-005` — dependency review ([`dependencies.md`](./dependencies.md), `JR-STACK-006`) — optional for handoff
 - `docs/stack/source-documentation.md` — when production code exists ([`universal-docs`](../universal-docs/README.md))
 
 ### 4. Link from README § Documentation

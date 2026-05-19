@@ -50,6 +50,14 @@ Stable `PROJ-*` IDs support stop/resume across agent sessions. Field rules: [`..
   - Depends on: `PROJ-STACK-000` (stack-profile)
   - Owner: agent
   - Deliverables: `.cursor/rules/<framework>-conventions.mdc`, `docs/stack/upstream-references.md`; optional `docs/stack/framework-guide.md`
+- [ ] `PROJ-STACK-003`: Document testing layers and verified test commands ([`testing.md`](../../stack-scaffolding/testing.md)). **required for handoff** when test tooling exists
+  - Depends on: `PROJ-STACK-001`
+  - Deliverables: `docs/stack/testing-strategy.md`
+- [ ] `PROJ-STACK-004`: Document runtime, deployment, and secrets/env boundaries ([`runtime.md`](../../stack-scaffolding/runtime.md)). **required for handoff** when deploy adapter or secrets split exists
+  - Deliverables: `docs/stack/runtime-boundaries.md`; align README § Boundaries
+- [ ] `PROJ-STACK-005`: Dependency and tooling review — no automatic upgrades ([`dependencies.md`](../../stack-scaffolding/dependencies.md)). *(optional for handoff)*
+  - Depends on: `PROJ-STACK-001`
+  - Deliverables: optional `docs/stack/dependency-review.md`; align `stack-profile` and `commands.md`
 
 ## PROJ-HANDOFF — Self-containment
 

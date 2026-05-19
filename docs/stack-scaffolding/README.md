@@ -2,8 +2,8 @@
 
 Jarvis determines a target project's **language, framework, and related stack facts** before stack-specific rules, playbooks, or validation docs are generated. Detection is **evidence-first**: repository files and the target README supply facts; user questions fill gaps and resolve conflicts.
 
-**Platform tasks:** `JR-STACK-001` (detect/confirm), `JR-STACK-002` (select stack rules/docs), `JR-STACK-003` (package manager and commands)  
-**Downstream (separate tasks):** `JR-STACK-004`–`007` (testing, runtime, dependencies, legacy review).
+**Platform tasks:** `JR-STACK-001` (detect/confirm), `JR-STACK-002` (select stack rules/docs), `JR-STACK-003` (package manager and commands), `JR-STACK-004` (testing layers), `JR-STACK-005` (runtime and secrets), `JR-STACK-006` (dependency review)  
+**Downstream:** `JR-STACK-007` (legacy framework/library review).
 
 **Read order for agents (Jarvis initializing a target project):**
 
@@ -11,8 +11,11 @@ Jarvis determines a target project's **language, framework, and related stack fa
 2. [`detection.md`](./detection.md) — run the detection pass; record confidence per field
 3. [`confirmation.md`](./confirmation.md) — present summary, ask only for gaps/conflicts; write durable stack record
 4. [`commands.md`](./commands.md) — record package manager and verified scripts (`PROJ-STACK-001`)
-5. [`selection.md`](./selection.md) + [`source-registry.md`](./source-registry.md) — select and adapt stack rules, playbooks, upstream refs
-6. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — spawn `PROJ-STACK-*` from confirmed stack
+5. [`testing.md`](./testing.md) — map test layers and verified commands (`PROJ-STACK-003`)
+6. [`runtime.md`](./runtime.md) — runtime, deploy, secrets/env boundaries (`PROJ-STACK-004`)
+7. [`dependencies.md`](./dependencies.md) — read-only manifest review (`PROJ-STACK-005`)
+8. [`selection.md`](./selection.md) + [`source-registry.md`](./source-registry.md) — select and adapt stack rules, playbooks, upstream refs
+9. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — spawn `PROJ-STACK-*` from confirmed stack
 
 **Platform context:** Initialization flow and terminology in [`../roadmap/platform-spec.md`](../roadmap/platform-spec.md). Intake Q5 overlaps when no README exists — see [`../target-readme/intake-questions.md`](../target-readme/intake-questions.md).
 
@@ -25,7 +28,10 @@ Jarvis determines a target project's **language, framework, and related stack fa
 | `JR-STACK-002` | [`selection.md`](./selection.md) | Choosing stack-specific rules and best-practices docs from confirmed capabilities |
 | `JR-STACK-002` | [`source-registry.md`](./source-registry.md) | Mapping capabilities to Jarvis `frameworks/`, `libraries/`, `ai-agents/` copy sources |
 | `JR-STACK-003` | [`commands.md`](./commands.md) | Package manager and validation commands from manifests — no invented scripts |
-| (target artifacts) | [`../templates/stack-scaffolding/`](../templates/stack-scaffolding/) | `stack-profile`, `commands`, `upstream-references`, `stack-framework-rule` examples |
+| `JR-STACK-004` | [`testing.md`](./testing.md) | Unit / integration / component / browser / e2e layers tied to verified scripts |
+| `JR-STACK-005` | [`runtime.md`](./runtime.md) | Adapter, deployment, secrets, and env var boundaries (names only) |
+| `JR-STACK-006` | [`dependencies.md`](./dependencies.md) | Prod vs dev deps, duplicate tools, alignment with commands — no auto-upgrades |
+| (target artifacts) | [`../templates/stack-scaffolding/`](../templates/stack-scaffolding/) | `stack-profile`, `commands`, `testing-strategy`, `runtime-boundaries`, `upstream-references`, `stack-framework-rule` examples |
 
 ## Sequence
 
@@ -40,7 +46,10 @@ flowchart TD
   conflict -->|No| record[Write stack-profile + README § Stack]
   confirm --> record
   record --> cmds[commands.md → README § Development]
-  cmds --> select[selection.md + source-registry]
+  cmds --> test[testing.md → testing-strategy.md]
+  test --> rt[runtime.md → runtime-boundaries.md]
+  rt --> deps[dependencies.md — review only]
+  deps --> select[selection.md + source-registry]
   select --> map[scaffolding-map → PROJ-STACK-*]
 ```
 
@@ -52,8 +61,10 @@ Jarvis must **stop and ask** before:
 - Choosing the **primary package root** in a monorepo when multiple apps exist and the user has not named the product path — see [`detection.md` § Monorepos](./detection.md#monorepos).
 - Treating **legacy or tutorial folders** as the product stack when the real app lives elsewhere (e.g. `examples/`, `docs/demo/`).
 - **Replacing** an existing target `docs/stack/stack-profile.md` that the team adopted as canonical without user approval.
+- **Deployment conflicts** (adapter vs Docker vs README) — see [`runtime.md` § Ask table](./runtime.md#ask-table).
+- **Changing lockfiles or dependencies** — see [`dependencies.md`](./dependencies.md).
 
-Routine high-confidence detection, a single confirmation batch, and creating `docs/stack/stack-profile.md` from the template do not require extra approval.
+Routine high-confidence detection, a single confirmation batch, and creating `docs/stack/*` from templates do not require extra approval (except where child docs specify pause tables).
 
 ## Decisions recorded for `JR-STACK-001`
 
@@ -66,6 +77,9 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Infer vs ask | High confidence → record; medium → assumption in confirmation batch; low/conflict → ask before record |
 | Stack profiles catalog | **Composed capabilities** — no profile IDs; selection uses [`source-registry.md`](./source-registry.md) (`JR-STACK-002`) |
 | Command detail beyond README | Target `docs/stack/commands.md` on medium/large init; README § Development stays minimal |
+| Testing layer detail | Target `docs/stack/testing-strategy.md` on medium/large when test tooling exists |
+| Runtime / secrets detail | Target `docs/stack/runtime-boundaries.md` on medium/large when deploy or secrets split exists |
+| Dependency changes | **Never automatic** — review only; user approves manifest edits |
 | Greenfield (no manifests) | Ask intake Q5; do not invent stack or scripts |
 | Legacy Jarvis `frameworks/` trees | Reference for copy/adapt only; not auto-selected without confirmed capabilities |
 
@@ -75,5 +89,6 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | --- | --- |
 | [`../target-readme/intake-questions.md`](../target-readme/intake-questions.md) | Q5 stack question when README missing |
 | [`../universal-docs/README.md`](../universal-docs/README.md) | `docs/stack/source-documentation.md` after language is known |
+| [`../universal-validation/README.md`](../universal-validation/README.md) | **TST-** / **TOOL-** / **DEPLOY-** checklist extensions |
 | Jarvis `frameworks/`, `libraries/`, `ai-agents/` (legacy) | Candidate copy sources — reviewed per `JR-STACK-007` |
 | [`../roadmap/open-decisions.md`](../roadmap/open-decisions.md) | Stack profiles catalog; full infer-vs-ask for non-stack fields |

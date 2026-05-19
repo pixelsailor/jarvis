@@ -28,7 +28,7 @@ Jarvis uses the target project's `docs/roadmap/` folder as the **resumable setup
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | README signals → initial `PROJ-*` rows |
 | [`../target-readme/handoff-checklist.md`](../target-readme/handoff-checklist.md) | README self-containment before `PROJ-HANDOFF-*` |
 | [`../universal-handoff/README.md`](../universal-handoff/README.md) | Target `docs/handoff-self-containment.md` for `PROJ-HANDOFF-001` / `PROJ-HANDOFF-002` evidence |
-| [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) | Stack detect/confirm, verified commands ([`commands.md`](../stack-scaffolding/commands.md)), then `PROJ-STACK-*` tooling tasks |
+| [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) | Stack detect/confirm, commands, testing, runtime, dependencies ([`README`](../stack-scaffolding/README.md) read order), then `PROJ-STACK-*` tooling tasks |
 
 ## Human input (pause points)
 

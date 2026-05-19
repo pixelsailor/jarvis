@@ -4,7 +4,7 @@ Jarvis records **how to install dependencies and run quality checks** in the tar
 
 **Platform task:** `JR-STACK-003`  
 **Prerequisite:** `PROJ-STACK-000` complete ([`confirmation.md`](./confirmation.md) — `docs/stack/stack-profile.md` with package manager and primary package path).  
-**Related:** [`detection.md`](./detection.md) (names test runners only); [`selection.md`](./selection.md) (strip invented scripts from copied rules); testing layers — `JR-STACK-004`.
+**Related:** [`detection.md`](./detection.md) (names test runners only); [`selection.md`](./selection.md) (strip invented scripts from copied rules); testing layers — [`testing.md`](./testing.md) (`JR-STACK-004`); runtime/env — [`runtime.md`](./runtime.md) (`JR-STACK-005`).
 
 ## Decision: two surfaces, one source of truth
 
@@ -146,7 +146,7 @@ Follow [`outline.md`](../target-readme/outline.md) § Development:
 - Prerequisites (runtime version from `.nvmrc`, `engines`, `requires-python`, etc. — **from files**, not guessed).
 - Install line using verified package manager.
 - Dev + quality commands (verified invocations only).
-- Env var **names** only when declared in `.env.example`, README, or documented config — never values.
+- Env var **names** only when declared in `.env.example`, README, or documented config — never values. Classify public vs secret in [`runtime.md`](./runtime.md) when medium/large init.
 
 ### 3. `docs/stack/stack-profile.md`
 
@@ -193,7 +193,7 @@ Routine extraction, README sync, and creating `commands.md` from the template do
 | Topic | Reason |
 | --- | --- |
 | Package manager when lockfile exists | [`intake-questions.md`](../target-readme/intake-questions.md), [`detection.md`](./detection.md) |
-| Whether to add `vitest` / `playwright` as tools | Detection + `JR-STACK-004` |
+| Whether to add `vitest` / `playwright` as tools | Detection + [`testing.md`](./testing.md); no new deps without [`dependencies.md`](./dependencies.md) |
 | Exact dependency versions | stack-profile / README stack bullets only when architectural |
 
 ## Greenfield and doc-only repos
