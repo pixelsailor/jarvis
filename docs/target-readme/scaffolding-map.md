@@ -12,7 +12,7 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 | --- | --- | --- | --- |
 | **Small** | Full required outline; minimal Documentation | `PROJ-README`, `PROJ-RULE` (1–2 rules), `PROJ-HANDOFF` | No task folders |
 | **Medium** | + boundaries refined | + `PROJ-ADR`, `PROJ-DOC`, `PROJ-STACK` | Optional for large doc sets |
-| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model — [`../orchestration/`](../orchestration/) (`JR-ORCH-001`/`002`) |
+| **Large** | + roadmap direction, structure | + `PROJ-AGENT`, `PROJ-ORCH`, validation docs | Task-folder model — [`../orchestration/`](../orchestration/) (`JR-ORCH-001`–`003`) |
 
 ## Signal → backlog → artifacts
 

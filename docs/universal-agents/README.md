@@ -90,7 +90,8 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | **`JR-AGENT-002`** | Five per-role contract templates |
 | **`JR-AGENT-003`** | Minimum read set tables per role (efficiency) — **not** in contract templates |
 | **`JR-AGENT-004`** | Handoff prompt / Next Agent Directive blocks for orchestration guide — **not** full duplicate in contracts |
-| **`JR-ORCH-003`–`007`** | Artifact ownership detail, gates vs merge-ready, init paths, loops, self-containment |
+| **`JR-ORCH-003`** | [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) — stage file contracts |
+| **`JR-ORCH-004`–`007`** | Gates vs merge-ready, init paths, loops, self-containment |
 
 Keep **small-run path matrices** thin in INDEX and contracts; defer nuance to **`JR-ORCH-005`** and the target orchestration guide.
 

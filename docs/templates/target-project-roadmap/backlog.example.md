@@ -87,7 +87,7 @@ Stable `PROJ-*` IDs support stop/resume across agent sessions. Field rules: [`..
 ## Deferred
 
 - [ ] `PROJ-ORCH-001`: Seed `.cursor/orchestrations/_template/` from Jarvis orchestration templates; set `project-slug` for `{slug}-NNN` task IDs.
-  - Jarvis: [`docs/orchestration/`](../../orchestration/), [`docs/templates/orchestration/_template/`](../../templates/orchestration/_template/).
+  - Jarvis: [`docs/orchestration/`](../../orchestration/) (`JR-ORCH-001`–`003`), full `_template/` pack (manifest + seven markdown artifacts).
   - Owner: agent
 
 ---

@@ -2,17 +2,25 @@
 
 Copy these files into **`.cursor/orchestrations/{task-id}/`** when starting a new run. The directory name and manifest `task_id` **must match exactly** (replace `REPLACE_WITH_PROJECT_SLUG-000` with your slug, e.g. `acme-001`).
 
-**Jarvis source:** Universal orchestration templates — adapt filenames and contracts in the target orchestration guide.  
-**Schema:** [`docs/orchestration/task-manifest.md`](../../../orchestration/task-manifest.md) (path after copy: target-owned doc).
+**Jarvis source:** Universal orchestration templates — adapt contracts in the target orchestration guide.  
+**Artifact ownership:** [`docs/orchestration/artifact-ownership.md`](../../../orchestration/artifact-ownership.md) (`JR-ORCH-003`).  
+**Manifest schema:** [`docs/orchestration/task-manifest.md`](../../../orchestration/task-manifest.md) (`JR-ORCH-002`).
 
-## Files in this template pack (`JR-ORCH-001` / `002`)
+## Files in this template pack
 
-| File | Owner | When |
+| File | Primary owner | When |
 | --- | --- | --- |
-| `task-manifest.example.json` → `task-manifest.json` | Orchestrator | Bootstrap run — set `task_id`, `objective`, `locked_artifacts`, `risk_tier` |
+| `task-manifest.example.json` → `task-manifest.json` | Orchestrator | Bootstrap — set `task_id`, `objective`, `locked_artifacts`, `risk_tier` |
+| `plan.md` | Planner | Before Builder |
+| `acceptance-criteria.md` | Planner | Before Builder |
+| `test-matrix.md` | Planner (planned) → Tester (actual) | Medium/large or testable code change |
+| `build-log.md` | Builder | Before Tester |
+| `test-report.md` | Tester | Before Validator |
+| `validation-report.md` | Validator | Before `awaiting_human` (when Validator runs) |
+| `human-approval.md` | Orchestrator | Gate 6 — mirrors manifest `human_approval` |
 | This README | — | Reference only; do not copy into `{task-id}/` |
 
-Additional markdown artifacts (`plan.md`, `acceptance-criteria.md`, `test-matrix.md`, `build-log.md`, `test-report.md`, `validation-report.md`, `human-approval.md`) are added when the target scaffolds full orchestration (`PROJ-ORCH-*`, `JR-ORCH-003`+).
+Copy all markdown templates at bootstrap; delete or leave empty sections roles do not use only when `risk_tier` and skip policy allow (document skips in manifest).
 
 ## `gate_status` values
 
@@ -30,5 +38,5 @@ Until then, keep task folders local and put **review evidence in the PR** (comma
 
 - `docs/ORCHESTRATED_DEVELOPMENT.md` — human orchestration guide (name chosen by project)
 - `.cursor/agents/INDEX.md` — agent roster ([`universal-agents`](../../../universal-agents/) `JR-AGENT-001`)
-- `.cursor/agents/orchestrator.md`, `planner.md`, `builder.md`, `tester.md`, `validator.md` — role contracts ([`templates/universal-agents/`](../../../templates/universal-agents/) `JR-AGENT-002`)
+- `.cursor/agents/orchestrator.md`, `planner.md`, `builder.md`, `tester.md`, `validator.md` — role contracts (`JR-AGENT-002`)
 - `docs/validation-checklist.md` — merge-ready **MG-*** and lifecycle mapping

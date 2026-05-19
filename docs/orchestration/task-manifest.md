@@ -159,7 +159,7 @@ Append on human `rejected_rework` or scope-changing rework:
 }
 ```
 
-Gate 6 must also be recorded in `human-approval.md` with the same facts (`JR-ORCH-003`).
+Gate 6 must also be recorded in `human-approval.md` with the same facts — see [`artifact-ownership.md`](./artifact-ownership.md) § `human-approval.md`.
 
 ## Flags
 
@@ -208,4 +208,5 @@ Before handoff:
 | Doc | Role |
 | --- | --- |
 | [`task-folder-model.md`](./task-folder-model.md) | Paths, artifacts, git policy |
+| [`artifact-ownership.md`](./artifact-ownership.md) | Stage file contracts |
 | [`README.md`](./README.md) | Index |

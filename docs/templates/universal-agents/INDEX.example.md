@@ -118,7 +118,7 @@ When sources conflict:
 | --- | --- |
 | Role contract templates | [`orchestrator.example.md`](./orchestrator.example.md), [`planner.example.md`](./planner.example.md), [`builder.example.md`](./builder.example.md), [`tester.example.md`](./tester.example.md), [`validator.example.md`](./validator.example.md) → target `.cursor/agents/*.md` |
 | Commands (verified) | [`REPLACE_WITH_COMMANDS_DOC`](../../REPLACE_WITH_COMMANDS_DOC) — e.g. `docs/stack/commands.md`; do not invent scripts in contracts |
-| Artifact edit ownership | Target orchestration rule or guide — platform `JR-ORCH-003` |
+| Artifact edit ownership | Target orchestration guide — paraphrase [`artifact-ownership`](../../../orchestration/artifact-ownership.md) (`JR-ORCH-003`); optional `orchestration-artifacts` rule |
 | ADR authority | `adrs/INDEX.md`, `adrs/GOVERNANCE.md` |
 | Project conventions | `.cursor/rules/index.md`, `docs/documentation-conventions.md` |
 | Validation | [`REPLACE_WITH_VALIDATION_CHECKLIST_PATH`](../../REPLACE_WITH_VALIDATION_CHECKLIST_PATH) |

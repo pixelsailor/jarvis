@@ -76,7 +76,7 @@ Files under `.cursor/orchestrations/{task-id}/`:
 - `docs/pr-and-commit-guide.md` — PR/commit evidence format
 - Stack commands — `docs/stack/commands.md` or README § Development (**verified scripts only**)
 
-Markdown artifact **templates** ship in `_template/` when the target scaffolds orchestration (`PROJ-ORCH-*`). Full section contracts and ownership rules are **`JR-ORCH-003`**; this table is the stable filename contract agents rely on.
+Markdown artifact **templates** ship in `_template/` when the target scaffolds orchestration (`PROJ-ORCH-*`). Full section contracts, freeze rules, and loop behavior: [`artifact-ownership.md`](./artifact-ownership.md) (`JR-ORCH-003`). This table is the stable filename contract agents rely on.
 
 ### Bootstrap from `_template`
 
@@ -113,6 +113,8 @@ Skipped stages **must** appear in `risk_tier.skipped_stages`, matching `gate_sta
 Small-run path details (Validator skipped vs Tester skipped) are **`JR-ORCH-005`** / target orchestration guide; do not skip Validator on architecture-touching work without user approval.
 
 ## Edit ownership (summary)
+
+See [`artifact-ownership.md`](./artifact-ownership.md) for section contracts, freeze after handoff, and remediation/rework behavior.
 
 | Actor | May write |
 | --- | --- |
@@ -162,5 +164,6 @@ Treat **NEW SESSION: YES** as the default for Planner, Builder, Tester, and Vali
 | Doc | Role |
 | --- | --- |
 | [`task-manifest.md`](./task-manifest.md) | JSON schema |
+| [`artifact-ownership.md`](./artifact-ownership.md) | Per-file contracts (`JR-ORCH-003`) |
 | [`README.md`](./README.md) | Index and decisions |
 | [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) | When to scaffold orchestration (large init) |

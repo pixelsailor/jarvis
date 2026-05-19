@@ -2,17 +2,18 @@
 
 Jarvis guidance for **target-project** multi-agent runs: durable **task folders**, a **manifest-owned** pipeline, and stage artifacts that survive context loss. Inspired by What's For Dinner (WFD) discipline — **not** WFD product, stack, or identifiers.
 
-**Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape)  
-**Follow-on (not in this pack):** `JR-ORCH-003`–`007` (artifact ownership, gates vs merge-ready, init paths, loops, self-containment). **Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
+**Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership)  
+**Follow-on (not in this pack):** `JR-ORCH-004`–`007` (gates vs merge-ready, init paths, loops, self-containment). **Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts); `JR-AGENT-003`–`004` (minimum read sets, handoff prompts).
 
 **Read order for agents (Jarvis initializing orchestration in a target):**
 
 1. Target root `README.md` — initialization path (large init usually needs orchestration)
 2. [`task-folder-model.md`](./task-folder-model.md) — where runs live, artifact set, bootstrap, git policy
-3. [`task-manifest.md`](./task-manifest.md) — JSON field contract and enums
-4. [`../templates/orchestration/`](../templates/orchestration/) — copy `_template/` into the target
-5. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — `PROJ-ORCH-*` backlog rows
-6. [`../universal-validation/README.md`](../universal-validation/README.md) — checklist + orchestration appendix when validation doc exists
+3. [`artifact-ownership.md`](./artifact-ownership.md) — who writes each file, section contracts, freeze/loop rules
+4. [`task-manifest.md`](./task-manifest.md) — JSON field contract and enums
+5. [`../templates/orchestration/`](../templates/orchestration/) — copy `_template/` into the target
+6. [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) — `PROJ-ORCH-*` backlog rows
+7. [`../universal-validation/README.md`](../universal-validation/README.md) — checklist + orchestration appendix when validation doc exists
 
 ## Workflow documents
 
@@ -20,7 +21,8 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 | --- | --- | --- |
 | `JR-ORCH-001` | [`task-folder-model.md`](./task-folder-model.md) | Choosing paths, artifacts, lifecycle vocabulary, bootstrap, git policy |
 | `JR-ORCH-002` | [`task-manifest.md`](./task-manifest.md) | Creating or validating `task-manifest.json`; schema migrations via `manifest_version` |
-| (target templates) | [`../templates/orchestration/`](../templates/orchestration/) | `_template/task-manifest.example.json`, `_template/README.example.md` |
+| `JR-ORCH-003` | [`artifact-ownership.md`](./artifact-ownership.md) | Per-file writers, required sections, freeze and loop behavior |
+| (target templates) | [`../templates/orchestration/_template/`](../templates/orchestration/_template/) | Manifest example + seven markdown stage templates |
 
 ## Target layout (after copy)
 
@@ -60,6 +62,18 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Schema richness | **Full** WFD-shaped manifest (gates 0–6, loops, rework, `session_counts`, `command_evidence`, `flags`, `human_approval`) |
 | `manifest_version` | **`1.0.0`** for Jarvis universal template; targets may bump when forking schema — document in target orchestration guide |
 | Product/stack in manifest | **Never** — no WFD IDs, package managers, or provider names in the generic template |
+
+## Decisions recorded for `JR-ORCH-003`
+
+| Topic | Decision |
+| --- | --- |
+| Canonical contract | [`artifact-ownership.md`](./artifact-ownership.md) — section order, freeze, loop behavior |
+| Template pack | Manifest example + `plan.md`, `acceptance-criteria.md`, `test-matrix.md`, `build-log.md`, `test-report.md`, `validation-report.md`, `human-approval.md` |
+| Planner freeze | After `gate_2_plan` → `passed`, Planner artifacts immutable until rework to Planner |
+| Build log on loops | **Append** dated sections |
+| Test / validation reports | **Replace** each stage invocation |
+| Gate 6 mirror | `human-approval.md` must match manifest `human_approval` |
+| AC IDs | `AC-NN` zero-padded |
 
 ## Related material
 
