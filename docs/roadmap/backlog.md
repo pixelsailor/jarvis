@@ -88,7 +88,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - Templates: [`docs/templates/universal-agents/orchestrator.example.md`](../templates/universal-agents/orchestrator.example.md), [`planner.example.md`](../templates/universal-agents/planner.example.md), [`builder.example.md`](../templates/universal-agents/builder.example.md), [`tester.example.md`](../templates/universal-agents/tester.example.md), [`validator.example.md`](../templates/universal-agents/validator.example.md); pack README [`docs/universal-agents/README.md`](../universal-agents/README.md) § Copy and adapt (role contracts).
 - [x] `JR-AGENT-003`: Define minimum read sets for each role to keep future sessions efficient.
   - [`docs/universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md); target paste [`docs/templates/universal-agents/minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md); INDEX hook in [`INDEX.example.md`](../templates/universal-agents/INDEX.example.md).
-- [ ] `JR-AGENT-004`: Define handoff prompts that target projects can copy and own.
+- [x] `JR-AGENT-004`: Define handoff prompts that target projects can copy and own.
+  - [`docs/universal-agents/handoff-prompts.md`](../universal-agents/handoff-prompts.md); target paste [`docs/templates/universal-agents/handoff-prompts.example.md`](../templates/universal-agents/handoff-prompts.example.md); orchestrator contract pointer only.
 - [ ] `JR-RULE-001`: Define always-apply versus topic-specific rule conventions.
 - [ ] `JR-RULE-002`: Define rule authoring guidance for target projects.
 - [ ] `JR-RULE-003`: Define how generated rules cite target-project ADRs and docs.

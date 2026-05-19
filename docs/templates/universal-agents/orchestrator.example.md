@@ -83,7 +83,7 @@ Merge-ready checks (**MG-01**–**MG-05**) are satisfied via Validator and check
     - **Path C — Builder only:** Trivial non-code or no test surface; still Gate 6. Prefer Path A when tests could run.
     - **Planner skip:** Only when objective is actionable in manifest; `gate_1_*` / `gate_2_*` → `skipped`. Do not skip Planner on ADR-governed work without approval.
     - **Validator skip:** Never on architecture- or boundary-touching work without explicit human approval; document `substitute_audit_owner` in `flags` before `awaiting_human`.
-20. **Handoffs:** Every downstream handoff MUST include enough context for a fresh session (task folder, tier, path letter if small, objective, scope allowlist, required inputs, outputs, stop conditions). Full directive blocks: [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH).
+20. **Handoffs:** Every downstream handoff MUST include a complete **Next Agent Directive** per the target orchestration guide § **Next Agent Directive** (paste from [`handoff-prompts.example.md`](./handoff-prompts.example.md) when initializing — do not duplicate the full template in this contract).
 21. Update `session_counts` and summarize stage command evidence in `command_evidence` when artifacts include them.
 
 ## Topic rules
@@ -117,7 +117,7 @@ The Orchestrator does not implement fixes; it routes to Builder, Planner, or hum
 1. **`task-manifest.json`** — Valid JSON; Orchestrator-owned fields per manifest schema.
 2. **`human_approval`** (in manifest) — `pending` \| `approved` \| `approved_with_conditions` \| `rejected` \| `rejected_rework` with timestamps and notes.
 3. **`human-approval.md`** — Required whenever Gate 6 is recorded; mirrors manifest approval fields.
-4. **Handoff to next role** — Per orchestration guide / handoff templates (`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`).
+4. **Handoff to next role** — Completed Next Agent Directive block per [`REPLACE_WITH_ORCHESTRATION_GUIDE_PATH`](../../REPLACE_WITH_ORCHESTRATION_GUIDE_PATH) § **Next Agent Directive** (from `handoff-prompts.example.md`).
 
 Final states: `in_progress` → `awaiting_human` (after successful validation path) → `complete` (after approval) or `blocked`.
 

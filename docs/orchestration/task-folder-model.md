@@ -143,7 +143,7 @@ Align with [`../templates/universal-pr-commit/pr-and-commit-guide.md`](../templa
 
 ## Fresh-session handoffs
 
-Each Orchestrator handoff should include a **Next Agent Directive** (role, task folder path, risk tier, objective, scope allowlist, required reads, validation commands from **verified** manifests, outputs, stop conditions). Targets copy the directive block into their orchestration guide (`JR-AGENT-004`).
+Each Orchestrator handoff should include a **Next Agent Directive** (role, task folder path, risk tier, objective, scope allowlist, required reads, validation commands from **verified** manifests, outputs, stop conditions). Canonical templates: [`../universal-agents/handoff-prompts.md`](../universal-agents/handoff-prompts.md) (`JR-AGENT-004`); target paste [`../templates/universal-agents/handoff-prompts.example.md`](../templates/universal-agents/handoff-prompts.example.md) into the orchestration guide — not duplicated in role contracts.
 
 Treat **NEW SESSION: YES** as the default for Planner, Builder, Tester, and Validator.
 

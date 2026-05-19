@@ -3,7 +3,7 @@
 Canonical guidance for **target-project** agent sessions: what to read **first** so fresh-context runs stay correct without loading the whole repository. This document generalizes patterns from mature orchestration setups; it does **not** embed stack commands or product domains.
 
 **Platform task:** `JR-AGENT-003`  
-**Related:** [`README.md`](./README.md) (roster + contracts), [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) (mandatory cross-artifact reads), [`../orchestration/loops-and-rework.md`](../orchestration/loops-and-rework.md) (remediation variants), [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (run tier skips)
+**Related:** [`README.md`](./README.md) (roster + contracts), [`handoff-prompts.md`](./handoff-prompts.md) (paste blocks — reference read sets, do not duplicate tables), [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) (mandatory cross-artifact reads), [`../orchestration/loops-and-rework.md`](../orchestration/loops-and-rework.md) (remediation variants), [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (run tier skips)
 
 **Target copy source:** [`../templates/universal-agents/minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md)
 

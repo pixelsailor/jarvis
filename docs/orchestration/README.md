@@ -3,7 +3,7 @@
 Jarvis guidance for **target-project** multi-agent runs: durable **task folders**, a **manifest-owned** pipeline, and stage artifacts that survive context loss. Inspired by What's For Dinner (WFD) discipline — **not** WFD product, stack, or identifiers.
 
 **Platform tasks:** `JR-ORCH-001` (task-folder model), `JR-ORCH-002` (`task-manifest.json` shape), `JR-ORCH-003` (artifact ownership), `JR-ORCH-004` (lifecycle vs merge-ready vs handoff), `JR-ORCH-005` (init and run-sizing paths), `JR-ORCH-006` (loops and rework), `JR-ORCH-007` (orchestration self-containment)  
-**Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts), `JR-AGENT-003` ([`minimum-read-sets.md`](../universal-agents/minimum-read-sets.md)); `JR-AGENT-004` (handoff prompts).
+**Agents:** [`../universal-agents/README.md`](../universal-agents/README.md) — `JR-AGENT-001` (INDEX), `JR-AGENT-002` (role contracts), `JR-AGENT-003` ([`minimum-read-sets.md`](../universal-agents/minimum-read-sets.md)), `JR-AGENT-004` ([`handoff-prompts.md`](../universal-agents/handoff-prompts.md)).
 
 **Read order for agents (Jarvis initializing orchestration in a target):**
 
@@ -40,9 +40,9 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 | `.cursor/orchestrations/{task-id}/` | One folder per run; folder slug **must equal** manifest `task_id` |
 | `.cursor/agents/INDEX.md` | Agent roster — copy from [`../templates/universal-agents/`](../templates/universal-agents/) (`JR-AGENT-001`) |
 | `.cursor/agents/*.md` | Per-role contracts — copy from [`../templates/universal-agents/`](../templates/universal-agents/) (`JR-AGENT-002`) |
-| `docs/ORCHESTRATED_DEVELOPMENT.md` (or project-chosen name) | Human orchestration guide — adapt from WFD pattern, target-owned |
+| `docs/ORCHESTRATED_DEVELOPMENT.md` (or project-chosen name) | Human orchestration guide — adapt from WFD pattern, target-owned; paste § **Next Agent Directive** from [`handoff-prompts.example.md`](../templates/universal-agents/handoff-prompts.example.md) (`JR-AGENT-004`) |
 
-Jarvis does **not** copy WFD's `docs/ORCHESTRATED_DEVELOPMENT.md` verbatim. Targets author their guide after templates and agent contracts exist.
+Jarvis does **not** copy WFD's `docs/ORCHESTRATED_DEVELOPMENT.md` verbatim. Targets author their guide after templates and agent contracts exist; handoff prompt blocks come from [`../universal-agents/handoff-prompts.md`](../universal-agents/handoff-prompts.md).
 
 ## Human input (pause points)
 

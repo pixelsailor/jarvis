@@ -203,7 +203,7 @@ Do **not** reset `rework_count` or `rework_history` on phase transition unless t
 
 ## Fresh-session handoff (loops)
 
-Every loop handoff MUST include in the Orchestrator directive:
+Every loop handoff MUST include in the Orchestrator directive (base block + **Loop context** addendum per [`../universal-agents/handoff-prompts.md`](../universal-agents/handoff-prompts.md) § Loop and rework addendum):
 
 - `task_id`, folder path, `risk_tier`, small-run path letter if applicable
 - **Loop context:** `loop_count`, `max_loops`, `rework_count`, and whether this is remediation vs human rework
