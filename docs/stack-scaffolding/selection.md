@@ -82,7 +82,7 @@ Templates: [`upstream-references.example.md`](../templates/stack-scaffolding/ups
 | --- | --- |
 | [`universal-validation`](../universal-validation/README.md) | Fill checklist **stack-specific extensions** from framework + boundaries (same session as rules) |
 | [`universal-docs`](../universal-docs/README.md) | `docs/stack/source-documentation.md` — language/framework comment syntax |
-| [`universal-rules`](../universal-rules/README.md) | Keep **alwaysApply** count ≤ platform default; stack rules use **globs** unless user approves more |
+| [`universal-rules`](../universal-rules/README.md) | Keep **alwaysApply** count ≤ platform default; stack rules use **globs** unless user approves more — [`activation-modes.md`](../universal-rules/activation-modes.md), [`adr-and-doc-citation.md`](../universal-rules/adr-and-doc-citation.md) |
 
 ### 6. Record backlog evidence
 

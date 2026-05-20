@@ -17,7 +17,10 @@ globs: REPLACE_WITH_PRODUCTION_GLOB
 | --- | --- |
 | Upstream docs and MCP order | [`docs/stack/upstream-references.md`](../../docs/stack/upstream-references.md) |
 | Comment / component doc syntax | [`docs/stack/source-documentation.md`](../../docs/stack/source-documentation.md) when present |
-| Project boundaries | Root README § Boundaries; Accepted ADRs |
+| Project boundaries | Root README § Boundaries |
+| Accepted ADRs for this area | _Link with **Binding** / **Supporting** labels — e.g. `adrs/ADR-NNN-*.md`; omit section until ADRs exist_ |
+
+When ADR-backed, add primary `ADR-NNN` to frontmatter `description` and cite **Accepted** ADRs only — do not paste decision text.
 
 ## Project-specific notes
 

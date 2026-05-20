@@ -201,7 +201,7 @@ After the Orchestrator marks a gate **passed**, the owning role must not rewrite
 
 **Template:** [`../templates/orchestration/_template/human-approval.md`](../templates/orchestration/_template/human-approval.md).
 
-**After approval:** Orchestrator may set `status: complete`. Ask whether to `git commit` — do not commit without explicit human confirmation in the same thread.
+**After approval:** Orchestrator may set `status: complete`. Ask whether to `git commit` — do not commit without explicit human confirmation in the same thread. If the human **requests** a pipeline commit, set `orchestrated_commit_requested` in manifest `flags`, then run `git commit` using target `docs/pr-and-commit-guide.md`. If they decline, do not commit; the run can still be complete.
 
 ## Bootstrap sequence
 

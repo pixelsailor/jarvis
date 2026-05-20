@@ -11,7 +11,7 @@ Generic guidance for how target projects describe changes in **pull requests** a
 | `docs/pr-and-commit-guide.md` | Canonical policy (from `pr-and-commit-guide.md` template) |
 | `.github/pull_request_template.md` | GitHub PR body pre-fill (from `pull_request_template.md` template) |
 
-**No Cursor rule** for this scaffold (confirmed): agents load policy via the root README Documentation map and `.cursor/rules/index.md` (Workflow row). Projects may add a `PROJ-RULE-*` topic rule later if enforcement in `.cursor/rules/` is desired ([`universal-rules`](../universal-rules/README.md)).
+**No Cursor rule** for this scaffold (confirmed): policy lives in `docs/pr-and-commit-guide.md`. The root README Documentation map and `.cursor/rules/index.md` (Workflow row) point agents to it. **Orchestrated commits:** when the Orchestrator runs `git commit` for a pipeline run, it **must** follow this guide — not on every agent session. See [`../orchestration/task-folder-model.md`](../orchestration/task-folder-model.md) § Git and commits and manifest flag `orchestrated_commit_requested` ([`task-manifest.md`](../orchestration/task-manifest.md)).
 
 ## When to scaffold
 
@@ -52,7 +52,7 @@ Jarvis must **stop and ask** the user before:
 
 - Replacing an existing `docs/pr-and-commit-guide.md` or PR template that encodes team-specific policy (for example monorepo-wide commit conventions or required ticket IDs in subjects).
 - Requiring the three PR buckets in **commit** bodies when the team standardized on **subject-only** commits (platform default).
-- Adding an **always-apply** Cursor rule for PR/commit when the project chose **doc-only** loading.
+- Adding an **always-apply** Cursor rule for PR/commit (platform default: doc-only; Orchestrator applies guide on pipeline commit).
 - Shipping a GitHub PR template when the project uses GitLab, Gerrit, or another host without an equivalent path.
 
 Routine copy, placeholder replacement, and Documentation map links do not require extra approval.
@@ -65,6 +65,8 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | --- | --- |
 | Canonical policy path | `docs/pr-and-commit-guide.md` |
 | Cursor rule | **None** (doc-only; index row under Workflow) |
+| Orchestrator `git commit` | **Required** to follow `docs/pr-and-commit-guide.md` when `orchestrated_commit_requested` is set and human confirmed in-thread |
+| Non-orchestrated commits | User-requested only; same guide applies when the committing agent is told to follow project PR/commit policy |
 | GitHub PR template | **Yes** on medium/large when using GitHub — [`.github/pull_request_template.md`](../templates/universal-pr-commit/pull_request_template.md) |
 | PR summary shape | Three buckets: **Product / UX**, **Architecture / ADR**, **Alignment gaps** |
 | Commit messages | **Subject-only** default; imperative ~72 chars; optional body for context/test — **not** the three PR buckets |

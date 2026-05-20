@@ -130,16 +130,22 @@ See [`artifact-ownership.md`](./artifact-ownership.md) for section contracts and
 
 Only the Orchestrator updates routing fields (`current_agent`, `gate_status`, `completed_stages`, loops, approval). Other agents report facts in owned artifacts; the Orchestrator mirrors summaries when routing.
 
-## Git policy
+## Git and commits
+
+Most orchestration runs **do not** end in a pipeline-created commit. Commits are **opt-in** per run.
 
 | Phase | Default |
 | --- | --- |
-| **During run** | Task folder **local**; agents do **not** commit unless the user explicitly asks |
-| **PR evidence** | Paste summaries from `test-report.md` / `validation-report.md` and checklist rows |
+| **During run** | Task folder **local**; pipeline agents do **not** run `git commit` |
+| **PR evidence** | Paste summaries from `test-report.md` / `validation-report.md` and checklist rows into PR bodies per [`docs/pr-and-commit-guide.md`](../templates/universal-pr-commit/pr-and-commit-guide.md) |
 | **After Gate 6** | Orchestrator **asks** whether to commit application changes and optionally the task folder |
-| **Team override** | If the project tracks orchestration in git, document that in the target orchestration guide — Jarvis still asks before first commit of a filled folder |
+| **Orchestrated commit** | Only when the human **requests** a pipeline commit **and** confirms in the same thread — Orchestrator sets manifest flag `orchestrated_commit_requested` before `git commit` |
+| **Commit message shape** | When the Orchestrator creates the commit, it **must** follow target `docs/pr-and-commit-guide.md` § Commit messages (imperative subject; optional body with test line; link task-folder evidence when orchestrated) |
+| **Team override** | If the project tracks orchestration in git, document that in the target orchestration guide — still require human request + confirmation unless the guide documents a stricter team policy |
 
-Align with [`../templates/universal-pr-commit/pr-and-commit-guide.md`](../templates/universal-pr-commit/pr-and-commit-guide.md).
+**Not every run commits:** absence of `orchestrated_commit_requested` means the Orchestrator summarizes evidence and stops — humans may commit outside the pipeline.
+
+See [`task-manifest.md`](./task-manifest.md) § Flags and [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md).
 
 ## Fresh-session handoffs
 

@@ -171,8 +171,19 @@ Free-form string tags for routing and audits. Examples (targets may extend):
 - `substitute_audit_owner: human`
 - `adr_conflict`
 - `objective_blocked`
+- `orchestrated_commit_requested` — Human asked the Orchestrator to create the git commit for this run after Gate 6; Orchestrator must follow `docs/pr-and-commit-guide.md` when running `git commit`. **Absent** unless commit was explicitly requested and confirmed in-thread.
 
 Prefer stable flag names documented in the target orchestration guide.
+
+### Orchestrated commits
+
+| Rule | Detail |
+| --- | --- |
+| Default | No pipeline `git commit` |
+| Enable | Human requests commit at Gate 6 (or post-approval) **and** confirms in the same thread |
+| Record | Append `orchestrated_commit_requested` to `flags` before `git commit` |
+| Format | Target `docs/pr-and-commit-guide.md` — subject imperative; body may cite `build-log.md`, `test-report.md`, `validation-report.md` paths |
+| PRs | Separate from commit — use guide § PR summaries when opening a PR; not required for every orchestrated run |
 
 ## Completed stages
 

@@ -8,7 +8,7 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 **Read order for agents (Jarvis initializing orchestration in a target):**
 
 1. Target root `README.md` — initialization path (large init usually needs orchestration)
-2. [`task-folder-model.md`](./task-folder-model.md) — where runs live, artifact set, bootstrap, git policy
+2. [`task-folder-model.md`](./task-folder-model.md) — where runs live, artifact set, bootstrap, git and commits (`orchestrated_commit_requested`)
 3. [`artifact-ownership.md`](./artifact-ownership.md) — who writes each file, section contracts, freeze/loop rules
 4. [`gates-and-checks.md`](./gates-and-checks.md) — lifecycle gates vs merge-ready vs handoff
 5. [`init-paths.md`](./init-paths.md) — small / medium / large init and run tiers; paths A/B/C
@@ -23,7 +23,7 @@ Jarvis guidance for **target-project** multi-agent runs: durable **task folders*
 
 | ID | Document | Use when |
 | --- | --- | --- |
-| `JR-ORCH-001` | [`task-folder-model.md`](./task-folder-model.md) | Choosing paths, artifacts, lifecycle vocabulary, bootstrap, git policy |
+| `JR-ORCH-001` | [`task-folder-model.md`](./task-folder-model.md) | Choosing paths, artifacts, lifecycle vocabulary, bootstrap, git and commits |
 | `JR-ORCH-002` | [`task-manifest.md`](./task-manifest.md) | Creating or validating `task-manifest.json`; schema migrations via `manifest_version` |
 | `JR-ORCH-003` | [`artifact-ownership.md`](./artifact-ownership.md) | Per-file writers, required sections, freeze and loop behavior |
 | `JR-ORCH-004` | [`gates-and-checks.md`](./gates-and-checks.md) | Lifecycle gates vs merge-ready (**MG-***) vs handoff (**PROJ-HANDOFF-***) |

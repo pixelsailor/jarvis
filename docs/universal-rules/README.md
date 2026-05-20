@@ -13,7 +13,16 @@ Generic `.cursor/rules/` layout and rules index for target projects. Jarvis copi
 | `.cursor/rules/adr-compliance.mdc` | Always-apply: consult **Accepted** ADRs before build work |
 | `docs/rules-authoring.md` | Optional on **large** path — how to add or change rules without duplicating ADRs |
 
-Topic rules (`globs`, boundary enforcement, stack playbooks) are added per README boundaries and `PROJ-RULE-*` tasks — not shipped in the universal starter set. Authoring detail expands in `JR-RULE-*` platform tasks.
+Topic rules (`globs`, boundary enforcement, stack playbooks) are added per README boundaries and `PROJ-RULE-*` tasks — not shipped in the universal starter set.
+
+**Rule discipline (platform canonical):**
+
+| Doc | Task |
+| --- | --- |
+| [`activation-modes.md`](./activation-modes.md) | `JR-RULE-001` — alwaysApply vs globs vs manual |
+| [`authoring.md`](./authoring.md) | `JR-RULE-002` — rule vs ADR vs doc, naming, workflow |
+| [`adr-and-doc-citation.md`](./adr-and-doc-citation.md) | `JR-RULE-003` — Binding/Supporting, gaps, paths |
+| _(open)_ | `JR-RULE-004` — documentation conventions as Cursor rules (blocked on reference material) |
 
 ## When to scaffold
 
@@ -63,15 +72,15 @@ See [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md)
 | Index authority | Every `.mdc` under `.cursor/rules/` has a row in `index.md` |
 | Agents vs rules | Agent contracts live under `.cursor/agents/` (or `agents/`); index § Agent contracts points there — do not list agents as `.mdc` rules |
 
-## Activation modes (platform default)
+## Activation modes (summary)
 
 | Mode | Frontmatter | Use for |
 | --- | --- | --- |
-| **alwaysApply** | `alwaysApply: true` | Routing, ADR compliance, cross-cutting boundaries that must load without opening a file |
-| **globs** | `globs: <pattern>` | Stack UI, API paths, tests, orchestration folders — load only when touched |
-| **manual** | Neither (omit both) | Rare playbooks invoked by name; list in index as **manual** |
+| **alwaysApply** | `alwaysApply: true` | Routing, ADR compliance, repo-wide boundaries |
+| **globs** | `globs: <pattern>` | Stack, APIs, tests, orchestration — load when touched |
+| **manual** | Neither | Rare playbooks; list in index as **manual** |
 
-Keep **alwaysApply** count small (platform default: **two** universal starters plus any boundary rules the user explicitly wants always-on). Each extra always-apply rule adds tokens to every session.
+**Full decision tree, budgets, and examples:** [`activation-modes.md`](./activation-modes.md) (`JR-RULE-001`). Default: **two** starter alwaysApply rules; pause before a **fourth**.
 
 ## Relationship to other Jarvis scaffolds
 
@@ -86,7 +95,7 @@ Keep **alwaysApply** count small (platform default: **two** universal starters p
 | [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) | Optional `workflow-gates.mdc` (globs) on **large** / orchestrated path — merge-ready **MG-*** contract (`JR-ORCH-004`) |
 | [`../stack-scaffolding/selection.md`](../stack-scaffolding/selection.md) | After stack-profile — framework/library `.mdc` rules and `docs/stack/upstream-references.md` |
 | [`../universal-agents/README.md`](../universal-agents/README.md) | Agent INDEX + role contract templates (`.cursor/agents/`) — `JR-AGENT-001`/`002` |
-| `JR-RULE-*` (future) | Expands authoring and ADR citation discipline |
+| [`activation-modes.md`](./activation-modes.md), [`authoring.md`](./authoring.md), [`adr-and-doc-citation.md`](./adr-and-doc-citation.md) | `JR-RULE-001`–`003` |
 
 ## Human input (pause points)
 
@@ -109,8 +118,10 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Rules directory | `.cursor/rules/` at repository root |
 | Index file | `.cursor/rules/index.md` (Markdown, not `.mdc`) |
 | Starter always-apply rules | `project-routing.mdc`, `adr-compliance.mdc` |
-| Documentation conventions | **No** default `.mdc` — load via README map + `docs/documentation-conventions.md` |
+| Documentation conventions | **No** default `.mdc` — doc-only until [`JR-RULE-004`](../roadmap/backlog.md) (reference material pending) |
 | README governance rule | From [`universal-readme`](../templates/universal-readme/readme-governance.mdc); globs `README.md`, not always-apply |
+| PR/commit guide | **No** alwaysApply rule — [`pr-and-commit-guide.md`](../templates/universal-pr-commit/pr-and-commit-guide.md); Orchestrator applies when creating an orchestrated commit |
+| Progressive enhancement / offline | **Not** scaffolded by Jarvis unless target declares support (README + ADRs) |
 | Alignment gaps path | `docs/adr-alignment-gaps.md` (sync with universal ADR scaffold) |
 | Agent contracts | Separate from rules index; optional `agents/` or `.cursor/agents/` on large path |
 | WFD pattern source | Index categories and activation table generalized — no WFD product identifiers in templates |

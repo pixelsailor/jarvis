@@ -30,7 +30,7 @@ Use `skipped` only with rationale in `risk_tier.skipped_stages` and `risk_tier.r
 
 ## Git policy (default)
 
-During the run, agents do **not** commit on their own. After Gate 6 (`human-approval.md` recorded, manifest `status: complete`), the Orchestrator asks whether to commit application changes and optionally `.cursor/orchestrations/{task-id}/`. Run `git commit` only when the human explicitly confirms.
+During the run, agents do **not** commit on their own. After Gate 6 (`human-approval.md` recorded, manifest `status: complete`), the Orchestrator asks whether to commit application changes and optionally `.cursor/orchestrations/{task-id}/`. Run `git commit` only when the human **requests** a pipeline commit and confirms in-thread; set `orchestrated_commit_requested` in manifest `flags` and follow `docs/pr-and-commit-guide.md`.
 
 Until then, keep task folders local and put **review evidence in the PR** (commands, verdict, AC coverage, MG-* checklist).
 

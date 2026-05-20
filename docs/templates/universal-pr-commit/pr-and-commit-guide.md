@@ -14,8 +14,19 @@ After initialization, this repository must **not** depend on Jarvis or any exter
 | --- | --- | --- |
 | Any PR to the default branch | Full template (summary buckets + test evidence) | N/A |
 | Direct commits (no PR) | Optional short note in commit body | **Imperative subject** required; body optional |
-| **Orchestrated** work (task folders, manifests) | Link or summarize validation and test artifacts when the project defines them | Same as non-orchestrated |
+| **Orchestrated pipeline commit** | N/A unless the human also opens a PR | **Required** when the Orchestrator runs `git commit` after Gate 6 — see [§1.1 Orchestrated pipeline commits](#11-orchestrated-pipeline-commits) |
+| **Orchestrated run, no pipeline commit** | When opening a PR later, use PR sections below | Human or another agent commits outside the pipeline — guide still applies if they choose |
 | **Trivial** (typo, comment-only, isolated non-architectural fix) | One-line summary; test section may be **N/A — trivial** | Imperative subject only |
+
+### 1.1 Orchestrated pipeline commits
+
+Not every orchestration run ends in a git commit. The **Orchestrator** commits only when:
+
+1. The human **requests** a pipeline commit after Gate 6 (or equivalent), **and**
+2. The human **confirms** in the same thread, **and**
+3. `task-manifest.json` `flags` includes `orchestrated_commit_requested` before `git commit`.
+
+When those conditions are met, the Orchestrator **must** follow [§5 Commit messages](#5-commit-messages) and, in the commit body when useful, cite paths to `build-log.md`, `test-report.md`, and `validation-report.md` under `.cursor/orchestrations/{task-id}/`. Do **not** load this guide on every agent session — it applies at commit time, not as an always-on Cursor rule.
 
 Architecture-touching work must still satisfy whatever merge-ready gates the project documents. This guide does not replace them.
 
@@ -102,7 +113,7 @@ Test: manual — offline read; REPLACE_WITH_VERIFY_COMMAND lint.
 | **Body** | Optional; short context or test line when the commit is review-worthy **without** a PR — **not** the three PR buckets |
 | **Scope** | Conventional prefixes (`feat:`, `fix:`, `docs:`) are optional; match recent repository style |
 
-Agents must **not** create git commits unless the user explicitly asks. Orchestrated workflows: follow the project's orchestration doc for when commits are allowed after human approval.
+Agents must **not** create git commits unless the user explicitly asks. **Orchestrator:** commit only with `orchestrated_commit_requested` and in-thread confirmation; message format per §5 and §1.1. Other roles do not commit unless the user directs them in that session.
 
 ---
 

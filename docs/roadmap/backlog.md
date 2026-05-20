@@ -90,9 +90,14 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md); target paste [`docs/templates/universal-agents/minimum-read-sets.example.md`](../templates/universal-agents/minimum-read-sets.example.md); INDEX hook in [`INDEX.example.md`](../templates/universal-agents/INDEX.example.md).
 - [x] `JR-AGENT-004`: Define handoff prompts that target projects can copy and own.
   - [`docs/universal-agents/handoff-prompts.md`](../universal-agents/handoff-prompts.md); target paste [`docs/templates/universal-agents/handoff-prompts.example.md`](../templates/universal-agents/handoff-prompts.example.md); orchestrator contract pointer only.
-- [ ] `JR-RULE-001`: Define always-apply versus topic-specific rule conventions.
-- [ ] `JR-RULE-002`: Define rule authoring guidance for target projects.
-- [ ] `JR-RULE-003`: Define how generated rules cite target-project ADRs and docs.
+- [x] `JR-RULE-001`: Define always-apply versus topic-specific rule conventions.
+  - [`docs/universal-rules/activation-modes.md`](../universal-rules/activation-modes.md); summary in universal-rules README.
+- [x] `JR-RULE-002`: Define rule authoring guidance for target projects.
+  - [`docs/universal-rules/authoring.md`](../universal-rules/authoring.md); target paste [`rules-authoring.md`](../templates/universal-rules/rules-authoring.md).
+- [x] `JR-RULE-003`: Define how generated rules cite target-project ADRs and docs.
+  - [`docs/universal-rules/adr-and-doc-citation.md`](../universal-rules/adr-and-doc-citation.md); stack template cites upstream via target `docs/stack/upstream-references.md`.
+- [ ] `JR-RULE-004`: Revisit documentation conventions as Cursor rules (activation mode, globs, optional `.mdc`).
+  - **Blocked:** reference material for doc-syntax enforcement not available yet. Until then: **doc-only** `docs/documentation-conventions.md` per `JR-RULE-001` / [`universal-docs`](../universal-docs/README.md).
 
 ## Orchestration model
 

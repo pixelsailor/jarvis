@@ -23,6 +23,7 @@ Rules for humans and agents editing files under `docs/roadmap/`. Goal: resumable
 | Stack detection, confirmation, commands, testing, runtime, dependencies, and rule/doc selection | [`../stack-scaffolding/README.md`](../stack-scaffolding/README.md) |
 | Universal orchestration task-folder model, manifest schema, artifact ownership, gates vs merge-ready, init/run paths, loops/rework, self-containment on copy | [`../orchestration/README.md`](../orchestration/README.md) |
 | Universal agent roster, role contracts, minimum read sets, and handoff prompts | [`../universal-agents/README.md`](../universal-agents/README.md), [`../universal-agents/minimum-read-sets.md`](../universal-agents/minimum-read-sets.md), [`../universal-agents/handoff-prompts.md`](../universal-agents/handoff-prompts.md) |
+| Universal Cursor rules: activation, authoring, ADR/doc citation; doc-conventions rules revisit | [`../universal-rules/README.md`](../universal-rules/README.md), [`activation-modes.md`](../universal-rules/activation-modes.md), [`authoring.md`](../universal-rules/authoring.md), [`adr-and-doc-citation.md`](../universal-rules/adr-and-doc-citation.md); open: `JR-RULE-004` in [`backlog.md`](./backlog.md) |
 
 Do not duplicate backlog tasks in `platform-spec.md` or prose summaries of the backlog in the root README.
 

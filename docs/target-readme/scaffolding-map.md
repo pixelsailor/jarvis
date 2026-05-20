@@ -23,7 +23,8 @@ Choose once per project (intake Q7). When unclear, default to **medium** and tel
 | Principles, non-negotiables | README § Principles | `PROJ-ADR-*` | `adrs/INDEX.md`, `GOVERNANCE.md`, `TEMPLATE.md`; Accepted ADRs for each non-negotiable that affects implementation |
 | Core capabilities | README § Capabilities | `PROJ-DOC-*` | Topic docs under `docs/` when a capability needs flow/architecture prose |
 | Technology stack | README § Stack + [`stack-profile.md`](../stack-scaffolding/confirmation.md#recording-target-repository) + repo files | `PROJ-STACK-*` | Detect/confirm per [`stack-scaffolding/`](../stack-scaffolding/README.md); then [`commands.md`](../stack-scaffolding/commands.md), [`testing.md`](../stack-scaffolding/testing.md), [`runtime.md`](../stack-scaffolding/runtime.md), [`dependencies.md`](../stack-scaffolding/dependencies.md), rules, `docs/stack/` — **verified from repo** |
-| Architecture boundaries | README § Boundaries | `PROJ-ADR-*`, `PROJ-RULE-*` | ADRs for client/server, secrets, data authority; always-apply rules that enforce boundaries |
+| Architecture boundaries | README § Boundaries | `PROJ-ADR-*`, `PROJ-RULE-*` | ADRs for client/server, secrets, data authority; topic rules (usually **globs**) that enforce boundaries — see [`activation-modes.md`](../universal-rules/activation-modes.md) |
+| Progressive enhancement / offline-style | README § Boundaries **only when the product declares it** | `PROJ-ADR-*`, `PROJ-RULE-*` | **Do not** scaffold from Jarvis by default; target-owned ADRs + rules when the project supports that model |
 | Data ownership | README § Data ownership | `PROJ-ADR-*` | ADR for storage/sync authority; rules for local vs cloud paths |
 | Documentation map entries | README § Documentation | `PROJ-DOC-*`, `PROJ-RULE-*` | Each linked path must exist or have an open `PROJ-*` task |
 | Development commands | README § Development + `docs/stack/commands.md` | `PROJ-STACK-001` | [`commands.md`](../stack-scaffolding/commands.md); no parallel cheat sheet; rules may cite same commands |
@@ -76,7 +77,7 @@ Summary: after any **material** README edit, update `docs/roadmap/backlog.md` in
 1. README (draft or audit-complete)
 2. docs/roadmap/ (README + backlog with PROJ-* from this map)
 3. adrs/ index + governance + first Accepted ADRs from boundaries
-4. .cursor/rules/ index + always-apply + topic rules
+4. `.cursor/rules/` index + always-apply + topic rules — [`activation-modes.md`](../universal-rules/activation-modes.md), [`authoring.md`](../universal-rules/authoring.md), [`adr-and-doc-citation.md`](../universal-rules/adr-and-doc-citation.md) (`JR-RULE-001`–`003`)
 5. docs/readme-governance.md (+ optional readme-governance rule) + docs/documentation-conventions.md + docs/pr-and-commit-guide.md (+ .github/pull_request_template.md on GitHub medium/large) + docs/validation-checklist.md (medium/large default) + docs/architecture/ (+ docs/guides/ when applicable) + topic docs referenced from README
 6. `.cursor/orchestrations/_template/` + orchestration guide (paste § **Next Agent Directive** from [`../templates/universal-agents/handoff-prompts.example.md`](../templates/universal-agents/handoff-prompts.example.md); [`../universal-agents/handoff-prompts.md`](../universal-agents/handoff-prompts.md)) + `.cursor/agents/INDEX.md` + five role contracts (large path; from [`../universal-agents/README.md`](../universal-agents/README.md)) — [`../orchestration/README.md`](../orchestration/README.md); sanitize per [`../orchestration/self-containment.md`](../orchestration/self-containment.md) (`JR-ORCH-007`)
 7. docs/handoff-self-containment.md + PROJ-HANDOFF-* verification (include **ORCH-IND-*** when step 6 ran)

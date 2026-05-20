@@ -13,7 +13,7 @@ Catalog of **Cursor rules** (`.cursor/rules/*.mdc`). Read this file when choosin
 | **Governance** | readme-governance | Root README scope; route depth to `docs/readme-governance.md` | globs `README.md` — add when [`readme-governance.mdc`](./readme-governance.mdc) and [`docs/readme-governance.md`](../../docs/readme-governance.md) exist |
 | **ADR-backed** | _—_ | Boundary enforcement rules cite ADR IDs in `description` and body | globs per rule — add from `PROJ-RULE-*` |
 | **Stack** | _—_ | Framework, lint, test, or MCP playbooks | globs per rule — add from `PROJ-STACK-*` |
-| **Workflow** | _—_ | PR/commit summaries and test evidence — link [`docs/pr-and-commit-guide.md`](../../docs/pr-and-commit-guide.md) when present | doc via README map — add row when guide exists |
+| **Workflow** | _—_ | PR/commit policy — [`docs/pr-and-commit-guide.md`](../../docs/pr-and-commit-guide.md); Orchestrator applies on pipeline commit (`orchestrated_commit_requested`) | doc via README map — add row when guide exists |
 | **Workflow** | validation-checklist | Cross-cutting Validator/PR audit per [`docs/validation-checklist.md`](../../docs/validation-checklist.md) | globs `.cursor/orchestrations/**`, `docs/validation-checklist.md` — add `.mdc` row when checklist scaffolded |
 | **Workflow** | workflow-gates | Merge-ready **MG-01**–**MG-05**; separate from lifecycle gates 0–6 | globs orchestration + agents + orchestration guide — add when [`workflow-gates.mdc`](./workflow-gates.mdc) copied (`JR-ORCH-004`) |
 
@@ -31,4 +31,4 @@ Remove placeholder rows as you add real rules. Keep **one row per `.mdc` file**.
 
 - Add or update a row in **the same session** as any new or changed `.mdc` file.
 - Prefer [`docs/rules-authoring.md`](../../docs/rules-authoring.md) when authoring or splitting rules (large-path projects).
-- Do not duplicate ADR bodies in rules — link `adrs/ADR-NNN-*.md` and keep enforcement concise.
+- Pick **alwaysApply** vs **globs** per that guide; ADR-backed rules use **Binding** / **Supporting** links — do not paste ADR bodies.
