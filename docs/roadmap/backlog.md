@@ -118,7 +118,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
 
 ## Validation and handoff
 
-- [ ] `JR-VALIDATION-001`: Define generic validation categories for initialized projects.
+- [x] `JR-VALIDATION-001`: Define generic validation categories for initialized projects.
+  - [`docs/validation/categories.md`](../validation/categories.md) — **VAL-CAT-01**–**08**, **VAL-PHASE-INIT** / **VAL-PHASE-CHANGE**; index [`docs/validation/README.md`](../validation/README.md).
 - [ ] `JR-VALIDATION-002`: Define evidence expectations for documentation-only initialization.
 - [ ] `JR-VALIDATION-003`: Define evidence expectations for generated code, tooling, or config.
 - [ ] `JR-VALIDATION-004`: Define target-project self-containment checks.

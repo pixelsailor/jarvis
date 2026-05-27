@@ -4,7 +4,8 @@ Canonical **small / medium / large** paths for (1) **target-project initializati
 
 **Prerequisites:** [`task-folder-model.md`](./task-folder-model.md), [`task-manifest.md`](./task-manifest.md), [`gates-and-checks.md`](./gates-and-checks.md) (`JR-ORCH-004`)  
 **Target README routing:** [`../target-readme/scaffolding-map.md`](../target-readme/scaffolding-map.md) (init path summary)  
-**Checklist IDs:** [`../templates/universal-validation/validation-checklist.md`](../templates/universal-validation/validation-checklist.md) (**MG-***, **TST-***)
+**Checklist IDs:** [`../templates/universal-validation/validation-checklist.md`](../templates/universal-validation/validation-checklist.md) (**MG-***, **TST-***)  
+**Init validation categories:** [`../validation/categories.md`](../validation/categories.md) (**VAL-CAT-01**–**08**, `JR-VALIDATION-001`)
 
 ## Two vocabularies (do not conflate)
 

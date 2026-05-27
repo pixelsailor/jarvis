@@ -63,5 +63,5 @@ Defaults favor long-term agent efficiency; override per target when the user dir
 | Filename | Avoid `jarvis-*` in target paths — doc is about independence, not a runtime dependency on Jarvis |
 | Scan patterns | Include `rg`/search hints in template for agent repeatability |
 | Provenance | Historical Jarvis credit allowed in `docs/roadmap/` or CONTRIBUTING — **not** in root README as required reading |
-| Overlap with `JR-VALIDATION-004` | This doc is the **operational checklist**; validation backlog task may add evidence tiers later |
+| Overlap with `JR-VALIDATION-004` | This doc is the **operational checklist**; category **VAL-CAT-06** in [`../validation/categories.md`](../validation/categories.md); evidence tiers in `JR-VALIDATION-002`–`005` |
 | Orchestration rows | **ORCH-IND-01–10** in copied template — canonical copy rules [`../orchestration/self-containment.md`](../orchestration/self-containment.md) (`JR-ORCH-007`) |

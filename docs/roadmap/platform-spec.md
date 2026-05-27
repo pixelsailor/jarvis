@@ -37,7 +37,8 @@ Stable reference for Jarvis platform behavior, terminology, and target-project e
 8. Jarvis scaffolds universal documentation and guardrails.
 9. Jarvis identifies language and framework from repository files and user confirmation, then scaffolds stack-specific documentation based on the target README, stack profile, and verified manifests.
 10. If the work is complex, Jarvis routes setup through an orchestration model with planned artifacts, test or validation evidence, and human approval.
-11. Jarvis performs a handoff check to confirm the target project is self-contained.
+11. Jarvis validates initialization against generic **validation categories** ([`../validation/categories.md`](../validation/categories.md) — `JR-VALIDATION-001`) and records evidence on required `PROJ-*` tasks.
+12. Jarvis performs a handoff check to confirm the target project is self-contained.
 
 ## Target README responsibilities
 
@@ -136,7 +137,7 @@ WFD should guide Jarvis's documentation and orchestration discipline, especially
 - Fresh-session handoffs that avoid reliance on chat memory.
 - Right-sized workflows for small, medium, and large changes.
 
-**Canonical Jarvis docs (generalized, not WFD copies):** [`../orchestration/README.md`](../orchestration/README.md) — task folders under `.cursor/orchestrations/{task-id}/`, `{project-slug}-NNN` IDs, `task-manifest.json` schema (`JR-ORCH-001`, `JR-ORCH-002`); lifecycle vs merge-ready vs handoff — [`gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`); init and run-sizing paths — [`init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`); validation remediation and human rework loops — [`loops-and-rework.md`](../orchestration/loops-and-rework.md) (`JR-ORCH-006`); orchestration self-containment on copy — [`self-containment.md`](../orchestration/self-containment.md) (`JR-ORCH-007`). **Cursor rules:** activation modes, authoring, ADR/doc citation — [`../universal-rules/`](../universal-rules/README.md) (`JR-RULE-001`–`003`).
+**Canonical Jarvis docs (generalized, not WFD copies):** [`../orchestration/README.md`](../orchestration/README.md) — task folders under `.cursor/orchestrations/{task-id}/`, `{project-slug}-NNN` IDs, `task-manifest.json` schema (`JR-ORCH-001`, `JR-ORCH-002`); lifecycle vs merge-ready vs handoff — [`gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`); init and run-sizing paths — [`init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`); validation remediation and human rework loops — [`loops-and-rework.md`](../orchestration/loops-and-rework.md) (`JR-ORCH-006`); orchestration self-containment on copy — [`self-containment.md`](../orchestration/self-containment.md) (`JR-ORCH-007`). **Validation categories (init vs change):** [`../validation/categories.md`](../validation/categories.md) (`JR-VALIDATION-001`); checklist rows — [`../universal-validation/README.md`](../universal-validation/README.md). **Cursor rules:** activation modes, authoring, ADR/doc citation — [`../universal-rules/`](../universal-rules/README.md) (`JR-RULE-001`–`003`).
 
 Do not copy WFD-specific details into Jarvis defaults, including:
 

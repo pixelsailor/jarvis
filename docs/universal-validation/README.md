@@ -11,7 +11,7 @@ Generic **validation checklist** for target projects: reusable audit rows for Va
 | `docs/validation-checklist.md` | Canonical checklist (from `validation-checklist.md` template) |
 | `.cursor/rules/validation-checklist.mdc` | Optional — globs load when orchestration or checklist is in context |
 
-**Related (when present):** [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR template and guide link checklist rows); [`../orchestration/README.md`](../orchestration/README.md) (`JR-ORCH-001`/`002` — task folders and manifest); [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004` — lifecycle vs merge-ready vs handoff); [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) (`JR-ORCH-003`); [`JR-ORCH-005`](../orchestration/init-paths.md), [`JR-ORCH-006`](../orchestration/loops-and-rework.md), and `JR-VALIDATION-*` (init paths, loops, evidence tiers).
+**Related (when present):** [`../universal-pr-commit/README.md`](../universal-pr-commit/README.md) (PR template and guide link checklist rows); [`../orchestration/README.md`](../orchestration/README.md) (`JR-ORCH-001`/`002` — task folders and manifest); [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004` — lifecycle vs merge-ready vs handoff); [`../orchestration/artifact-ownership.md`](../orchestration/artifact-ownership.md) (`JR-ORCH-003`); [`JR-ORCH-005`](../orchestration/init-paths.md), [`JR-ORCH-006`](../orchestration/loops-and-rework.md); [`../validation/README.md`](../validation/README.md) (`JR-VALIDATION-001` categories; `002`–`005` evidence tiers).
 
 ## When to scaffold
 
@@ -63,7 +63,8 @@ Use stable IDs so `validation-report.md`, PR comments, and `plan.md` → Validat
 | `JR-ORCH-001`/`002` | Task-folder path and `gate_status` keys; lifecycle ↔ **MG-*** mapping in checklist orchestration appendix |
 | `JR-ORCH-003` | [`artifact-ownership.md`](../orchestration/artifact-ownership.md) + `_template/validation-report.md` |
 | `JR-ORCH-004` | [`gates-and-checks.md`](../orchestration/gates-and-checks.md) — three vocabularies; targets copy via orchestration guide + `workflow-gates.mdc` |
-| `JR-VALIDATION-*` (future) | Doc-only vs code init evidence; does not replace this checklist |
+| [`../validation/categories.md`](../validation/categories.md) (`JR-VALIDATION-001`) | **VAL-CAT-01**–**08** scope init vs change audits; checklist rows implement categories |
+| `JR-VALIDATION-002`–`005` (future) | Doc-only vs code init evidence tiers; Jarvis completion claims; extends **VAL-CAT-06**–**07** |
 
 ## Human input (pause points)
 

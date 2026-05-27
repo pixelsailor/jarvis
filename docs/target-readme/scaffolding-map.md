@@ -71,6 +71,10 @@ Summary: after any **material** README edit, update `docs/roadmap/backlog.md` in
 | Documentation map link added | `PROJ-DOC-*` until file exists |
 | Handoff claimed in README | Run [`handoff.md`](../target-roadmap/handoff.md) — do not close backlog from README prose alone |
 
+## Validation categories (init audit)
+
+Before `PROJ-HANDOFF-*`, run required **VAL-CAT-*** categories for the init path — [`../validation/categories.md`](../validation/categories.md) (`JR-VALIDATION-001`). Record results in `PROJ-*` `Evidence:` bullets; detailed checklist rows live in target `docs/validation-checklist.md`.
+
 ## Scaffolding order (default)
 
 ```text
