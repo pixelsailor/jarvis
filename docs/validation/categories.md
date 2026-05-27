@@ -3,7 +3,7 @@
 Canonical **validation categories** for target projects after Jarvis initialization. Use categories to **scope audits** (what to look at); use the target [`validation-checklist.md`](../templates/universal-validation/validation-checklist.md) for **checkable rows** (**MG-***, **TST-***, extensions).
 
 **Prerequisites:** [`../orchestration/init-paths.md`](../orchestration/init-paths.md), [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md)  
-**Evidence detail:** [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) (`JR-VALIDATION-002`); [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`); `JR-VALIDATION-004` (self-containment tiers), `JR-VALIDATION-005` (Jarvis vs human completion claims) — planned
+**Evidence detail:** [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) (`JR-VALIDATION-002`); [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`); [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`); `JR-VALIDATION-005` (Jarvis vs human completion claims) — planned
 
 ## Design goals
 
@@ -106,12 +106,14 @@ Canonical **validation categories** for target projects after Jarvis initializat
 
 **Question:** Can the target operate without Jarvis?
 
+**Evidence detail:** [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`) — **VAL-IND-FAM-01**–**07**, **VAL-EVID-02/03/04/05** for **06**; operational **IND-*** / **ORCH-IND-*** in target `docs/handoff-self-containment.md`.
+
 | Check | Evidence examples |
 | --- | --- |
-| `docs/handoff-self-containment.md` audit complete | Itemized pass/fail |
-| `PROJ-HANDOFF-001` / `PROJ-HANDOFF-002` with `Evidence:` | [`conventions.md`](../target-roadmap/conventions.md) |
-| User sign-off for `PROJ-HANDOFF-003` when required | Named in backlog |
-| Orchestration copied: **ORCH-IND-01–10** | [`self-containment.md`](../orchestration/self-containment.md) |
+| `docs/handoff-self-containment.md` audit complete | Itemized pass/fail per **IND-*** / **ORCH-IND-*** |
+| `PROJ-HANDOFF-001` / `PROJ-HANDOFF-002` with `Evidence:` | `VAL-CAT-06` + tiers + optional **FAM-** rollup — [`conventions.md`](../target-roadmap/conventions.md) |
+| User sign-off for `PROJ-HANDOFF-003` when required | **VAL-EVID-05** |
+| Orchestration copied: **ORCH-IND-01–10** | [`self-containment.md`](../orchestration/self-containment.md); **VAL-IND-FAM-07** |
 
 **Maps to:** Handoff vocabulary in [`gates-and-checks.md`](../orchestration/gates-and-checks.md) — **not** lifecycle Gate 5 or **MG-03**.
 

@@ -3,7 +3,7 @@
 Canonical **evidence tiers** and **audit rules** when Jarvis closes **initialization** (`VAL-PHASE-INIT`) without producing or changing **runnable** application code, tests, or deployable config. Use with category scoping in [`categories.md`](./categories.md) (`JR-VALIDATION-001`) and init path matrices in [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`).
 
 **Runnable init evidence:** [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`) — when init adds or changes manifests, CI, or executable source.  
-**Self-containment operations:** [`../templates/universal-handoff/handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md) + **VAL-CAT-06** — `JR-VALIDATION-004` (planned).  
+**Self-containment:** operational checklist in target `docs/handoff-self-containment.md` (from [`handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md)); validation vocabulary — [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`).  
 **Jarvis completion claims:** `JR-VALIDATION-005` (planned).
 
 ## Design goals
@@ -88,7 +88,7 @@ For each **required** category (per init path matrix), meet the **minimum tier**
 | **VAL-CAT-03** ADR alignment | T1 + T3 (when required) | `adrs/INDEX.md` / `GOVERNANCE.md`; Accepted vs open `PROJ-ADR-*`; or **VAL-EVID-00** with user-approved deferral |
 | **VAL-CAT-04** Rules & agents | T1 + T3 | `.cursor/rules/index.md` activation; agent INDEX if large path |
 | **VAL-CAT-05** Stack fidelity | T1 + T3 **or** **VAL-EVID-00** | If README claims stack but no manifests: open `PROJ-STACK-*`, no invented commands ([`commands.md` § Greenfield](../stack-scaffolding/commands.md#greenfield-and-doc-only-repos)) |
-| **VAL-CAT-06** Independence | T2 + T3 + T4 | `handoff-self-containment.md` IND-* (+ ORCH-IND-* if orch exists); no Jarvis URLs in required reading |
+| **VAL-CAT-06** Independence | T2 + T3 + T4 | Target `handoff-self-containment.md` **IND-*** (+ **ORCH-IND-*** if orch); optional **FAM-** rollup per [`self-containment-checks.md`](./self-containment-checks.md) |
 | **VAL-CAT-07** Executable | **VAL-EVID-00 only** | Fixed phrase: `N/A — doc-only init; no runnable artifact produced` |
 | **VAL-CAT-08** Orchestration | T1 + T3 **or** **VAL-EVID-00** | Large/medium with `_template/`: manifest shape + sanitized README; else N/A |
 
@@ -146,7 +146,7 @@ Extend [`conventions.md`](../target-roadmap/conventions.md#evidence) for initial
 
 ```markdown
 - [x] `PROJ-HANDOFF-001`: No Jarvis links in generated docs. **required for handoff**
-  - Evidence: VAL-CAT-06 PASS — VAL-EVID-02: IND-01–IND-17 pass 2026-05-27; `rg -i jarvis` clean outside roadmap provenance.
+  - Evidence: VAL-CAT-06 PASS — VAL-EVID-02/03: FAM-01–06 pass; IND-01–IND-17 pass 2026-05-27; `rg -i jarvis` clean outside roadmap provenance.
   - Evidence: VAL-CAT-07 N/A — doc-only init; no runnable artifact produced (VAL-EVID-00).
 ```
 
@@ -245,13 +245,15 @@ Jarvis must **stop and ask** before:
 | Existing repo with code | Init audit still doc-only for scaffold work; no full-repo test mandate |
 | WFD | Tier discipline only — no WFD product or gap identifiers |
 | Runnable init | [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`) |
-| Next task | `JR-VALIDATION-004` — self-containment tier extensions; `005` — Jarvis vs human completion claims |
+| Self-containment validation | [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`) |
+| Next task | `JR-VALIDATION-005` — Jarvis vs human completion claims |
 
 ## Related
 
 | Doc | Role |
 | --- | --- |
 | [`runnable-init-evidence.md`](./runnable-init-evidence.md) | Runnable init counterpart (`JR-VALIDATION-003`) |
+| [`self-containment-checks.md`](./self-containment-checks.md) | **VAL-CAT-06** families and rollup (`JR-VALIDATION-004`) |
 | [`README.md`](./README.md) | Validation pack index |
 | [`categories.md`](./categories.md) | **VAL-CAT-*** catalog and init matrix |
 | [`../orchestration/init-paths.md`](../orchestration/init-paths.md) | Init path vs run tier |

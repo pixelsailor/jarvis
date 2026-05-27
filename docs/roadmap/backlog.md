@@ -124,8 +124,8 @@ Resumable platform buildout tasks. Stable reference material lives in [`platform
   - [`docs/validation/doc-only-init-evidence.md`](../validation/doc-only-init-evidence.md) — **VAL-EVID-00**–**05**; doc-only definition; per-**VAL-CAT-*** minimums; **VAL-CAT-07** N/A phrase; `Evidence:` format.
 - [x] `JR-VALIDATION-003`: Define evidence expectations for generated code, tooling, or config.
   - [`docs/validation/runnable-init-evidence.md`](../validation/runnable-init-evidence.md) — **VAL-EVID-06**–**07**; default quality chain; runnable slices; **VAL-CAT-07** pass/deferred/N/A lines.
-- [ ] `JR-VALIDATION-004`: Define target-project self-containment checks.
-  - Operational checklist: [`docs/universal-handoff/README.md`](../universal-handoff/README.md) (`JR-UNIVERSAL-007`); extend evidence tiers if needed.
+- [x] `JR-VALIDATION-004`: Define target-project self-containment checks.
+  - [`docs/validation/self-containment-checks.md`](../validation/self-containment-checks.md) — two layers (operational **IND-*** / **ORCH-IND-*** vs **VAL-IND-FAM-***); **VAL-EVID-02/03/04/05** for **VAL-CAT-06**; `PROJ-HANDOFF-*` rollup; init/change triggers.
 - [ ] `JR-VALIDATION-005`: Define what Jarvis may claim as complete versus what requires human approval.
 
 ## Legacy repository review

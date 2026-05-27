@@ -3,7 +3,7 @@
 Canonical **evidence tiers** and **audit rules** when Jarvis closes **initialization** (`VAL-PHASE-INIT`) after producing or changing **runnable** artifacts: application source, tests, lockfiles/manifests, CI/workflows, service workers, or deployable config. Use with category scoping in [`categories.md`](./categories.md) (`JR-VALIDATION-001`), command extraction in [`../stack-scaffolding/commands.md`](../stack-scaffolding/commands.md) (`JR-STACK-003`), and init path matrices in [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`).
 
 **Doc-only init evidence:** [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) (`JR-VALIDATION-002`) — when init produces no runnable delta.  
-**Self-containment operations:** [`../templates/universal-handoff/handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md) + **VAL-CAT-06** — `JR-VALIDATION-004` (planned).  
+**Self-containment:** operational checklist in target `docs/handoff-self-containment.md` (from [`handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md)); validation vocabulary — [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`).  
 **Jarvis completion claims:** `JR-VALIDATION-005` (planned).
 
 ## Design goals
@@ -129,7 +129,7 @@ For each **required** category (per init path matrix), meet the **minimum tier**
 | **VAL-CAT-03** ADR alignment | T1 + T3 (when required) | Same as doc-only |
 | **VAL-CAT-04** Rules & agents | T1 + T3 | Same as doc-only |
 | **VAL-CAT-05** Stack fidelity | T1 + T3 + **T6** | `commands.md` / README § Development; manifest paths + `last_verified` date |
-| **VAL-CAT-06** Independence | T2 + T3 + T4 | Run last; handoff checklist |
+| **VAL-CAT-06** Independence | T2 + T3 + T4 | Run last; target **IND-*** / **ORCH-IND-***; optional **FAM-** per [`self-containment-checks.md`](./self-containment-checks.md) |
 | **VAL-CAT-07** Executable | **T6 + T7** | Default quality chain with exit codes; or **FAIL** / deferral per policy |
 | **VAL-CAT-08** Orchestration | T1 + T3 or **VAL-EVID-00** | Unchanged from doc-only |
 
@@ -296,7 +296,8 @@ Jarvis must **stop and ask** before:
 | Evidence scope | Init-scoped artifacts and commands unless user expands |
 | Mixed init | Not doc-only by default; split evidence only with user approval |
 | WFD | Command discipline only — extract from **target** manifests, not WFD defaults |
-| Next task | `JR-VALIDATION-004` — self-containment tier extensions; `005` — Jarvis vs human completion claims |
+| Self-containment validation | [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`) |
+| Next task | `JR-VALIDATION-005` — Jarvis vs human completion claims |
 
 ## Related
 
@@ -305,6 +306,7 @@ Jarvis must **stop and ask** before:
 | [`README.md`](./README.md) | Validation pack index |
 | [`categories.md`](./categories.md) | **VAL-CAT-*** catalog |
 | [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) | Doc-only counterpart |
+| [`self-containment-checks.md`](./self-containment-checks.md) | **VAL-CAT-06** families and rollup (`JR-VALIDATION-004`) |
 | [`../stack-scaffolding/commands.md`](../stack-scaffolding/commands.md) | Extraction and README sync |
 | [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) | Why **MG-*** ≠ init |
 | [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) | Handoff layers |

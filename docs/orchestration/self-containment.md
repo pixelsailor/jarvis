@@ -145,7 +145,7 @@ Optional `PROJ-ORCH-002`: Re-run ORCH-IND after template pack upgrade — only w
 | [`artifact-ownership.md`](./artifact-ownership.md) | § Target adoption — copy step defers sanitization detail here |
 | [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) | `PROJ-ORCH-*` optional on small path; required on large |
 | **`JR-VALIDATION-002`** | Doc-only init evidence tiers — [`../validation/doc-only-init-evidence.md`](../validation/doc-only-init-evidence.md) |
-| **`JR-VALIDATION-004`** | May add evidence tiers later — ORCH-IND remains the operational orchestration slice |
+| **`JR-VALIDATION-004`** | [`../validation/self-containment-checks.md`](../validation/self-containment-checks.md) — **VAL-IND-FAM-07** rolls up **ORCH-IND-01–10**; no new evidence tier; operational rows unchanged |
 
 ## Human input (pause points)
 

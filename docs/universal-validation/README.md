@@ -66,7 +66,8 @@ Use stable IDs so `validation-report.md`, PR comments, and `plan.md` → Validat
 | [`../validation/categories.md`](../validation/categories.md) (`JR-VALIDATION-001`) | **VAL-CAT-01**–**08** scope init vs change audits; checklist rows implement categories |
 | [`doc-only-init-evidence.md`](../validation/doc-only-init-evidence.md) (`JR-VALIDATION-002`) | **VAL-EVID-00**–**05**; doc-only init; **VAL-CAT-07** N/A |
 | [`runnable-init-evidence.md`](../validation/runnable-init-evidence.md) (`JR-VALIDATION-003`) | **VAL-EVID-06**–**07**; default quality chain; runnable init **VAL-CAT-05** / **07** |
-| `JR-VALIDATION-004`–`005` (planned) | Self-containment tiers; Jarvis completion claims |
+| [`self-containment-checks.md`](../validation/self-containment-checks.md) (`JR-VALIDATION-004`) | **VAL-CAT-06** validation layer; **VAL-IND-FAM-***; operational rows in target `handoff-self-containment.md` |
+| `JR-VALIDATION-005` (planned) | Jarvis vs human completion claims |
 
 ## Human input (pause points)
 
