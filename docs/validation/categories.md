@@ -3,7 +3,7 @@
 Canonical **validation categories** for target projects after Jarvis initialization. Use categories to **scope audits** (what to look at); use the target [`validation-checklist.md`](../templates/universal-validation/validation-checklist.md) for **checkable rows** (**MG-***, **TST-***, extensions).
 
 **Prerequisites:** [`../orchestration/init-paths.md`](../orchestration/init-paths.md), [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md)  
-**Evidence detail:** [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) (`JR-VALIDATION-002`); [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`); [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`); `JR-VALIDATION-005` (Jarvis vs human completion claims) — planned
+**Evidence detail:** [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) (`JR-VALIDATION-002`); [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`); [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`); [`completion-claims.md`](./completion-claims.md) (`JR-VALIDATION-005`)
 
 ## Design goals
 

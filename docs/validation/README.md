@@ -2,7 +2,7 @@
 
 Jarvis guidance for **what to validate** when scaffolding a target project and when auditing ongoing work. This pack defines **categories** (purpose groupings); concrete audit rows live in the target [`validation-checklist.md`](../templates/universal-validation/validation-checklist.md) (**MG-***, **TST-***, extensions).
 
-**Platform tasks:** `JR-VALIDATION-001` (categories), `JR-VALIDATION-002` (doc-only init evidence), `JR-VALIDATION-003` (runnable init evidence), `JR-VALIDATION-004` (self-containment validation vocabulary), `JR-VALIDATION-005` (Jarvis completion claims — planned).
+**Platform tasks:** `JR-VALIDATION-001` (categories), `JR-VALIDATION-002` (doc-only init evidence), `JR-VALIDATION-003` (runnable init evidence), `JR-VALIDATION-004` (self-containment validation vocabulary), `JR-VALIDATION-005` (Jarvis completion claims).
 
 ## Read order (agents)
 
@@ -10,10 +10,11 @@ Jarvis guidance for **what to validate** when scaffolding a target project and w
 2. [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) — **VAL-EVID-00**–**05** when init produces no runnable artifact (`JR-VALIDATION-002`)
 3. [`runnable-init-evidence.md`](./runnable-init-evidence.md) — **VAL-EVID-06**–**07** when init adds manifests, code, or runnable config (`JR-VALIDATION-003`)
 4. [`self-containment-checks.md`](./self-containment-checks.md) — **VAL-CAT-06** tiers, **VAL-IND-FAM-*** families, `PROJ-HANDOFF-*` rollup (`JR-VALIDATION-004`)
-5. Target init path — [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`)
-6. Three gate vocabularies — [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`)
-7. Checklist scaffold — [`../universal-validation/README.md`](../universal-validation/README.md) (`JR-UNIVERSAL-006`)
-8. Handoff layers — [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md), [`../universal-handoff/README.md`](../universal-handoff/README.md)
+5. [`completion-claims.md`](./completion-claims.md) — **VAL-CLAIM-*** surfaces and forbidden phrasing (`JR-VALIDATION-005`)
+6. Target init path — [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`)
+7. Three gate vocabularies — [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`)
+8. Checklist scaffold — [`../universal-validation/README.md`](../universal-validation/README.md) (`JR-UNIVERSAL-006`)
+9. Handoff layers — [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md), [`../universal-handoff/README.md`](../universal-handoff/README.md)
 
 ## Documents
 
@@ -23,7 +24,7 @@ Jarvis guidance for **what to validate** when scaffolding a target project and w
 | `JR-VALIDATION-002` | [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) | **VAL-EVID-*** tiers; doc-only init; **VAL-CAT-07** N/A |
 | `JR-VALIDATION-003` | [`runnable-init-evidence.md`](./runnable-init-evidence.md) | **VAL-EVID-06**–**07**; default quality chain; **VAL-CAT-05** / **07** at runnable init |
 | `JR-VALIDATION-004` | [`self-containment-checks.md`](./self-containment-checks.md) | **VAL-CAT-06** validation layer; **VAL-IND-FAM-***; operational rows stay in target `handoff-self-containment.md` |
-| `JR-VALIDATION-005` | _(planned)_ | What Jarvis may claim complete vs human approval |
+| `JR-VALIDATION-005` | [`completion-claims.md`](./completion-claims.md) | **VAL-CLAIM-*** surfaces; Jarvis vs human completion authority |
 
 ## Relationship to other scaffolds
 

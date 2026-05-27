@@ -2,7 +2,7 @@
 
 Criteria for declaring **target-project initialization** complete enough that Jarvis can step away. The target keeps developing with local docs, rules, and an honest backlog — not a fully empty checklist.
 
-**Related:** Platform summary in [`../roadmap/platform-spec.md`](../roadmap/platform-spec.md#handoff-checklist-for-future-jarvis-output); README-only checks in [`../target-readme/handoff-checklist.md`](../target-readme/handoff-checklist.md); task fields in [`conventions.md`](./conventions.md).
+**Related:** Platform summary in [`../roadmap/platform-spec.md`](../roadmap/platform-spec.md#handoff-checklist-for-future-jarvis-output); README-only checks in [`../target-readme/handoff-checklist.md`](../target-readme/handoff-checklist.md); task fields in [`conventions.md`](./conventions.md); claim discipline in [`../validation/completion-claims.md`](../validation/completion-claims.md) (`JR-VALIDATION-005`).
 
 ---
 

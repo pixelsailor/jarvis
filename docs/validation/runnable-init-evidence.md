@@ -4,7 +4,7 @@ Canonical **evidence tiers** and **audit rules** when Jarvis closes **initializa
 
 **Doc-only init evidence:** [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) (`JR-VALIDATION-002`) — when init produces no runnable delta.  
 **Self-containment:** operational checklist in target `docs/handoff-self-containment.md` (from [`handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md)); validation vocabulary — [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`).  
-**Jarvis completion claims:** `JR-VALIDATION-005` (planned).
+**Jarvis completion claims:** [`completion-claims.md`](./completion-claims.md) (`JR-VALIDATION-005`).
 
 ## Design goals
 
@@ -297,7 +297,7 @@ Jarvis must **stop and ask** before:
 | Mixed init | Not doc-only by default; split evidence only with user approval |
 | WFD | Command discipline only — extract from **target** manifests, not WFD defaults |
 | Self-containment validation | [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`) |
-| Next task | `JR-VALIDATION-005` — Jarvis vs human completion claims |
+| Completion claims | [`completion-claims.md`](./completion-claims.md) (`JR-VALIDATION-005`) |
 
 ## Related
 
@@ -310,4 +310,5 @@ Jarvis must **stop and ask** before:
 | [`../stack-scaffolding/commands.md`](../stack-scaffolding/commands.md) | Extraction and README sync |
 | [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) | Why **MG-*** ≠ init |
 | [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) | Handoff layers |
+| [`completion-claims.md`](./completion-claims.md) | **VAL-CLAIM-*** authority (`JR-VALIDATION-005`) |
 | [`../universal-validation/README.md`](../universal-validation/README.md) | Checklist copy |

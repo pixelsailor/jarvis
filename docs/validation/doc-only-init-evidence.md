@@ -4,7 +4,7 @@ Canonical **evidence tiers** and **audit rules** when Jarvis closes **initializa
 
 **Runnable init evidence:** [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`) — when init adds or changes manifests, CI, or executable source.  
 **Self-containment:** operational checklist in target `docs/handoff-self-containment.md` (from [`handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md)); validation vocabulary — [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`).  
-**Jarvis completion claims:** `JR-VALIDATION-005` (planned).
+**Jarvis completion claims:** [`completion-claims.md`](./completion-claims.md) (`JR-VALIDATION-005`).
 
 ## Design goals
 
@@ -246,7 +246,7 @@ Jarvis must **stop and ask** before:
 | WFD | Tier discipline only — no WFD product or gap identifiers |
 | Runnable init | [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`) |
 | Self-containment validation | [`self-containment-checks.md`](./self-containment-checks.md) (`JR-VALIDATION-004`) |
-| Next task | `JR-VALIDATION-005` — Jarvis vs human completion claims |
+| Completion claims | [`completion-claims.md`](./completion-claims.md) (`JR-VALIDATION-005`) |
 
 ## Related
 

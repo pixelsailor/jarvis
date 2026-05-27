@@ -4,7 +4,7 @@ Canonical **validation layer** for **VAL-CAT-06** (Independence & handoff): how 
 
 **Operational checklist (targets):** `docs/handoff-self-containment.md` — copied from [`../templates/universal-handoff/handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md); scaffold guide [`../universal-handoff/README.md`](../universal-handoff/README.md) (`JR-UNIVERSAL-007`).  
 **Orchestration slice:** **ORCH-IND-01–10** in the same target file — copy rules [`../orchestration/self-containment.md`](../orchestration/self-containment.md) (`JR-ORCH-007`).  
-**Jarvis completion claims:** `JR-VALIDATION-005` (planned).
+**Jarvis completion claims:** [`completion-claims.md`](./completion-claims.md) (`JR-VALIDATION-005`).
 
 ## Design goals
 
@@ -211,7 +211,7 @@ Jarvis must **stop and ask** before:
 | Change phase | Spot re-audit on triggers — not full handoff on every PR |
 | Operational doc sprawl | **No** second target self-containment checklist file |
 | WFD | Discipline only — no WFD product or gap identifiers |
-| Next task | `JR-VALIDATION-005` — Jarvis vs human completion claims |
+| Completion claims | [`completion-claims.md`](./completion-claims.md) (`JR-VALIDATION-005`) |
 
 ## Related
 
@@ -225,3 +225,4 @@ Jarvis must **stop and ask** before:
 | [`../universal-handoff/README.md`](../universal-handoff/README.md) | Copy workflow (`JR-UNIVERSAL-007`) |
 | [`../orchestration/self-containment.md`](../orchestration/self-containment.md) | **ORCH-IND** copy-time rules |
 | [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) | Three layers + partial handoff |
+| [`completion-claims.md`](./completion-claims.md) | **VAL-CLAIM-03**, **10** — handoff vs human approval (`JR-VALIDATION-005`) |
