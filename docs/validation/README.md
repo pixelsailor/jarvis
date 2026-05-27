@@ -2,22 +2,23 @@
 
 Jarvis guidance for **what to validate** when scaffolding a target project and when auditing ongoing work. This pack defines **categories** (purpose groupings); concrete audit rows live in the target [`validation-checklist.md`](../templates/universal-validation/validation-checklist.md) (**MG-***, **TST-***, extensions).
 
-**Platform tasks:** `JR-VALIDATION-001` (categories — this pack), `JR-VALIDATION-002`–`005` (evidence tiers, self-containment extensions, Jarvis completion claims — future docs in this folder).
+**Platform tasks:** `JR-VALIDATION-001` (categories), `JR-VALIDATION-002` (doc-only init evidence), `JR-VALIDATION-003`–`005` (runnable init evidence, self-containment extensions, Jarvis completion claims — planned).
 
 ## Read order (agents)
 
 1. [`categories.md`](./categories.md) — category IDs, init vs change phases, init-path matrix
-2. Target init path — [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`)
-3. Three gate vocabularies — [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`)
-4. Checklist scaffold — [`../universal-validation/README.md`](../universal-validation/README.md) (`JR-UNIVERSAL-006`)
-5. Handoff layers — [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md), [`../universal-handoff/README.md`](../universal-handoff/README.md)
+2. [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) — **VAL-EVID-*** tiers when init produces no runnable artifact (`JR-VALIDATION-002`)
+3. Target init path — [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`)
+4. Three gate vocabularies — [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md) (`JR-ORCH-004`)
+5. Checklist scaffold — [`../universal-validation/README.md`](../universal-validation/README.md) (`JR-UNIVERSAL-006`)
+6. Handoff layers — [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md), [`../universal-handoff/README.md`](../universal-handoff/README.md)
 
 ## Documents
 
 | ID | Document | Use when |
 | --- | --- | --- |
 | `JR-VALIDATION-001` | [`categories.md`](./categories.md) | Scoping init audits, Validator read sets, mapping `PROJ-*` to validation work |
-| `JR-VALIDATION-002` | _(planned)_ | Evidence for documentation-only initialization |
+| `JR-VALIDATION-002` | [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) | **VAL-EVID-*** tiers; doc-only init; **VAL-CAT-07** N/A |
 | `JR-VALIDATION-003` | _(planned)_ | Evidence for generated code, tooling, or config |
 | `JR-VALIDATION-004` | _(planned)_ | Self-containment checks beyond [`handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md) |
 | `JR-VALIDATION-005` | _(planned)_ | What Jarvis may claim complete vs human approval |

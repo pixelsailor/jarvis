@@ -3,7 +3,7 @@
 Canonical **validation categories** for target projects after Jarvis initialization. Use categories to **scope audits** (what to look at); use the target [`validation-checklist.md`](../templates/universal-validation/validation-checklist.md) for **checkable rows** (**MG-***, **TST-***, extensions).
 
 **Prerequisites:** [`../orchestration/init-paths.md`](../orchestration/init-paths.md), [`../orchestration/gates-and-checks.md`](../orchestration/gates-and-checks.md)  
-**Evidence detail (future):** `JR-VALIDATION-002` (doc-only init), `JR-VALIDATION-003` (code/tooling/config), `JR-VALIDATION-004` (self-containment tiers), `JR-VALIDATION-005` (Jarvis vs human completion claims)
+**Evidence detail:** [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) (`JR-VALIDATION-002`); `JR-VALIDATION-003` (code/tooling/config), `JR-VALIDATION-004` (self-containment tiers), `JR-VALIDATION-005` (Jarvis vs human completion claims) — planned
 
 ## Design goals
 
@@ -129,7 +129,7 @@ Canonical **validation categories** for target projects after Jarvis initializat
 
 | When | Expectation |
 | --- | --- |
-| **Doc-only init** (`JR-VALIDATION-002`) | Category often **N/A** at init — record “no runnable artifact” in evidence |
+| **Doc-only init** ([`doc-only-init-evidence.md`](./doc-only-init-evidence.md)) | **VAL-EVID-00** — mandatory N/A line; no **MG-*** / test commands at init |
 | **Init with generated config/tooling** (`JR-VALIDATION-003`) | Run verified commands from manifests; record stdout / exit code summary |
 | **Every production change** | **TST-*** + **MG-04** / **MG-05** in checklist; `test-report.md` when Tester ran |
 
@@ -197,7 +197,7 @@ Full vocabulary rules: [`gates-and-checks.md`](../orchestration/gates-and-checks
 1. Read target init path from intake or backlog.
 2. List **required** categories from the matrix above.
 3. For each category, gather evidence (paths, command summaries, scan results).
-4. Record in `PROJ-*` `Evidence:` bullets: `VAL-CAT-0N: <one-line result>`.
+4. Record in `PROJ-*` `Evidence:` bullets per [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) when doc-only: `VAL-CAT-0N PASS|N/A — VAL-EVID-0N: …`.
 5. Run **VAL-CAT-06** last; then Layer 3 user sign-off per [`handoff.md`](../target-roadmap/handoff.md).
 
 ### Change session (Validator / human PR)
@@ -223,5 +223,5 @@ Full vocabulary rules: [`gates-and-checks.md`](../orchestration/gates-and-checks
 | Eight categories | Enough granularity for agents; avoids checklist-sized sprawl |
 | `VAL-CAT-*` not copied to targets by default | Single checklist file stays canonical in target repos |
 | **VAL-CAT-06** separate from **MG-*** | Prevents “merge-ready” language at init handoff |
-| **VAL-CAT-07** optional at doc-only init | Runnable evidence deferred to `JR-VALIDATION-002` / `003` |
-| Evidence format at init | `Evidence:` sub-bullets cite `VAL-CAT-0N` + path or command — full tier tables come in `JR-VALIDATION-002`+ |
+| **VAL-CAT-07** at doc-only init | **VAL-EVID-00** only — see [`doc-only-init-evidence.md`](./doc-only-init-evidence.md); runnable evidence in `JR-VALIDATION-003` |
+| Evidence format at init | `Evidence:` cites `VAL-CAT-0N` + `PASS`/`N/A` + `VAL-EVID-0N` + paths/date — [`doc-only-init-evidence.md`](./doc-only-init-evidence.md) |

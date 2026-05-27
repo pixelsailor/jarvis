@@ -144,6 +144,7 @@ Optional `PROJ-ORCH-002`: Re-run ORCH-IND after template pack upgrade — only w
 | [`gates-and-checks.md`](./gates-and-checks.md) | Handoff vocabulary — target guide paraphrase, no Jarvis links |
 | [`artifact-ownership.md`](./artifact-ownership.md) | § Target adoption — copy step defers sanitization detail here |
 | [`../target-roadmap/handoff.md`](../target-roadmap/handoff.md) | `PROJ-ORCH-*` optional on small path; required on large |
+| **`JR-VALIDATION-002`** | Doc-only init evidence tiers — [`../validation/doc-only-init-evidence.md`](../validation/doc-only-init-evidence.md) |
 | **`JR-VALIDATION-004`** | May add evidence tiers later — ORCH-IND remains the operational orchestration slice |
 
 ## Human input (pause points)

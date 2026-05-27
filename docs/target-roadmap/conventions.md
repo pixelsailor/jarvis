@@ -155,6 +155,14 @@ Do not leave deferred/cancelled tasks in active `## PROJ-*` sections.
   - Evidence: `adrs/INDEX.md` created; `pnpm run check` passed 2026-05-17.
 ```
 
+**Initialization audits** (when the project used category IDs during setup): prefer one line per category audited:
+
+```markdown
+  - Evidence: VAL-CAT-02 PASS — VAL-EVID-02/03: README § Documentation links verified 2026-05-27; paths: README.md, docs/roadmap/README.md
+```
+
+Use `N/A` with a one-line reason when a category does not apply (for example doc-only init with no runnable artifact: `VAL-CAT-07 N/A — doc-only init; no runnable artifact produced`). Do not cite Jarvis platform paths in evidence.
+
 ### Blocker
 
 - **Sub-bullet label:** `Blocker:` — what prevents progress **now**.
