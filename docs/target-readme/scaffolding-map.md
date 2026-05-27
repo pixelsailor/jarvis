@@ -73,7 +73,7 @@ Summary: after any **material** README edit, update `docs/roadmap/backlog.md` in
 
 ## Validation categories (init audit)
 
-Before `PROJ-HANDOFF-*`, run required **VAL-CAT-*** categories for the init path — [`../validation/categories.md`](../validation/categories.md) (`JR-VALIDATION-001`). Doc-only init: evidence tiers and **VAL-CAT-07** N/A — [`../validation/doc-only-init-evidence.md`](../validation/doc-only-init-evidence.md) (`JR-VALIDATION-002`). Record results in `PROJ-*` `Evidence:` bullets; detailed checklist rows live in target `docs/validation-checklist.md`.
+Before `PROJ-HANDOFF-*`, run required **VAL-CAT-*** categories for the init path — [`../validation/categories.md`](../validation/categories.md) (`JR-VALIDATION-001`). Doc-only init: evidence tiers and **VAL-CAT-07** N/A — [`../validation/doc-only-init-evidence.md`](../validation/doc-only-init-evidence.md) (`JR-VALIDATION-002`). Runnable init (code, manifests, CI): [`../validation/runnable-init-evidence.md`](../validation/runnable-init-evidence.md) (`JR-VALIDATION-003`). Record results in `PROJ-*` `Evidence:` bullets; detailed checklist rows live in target `docs/validation-checklist.md`.
 
 ## Scaffolding order (default)
 

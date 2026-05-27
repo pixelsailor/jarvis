@@ -161,7 +161,7 @@ Do not leave deferred/cancelled tasks in active `## PROJ-*` sections.
   - Evidence: VAL-CAT-02 PASS — VAL-EVID-02/03: README § Documentation links verified 2026-05-27; paths: README.md, docs/roadmap/README.md
 ```
 
-Use `N/A` with a one-line reason when a category does not apply (for example doc-only init with no runnable artifact: `VAL-CAT-07 N/A — doc-only init; no runnable artifact produced`). Do not cite Jarvis platform paths in evidence.
+Use `N/A` with a one-line reason when a category does not apply (for example doc-only init: `VAL-CAT-07 N/A — doc-only init; no runnable artifact produced`). Runnable init may use `PASS`, `DEFERRED`, or `N/A` per [`runnable-init-evidence.md`](../validation/runnable-init-evidence.md). Do not cite Jarvis platform paths in evidence.
 
 ### Blocker
 

@@ -2,7 +2,7 @@
 
 Canonical **evidence tiers** and **audit rules** when Jarvis closes **initialization** (`VAL-PHASE-INIT`) without producing or changing **runnable** application code, tests, or deployable config. Use with category scoping in [`categories.md`](./categories.md) (`JR-VALIDATION-001`) and init path matrices in [`../orchestration/init-paths.md`](../orchestration/init-paths.md) (`JR-ORCH-005`).
 
-**Runnable init evidence:** `JR-VALIDATION-003` (planned) — when init adds or changes manifests, CI, or executable source.  
+**Runnable init evidence:** [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`) — when init adds or changes manifests, CI, or executable source.  
 **Self-containment operations:** [`../templates/universal-handoff/handoff-self-containment.md`](../templates/universal-handoff/handoff-self-containment.md) + **VAL-CAT-06** — `JR-VALIDATION-004` (planned).  
 **Jarvis completion claims:** `JR-VALIDATION-005` (planned).
 
@@ -31,13 +31,13 @@ An init session (or init **phase** of a larger path) is **documentation-only** w
 
 **Still doc-only** when the **target repo already contains** application code from before Jarvis — init evidence covers **scaffold work only**, not re-validating the whole codebase.
 
-**Not doc-only** (use `JR-VALIDATION-003` when published):
+**Not doc-only** (use [`runnable-init-evidence.md`](./runnable-init-evidence.md) when published):
 
 - Jarvis adds or edits lockfiles, manifests, CI, service worker, or generated source
 - README § Development gains **new** commands Jarvis expects to be run at handoff
 - Init includes “wire minimal app shell” or “add default test script” tasks
 
-When **mixed** (mostly docs + one config file), treat the session as **not** doc-only unless the user explicitly approves **split evidence**: doc categories per this doc; **VAL-CAT-05** / **VAL-CAT-07** per `003` for the config slice.
+When **mixed** (mostly docs + one config file), treat the session as **not** doc-only unless the user explicitly approves **split evidence**: doc categories per this doc; **VAL-CAT-05** / **VAL-CAT-07** per [`runnable-init-evidence.md`](./runnable-init-evidence.md) for the config slice.
 
 ### Relationship to init path (small / medium / large)
 
@@ -63,6 +63,8 @@ Use tiers in `Evidence:` bullets and handoff summaries. **Higher tiers subsume l
 | **3 — Contract** | `VAL-EVID-03` | Content matches a named contract (outline, table, activation mode) | Read file + checklist row pass/fail | README outline, ADR index shape, rules index |
 | **4 — Consistency** | `VAL-EVID-04` | Two artifacts agree (README ↔ backlog ↔ ADR ↔ rules) | Cross-walk tables in [`readme-sync.md`](../target-roadmap/readme-sync.md) | Before **VAL-CAT-06** final pass |
 | **5 — Human** | `VAL-EVID-05` | User accepted residual risk or optional gaps | `PROJ-HANDOFF-003`; partial handoff note | Layer 3 handoff always |
+
+**Runnable init only** — **VAL-EVID-06** (manifest trace) and **VAL-EVID-07** (executed) are defined in [`runnable-init-evidence.md`](./runnable-init-evidence.md); do not use at doc-only init.
 
 **Do not use at doc-only init:**
 
@@ -164,7 +166,7 @@ On **large** paths with many `PROJ-*` rows, agents may add a **single** table to
 ## Agent workflow (doc-only init closeout)
 
 1. Confirm init path → list required categories from [`categories.md`](./categories.md#initialization-path--required-categories).
-2. Confirm session is **doc-only** per [definition](#documentation-only-initiation-definition) — if not, switch to `JR-VALIDATION-003` for runnable slices.
+2. Confirm session is **doc-only** per [definition](#documentation-only-initiation-definition) — if not, switch to [`runnable-init-evidence.md`](./runnable-init-evidence.md) for runnable slices.
 3. For each required category, run minimum tiers → record `PASS` / `N/A` on completing `PROJ-*` rows.
 4. Run **VAL-CAT-06** last (T2–T4 + handoff checklist).
 5. Write mandatory **VAL-CAT-07** N/A line.
@@ -215,7 +217,7 @@ Jarvis must **stop and ask** before:
 
 | Situation | Why |
 | --- | --- |
-| User wants handoff while README § Development lists commands that were **never** verified | Becomes **VAL-CAT-05** / **07** failure or requires runnable evidence (`003`) |
+| User wants handoff while README § Development lists commands that were **never** verified | Becomes **VAL-CAT-05** / **07** failure or requires [`runnable-init-evidence.md`](./runnable-init-evidence.md) |
 | Mixed init (docs + generated code) without split evidence plan | Wrong tier application |
 | Skipping minimal `validation-checklist.md` on small path | Conflicts with [`init-paths.md`](../orchestration/init-paths.md) human decision 2026-05-19 |
 | Marking **MG-03** pass at init to “speed up” handoff | Conflates handoff with merge-ready |
@@ -242,12 +244,14 @@ Jarvis must **stop and ask** before:
 | Separate `validation-init-summary.md` | **No** by default — `PROJ-*` `Evidence:` + optional README table on large |
 | Existing repo with code | Init audit still doc-only for scaffold work; no full-repo test mandate |
 | WFD | Tier discipline only — no WFD product or gap identifiers |
-| Next task | `JR-VALIDATION-003` — runnable/config init evidence; `004` — self-containment tier extensions; `005` — Jarvis vs human completion claims |
+| Runnable init | [`runnable-init-evidence.md`](./runnable-init-evidence.md) (`JR-VALIDATION-003`) |
+| Next task | `JR-VALIDATION-004` — self-containment tier extensions; `005` — Jarvis vs human completion claims |
 
 ## Related
 
 | Doc | Role |
 | --- | --- |
+| [`runnable-init-evidence.md`](./runnable-init-evidence.md) | Runnable init counterpart (`JR-VALIDATION-003`) |
 | [`README.md`](./README.md) | Validation pack index |
 | [`categories.md`](./categories.md) | **VAL-CAT-*** catalog and init matrix |
 | [`../orchestration/init-paths.md`](../orchestration/init-paths.md) | Init path vs run tier |

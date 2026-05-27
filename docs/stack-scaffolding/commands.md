@@ -121,8 +121,8 @@ Record **working directory** when not repo root: `(from apps/web) pnpm run dev`.
 
 When the environment can run commands safely (dependencies installed, no destructive scripts):
 
-- Run the **default quality chain** once before marking `PROJ-STACK-001` complete.
-- Record pass/fail and date in backlog **Evidence** — do not claim pass if not run.
+- Run the **default quality chain** once before marking `PROJ-STACK-001` complete ([`runnable-init-evidence.md`](../validation/runnable-init-evidence.md) — **VAL-EVID-07**).
+- Record pass/fail, exit codes, and date in backlog **Evidence** — do not claim **VAL-CAT-07** pass if not run.
 
 If install fails or CI-only tooling is unavailable, record **Evidence** as manifest inspection only and note `execution: not run` on the task.
 
